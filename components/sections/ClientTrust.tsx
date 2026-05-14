@@ -12,73 +12,83 @@ const clientLogos = [
   { name: "Client 7", src: "/clients/logo7.webp" },
   { name: "Client 9", src: "/clients/logo9.webp" },
   { name: "Client 11", src: "/clients/logo11.webp" },
+  { name: "Client 12", src: "/clients/12.png" },
+  { name: "Client 13", src: "/clients/13.webp" },
+  { name: "Client 14", src: "/clients/14.webp" },
+  { name: "Client 15", src: "/clients/15.png" },
+  { name: "Client 16", src: "/clients/16.webp" },
+  { name: "Client 17", src: "/clients/17.png" },
+  { name: "Client 18", src: "/clients/18.webp" },
+  { name: "Client 19", src: "/clients/19.webp" },
+  { name: "Client 20", src: "/clients/20.png" },
+  { name: "Client 21", src: "/clients/21.webp" },
+  { name: "Client 22", src: "/clients/22.webp" },
+  { name: "Client 23", src: "/clients/23.webp" },
+  { name: "Client 24", src: "/clients/24.webp" },
+  { name: "Client 25", src: "/clients/25.webp" },
+  { name: "Client 26", src: "/clients/26.webp" },
+  { name: "Client 27", src: "/clients/27.png" },
+  { name: "Client 28", src: "/clients/28.png" },
+  { name: "Client 29", src: "/clients/29.webp" },
 ];
 
 export default function ClientTrust() {
-  // Duplicating logos for a truly seamless 4K loop
-  const duplicated = [...clientLogos, ...clientLogos, ...clientLogos, ...clientLogos];
+  // 30+ logos ke liye 2x duplication kafi hai seamless loop ke liye
+  const duplicated = [...clientLogos, ...clientLogos];
 
   return (
-    <section className="relative py-16 2xl:py-32 bg-[#020617] overflow-hidden border-y border-white/5 selection:bg-blue-600/30">
+    <section className="relative py-6 md:py-10 2xl:py-14 bg-[#020617] overflow-hidden border-y border-white/5">
 
-      {/* 🌌 High-End Ambient Glow */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] 2xl:w-[1800px] h-[300px] bg-blue-600/[0.08] blur-[150px] 2xl:blur-[250px] rounded-full" />
-      </div>
+      {/* 🌌 Background Glow */}
+      {/* <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[120px] bg-blue-600/[0.08] blur-[100px] rounded-full" />
+      </div> */}
 
-      <div className="relative z-10 max-w-[1800px] 2xl:max-w-[2400px] mx-auto px-6 2xl:px-20">
-        <div className="flex flex-col lg:flex-row items-center gap-16 2xl:gap-32">
+      <div className="relative z-10 max-w-full mx-auto px-6 lg:px-12">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
 
-          {/* LEFT SIDE: Minimalist Branding */}
-          <div className="lg:w-1/4 space-y-3 2xl:space-y-6 text-center lg:text-left shrink-0">
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              className="text-[10px] 2xl:text-xl tracking-[0.5em] text-blue-500 font-black uppercase"
+          {/* LEFT SIDE: Heading */}
+          <div className="shrink-0 text-center lg:text-left">
+            <motion.h2
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="text-2xl md:text-4xl 2xl:text-6xl font-black text-white tracking-tighter leading-none"
             >
-              Trusted By
-            </motion.p>
-            <motion.h3
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="text-4xl md:text-5xl 2xl:text-8xl font-black text-white tracking-tighter leading-none"
-            >
-              The <br className="hidden 2xl:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500">
-                Partners.
+              Our{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
+                Clients.
               </span>
-            </motion.h3>
+            </motion.h2>
           </div>
 
-          {/* RIGHT SIDE: 4K Marquee Track */}
-          <div className="lg:w-3/4 relative h-32 2xl:h-64 flex items-center overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_15%,white_85%,transparent)]">
+          {/* RIGHT SIDE: Heavy Marquee Track */}
+          <div className="w-full lg:flex-1 relative h-20 md:h-28 2xl:h-44 flex items-center overflow-hidden ">
             <motion.div
-              className="flex gap-24 2xl:gap-48 w-max items-center"
-              animate={{ x: ["0%", "-25%"] }}
+              className="flex gap-8 md:gap-10 2xl:gap-20 w-max items-center"
+              animate={{ x: ["0%", "-50%"] }} // Smooth half-width translation for infinite loop
               transition={{
-                duration: 40,
+                duration: 50, // Logos zyada hain toh speed slow rakhi hai (Adjust if needed)
                 repeat: Infinity,
                 ease: "linear",
               }}
-              whileHover={{ transition: { duration: 80 } }} // Slow down on hover for detail
+              whileHover={{ transition: { duration: 100 } }} // Hover par mazeed slow ho jayega
             >
               {duplicated.map((client, index) => (
                 <div
                   key={index}
-                  className="relative flex items-center justify-center min-w-[180px] 2xl:min-w-[350px] group/logo select-none"
+                  className="relative flex items-center justify-center min-w-[140px] md:min-w-[180px] 2xl:min-w-[280px] group/logo select-none px-2"
                 >
                   <Image
                     src={client.src}
                     alt={client.name}
-                    width={180} // 4K ke liye ye kafi hai, 300 zyada tha
-                    height={70}
-                    sizes="(max-width: 768px) 100px, 180px" // Mobile par choti image load hogi
-                    className="h-12 md:h-16 2xl:h-32 w-auto object-contain transition-all duration-700 filter grayscale brightness-[0.8] contrast-[1.2] group-hover/logo:grayscale-0 group-hover/logo:brightness-110 group-hover/logo:scale-110"
+                    width={200}
+                    height={80}
+                    className="h-10 md:h-14 2xl:h-24 w-auto object-contain transition-all duration-500 "
                   />
-
-                  {/* ✨ Neon Reflection Effect */}
-                  <div className="absolute -bottom-10 2xl:-bottom-20 left-1/2 -translate-x-1/2 w-[80%] h-6 2xl:h-12 bg-blue-500/20 blur-xl 2xl:blur-2xl opacity-0 group-hover/logo:opacity-100 transition-all duration-700" />
+                  
+                  {/* Subtle hover indicator light */}
+                  <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-12 h-1 bg-blue-500/0 group-hover/logo:bg-blue-500/40 blur-sm transition-all duration-500" />
                 </div>
               ))}
             </motion.div>

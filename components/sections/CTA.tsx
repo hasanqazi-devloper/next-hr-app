@@ -1,61 +1,86 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { ArrowUpRight, Zap } from "lucide-react";
+import { ArrowUpRight, Phone } from "lucide-react";
 
 export default function CTASection() {
   return (
-    // Micro padding (py-10) for a highly compact and sleek footprint
-    <section className="relative py-10 px-6 bg-[#030207] bg-gradient-to-r from-[#030207] via-[#080711] to-[#030207] overflow-hidden border-t border-white/5 selection:bg-blue-600">
+    <section className="relative py-8 md:py-10  overflow-hidden border-y border-white/5 bg-[#030207] bg-gradient-to-r from-[#030303] via-[#050a18] to-[#030303]">
+      
+      
+      {/* Background Glow - localized to right side */}
+      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[400px] h-[100px] bg-blue-600/[0.07] blur-[100px] rounded-full pointer-events-none" />
 
-      {/* 🌌 Tight Ambient Glow behind the core content */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[150px] bg-blue-600/[0.05] blur-[100px] rounded-full pointer-events-none" />
+      <div className="relative z-10 max-w-full mx-auto px-6 md:px-12 lg:px-20 2xl:px-32">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
 
-      {/* Clean 12-Column Grid with reduced gap */}
-      <div className="relative z-10 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-
-        {/* 📝 LEFT SIDE — Tight Copy (Spans 8 Columns) */}
-        <div className="md:col-span-8 text-left space-y-2">
-          
-          <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-500/5 border border-blue-500/10 backdrop-blur-md">
-            <Zap className="w-2.5 h-2.5 text-blue-400 animate-pulse" />
-            <span className="text-[8px] uppercase tracking-[4px] text-blue-400 font-black">
-              {"Next Phase"}
-            </span>
+          {/* 📝 LEFT: Super Bold Heading - Tight line height */}
+          <div className="flex-shrink-0">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl font-black text-white tracking-tighter leading-[0.85] uppercase italic">
+              Ready To Grow <br />
+              <span className="text-blue-500">Your Brand?</span>
+            </h2>
           </div>
-          
-          <h2 className="text-2xl md:text-4xl font-black text-white tracking-tighter   leading-none">
-            {"Let's Build Your "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-              {"Digital Empire."}
-            </span>
-          </h2>
 
-          <p className="text-[11px] md:text-xs text-zinc-400 font-medium max-w-sm leading-normal">
-            {"Engineering high-converting, deployment-ready scaling systems tailored for growth."}
-          </p>
-        </div>
+          {/* 🏷️ MIDDLE: Small descriptive text - Vertical alignment fix */}
+          <div className="flex-1 lg:max-w-xs">
+            <p className="text-zinc-500 text-[11px] md:text-xs uppercase font-bold tracking-[2px] leading-relaxed border-l border-white/10 pl-5">
+              Turn your ideas into results with our expert digital strategies and creative execution.
+            </p>
+          </div>
 
-        {/* ⚡ RIGHT SIDE — High Clarity Action Button (Spans 4 Columns) */}
-        <div className="md:col-span-4 flex justify-start md:justify-end items-center">
+          {/* ⚡ RIGHT: Interactive Elements */}
+          <div className="flex flex-wrap items-center gap-8 lg:gap-12">
+            
+            {/* BUTTON: Contact Now - Square cornered modern look */}
           <Link href="/contact">
-            <motion.div
-              whileHover={{ scale: 1.04 }}
-              whileTap={{ scale: 0.98 }}
-              className="relative inline-flex group"
-            >
-              {/* Vibrant Outer Glow for Maximum Focus */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 blur-md opacity-50 group-hover:opacity-100 transition-opacity duration-300" />
-              
-              <button className="relative px-7 py-3 rounded-full bg-white text-black font-black text-xs uppercase tracking-widest flex items-center gap-2 z-10 border border-white/20 transition-all duration-300 group-hover:bg-black group-hover:text-white">
-                {"Start Project"}
-                <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </button>
-            </motion.div>
-          </Link>
-        </div>
+  <button className="group relative px-10 py-4 bg-white/[0.03] border border-white/10 rounded-xl hover:border-blue-500/50 transition-all duration-500 overflow-hidden shadow-2xl hover:shadow-blue-500/20">
+    
+    {/* 🎨 Background Liquid Fill Effect */}
+    <div className="absolute inset-0 w-0 bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:w-full opacity-90" />
+    
+    {/* ✨ Corner Shine (Sleek Detail) */}
+    <div className="absolute top-0 right-0 w-8 h-8 bg-white/10 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
 
+    <span className="relative z-10 flex flex-col items-start leading-none">
+      <span className="text-[9px] font-black uppercase tracking-[3px] text-blue-400 group-hover:text-blue-100 transition-colors duration-300">
+        Get In Touch
+      </span>
+      
+      <span className="text-base font-black uppercase tracking-tighter text-white flex items-center gap-2 mt-1">
+        CONTACT NOW 
+        <div className="bg-white/10 group-hover:bg-white/20 p-1 rounded-md transition-colors">
+          <ArrowUpRight size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-500 ease-out" />
+        </div>
+      </span>
+    </span>
+
+    {/* ⚡ Bottom Line Glow */}
+    <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-white group-hover:w-full transition-all duration-700 delay-100" />
+  </button>
+</Link>
+
+            {/* PHONE COMPONENT: Clean & High Contrast */}
+            <div className="flex items-center gap-4">
+              {/* Circular Icon with Border Glow */}
+              <div className="w-12 h-12 rounded-full border border-white/10 bg-white flex items-center justify-center group cursor-pointer hover:bg-white transition-all duration-500">
+                <Phone size={20} className="text-[#14b8a6] transition-transform duration-500 group-hover:scale-110" fill="#14b8a6" fillOpacity={0.1} />
+              </div>
+              
+              <div className="flex flex-col">
+                <span className="text-[10px] text-zinc-500 font-black uppercase tracking-widest mb-1">Call experts</span>
+                <Link 
+                  href="tel:+971509273668" 
+                  className="text-lg md:text-xl 2xl:text-2xl text-white font-black hover:text-blue-500 transition-colors tracking-tighter leading-none"
+                >
+                  +971 50 927 3668
+                </Link>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
       </div>
     </section>
   );

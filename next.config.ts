@@ -61,7 +61,7 @@ const nextConfig = {
   },
 
   // ⚡ SPEED MODE: Performance optimizations
-  experimental: {
+ experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
 

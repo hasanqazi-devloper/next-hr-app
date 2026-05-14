@@ -5,14 +5,19 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const awardLogos = [
-  { src: "/brands/ahref.svg", alt: "Ahrefs" },
-  { src: "/brands/google.png", alt: "Google" },
-  { src: "/brands/linkedin.webp", alt: "LinkedIn" },
-  { src: "/brands/met-bus.png", alt: "Meta Business" },
+  { src: "/brands/ahref.png", alt: "Ahrefs" },
+  { src: "/brands/googlleads.png", alt: "Google" },
+  { src: "/brands/hubspot.png", alt: "LinkedIn" },
+  { src: "/brands/linkedin.webp", alt: "Meta Business" },
   { src: "/brands/semrush.png", alt: "Semrush" },
   { src: "/brands/shopify.gif", alt: "Shopify" },
-  { src: "/brands/woo.avif", alt: "WooCommerce" },
-  { src: "/brands/WP.webp", alt: "WordPress" },
+  // { src: "/brands/woo.avif", alt: "WooCommerce" },
+  // { src: "/brands/WP.webp", alt: "WordPress" },
+  // { src: "/brands/WP.webp", alt: "WordPress" },
+  // { src: "/brands/WP.webp", alt: "WordPress" },
+  // { src: "/brands/WP.webp", alt: "WordPress" },
+  // { src: "/brands/WP.webp", alt: "WordPress" },
+
 ];
 
 export default function HeroSlider() {

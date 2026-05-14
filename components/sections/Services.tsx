@@ -186,7 +186,6 @@
 //     </section>
 //   );
 // }
-
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
@@ -208,7 +207,7 @@ export default function Services() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="relative bg-[#030303] py-12 md:py-20 2xl:py-32 overflow-hidden border-t border-white/5">
+    <section className="relative bg-[#030303] py-12 md:py-20 2xl:py-32 pt-10 overflow-hidden border-t border-white/5">
       
       {/* Background Glows */}
       <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-blue-500/5 blur-[120px] pointer-events-none" />
@@ -217,22 +216,16 @@ export default function Services() {
       <div className="max-w-7xl 2xl:max-w-[110rem] mx-auto px-6 relative z-10">
         
         {/* HEADER - Centered & Slim */}
-        <div className="mb-12 md:mb-16 text-center">
-          <motion.span 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            className="text-[10px] 2xl:text-base uppercase tracking-[0.4em] text-blue-400 font-bold"
-          >
-            Our Expertise
-          </motion.span>
+        <div className="mb-8 md:mb-12  pt-0  text-center">
+        
           <motion.h2 
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="mt-3 text-3xl md:text-5xl 2xl:text-8xl font-black tracking-tighter leading-none text-white uppercase"
+            className="mt-3 text-3xl md:text-5xl 2xl:text-8xl font-black tracking-tighter leading-none text-white "
           >
-            Digital Marketing <br className="hidden lg:block" />
+            Digital Marketing {" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">
-              SERVICES
+              Services
             </span>
           </motion.h2>
         </div>
@@ -240,30 +233,45 @@ export default function Services() {
         {/* MAIN GRID */}
         <div className="grid lg:grid-cols-12 gap-8 2xl:gap-20 items-start relative">
           
-          {/* LEFT SIDE: Image Preview (Parallel to list) */}
-          <div className="hidden lg:block lg:col-span-5 sticky top-24">
-            <div className="relative w-full h-[350px] 2xl:h-[550px] rounded-[2rem] 2xl:rounded-[3.5rem] overflow-hidden border border-white/10 bg-zinc-900 shadow-2xl">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={active}
-                  initial={{ opacity: 0, scale: 1.05 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.98 }}
-                  transition={{ duration: 0.4 }}
-                  className="absolute inset-0"
-                >
-                  <Image
-                    src={SERVICES[active].image}
-                    alt={SERVICES[active].title}
-                    fill
-                    className="object-cover opacity-80"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
-                </motion.div>
-              </AnimatePresence>
-            </div>
-          </div>
+       {/* LEFT SIDE: Image Preview Area */}
+<div className="hidden lg:block lg:col-span-5 h-full min-h-[450px] 2xl:min-h-[650px] relative">
+  {/* 🛠️ Dynamic container: No mirror effect, clean border-glow */}
+  <motion.div 
+    className="absolute left-0 w-full h-[380px] 2xl:h-[550px] rounded-[2.5rem] 2xl:rounded-[4rem] overflow-hidden border border-white/5 bg-[#080808] shadow-[0_0_50px_rgba(0,0,0,0.5)]"
+    animate={{ 
+      // Smooth vertical tracking
+      y: active * 50, // Halka sa offset taake active link ke samne rahe
+    }}
+    transition={{ type: "spring", stiffness: 100, damping: 25 }}
+  >
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={active}
+        // ✨ New Premium Animation: Slide up + Fade + Blur
+        initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+        exit={{ opacity: 0, y: -20, filter: "blur(10px)" }}
+        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        className="relative w-full h-full p-4 flex items-center justify-center"
+      >
+        {/* 📸 IMAGE: Size fixed and centered to avoid cutting */}
+        <Image
+          src={SERVICES[active].image}
+          alt={SERVICES[active].title}
+          fill
+          priority
+          className="object-contain p-6 2xl:p-12 drop-shadow-[0_20px_50px_rgba(59,130,246,0.2)]" 
+        />
+        
+        {/* Subtle Inner Glow instead of heavy mirror gradient */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.05)_0%,transparent_70%)] pointer-events-none" />
+      </motion.div>
+    </AnimatePresence>
+  </motion.div>
 
+  {/* Background Decorative Element (Optional: for depth) */}
+  <div className="absolute -z-10 inset-0 bg-blue-600/5 blur-[120px] rounded-full pointer-events-none" />
+</div>
           {/* RIGHT SIDE: THE SERVICES LIST */}
           <div className="lg:col-span-7">
             {SERVICES.map((item, i) => {
@@ -278,17 +286,16 @@ export default function Services() {
                     
                     <div className="relative flex items-center gap-6">
                       {/* Shadow Numbering (Background Watermark) */}
-                    <span className={`absolute -left-8 md:-left-12 top-1/2 -translate-y-1/2 
-  /* Mobile par bara, Laptop par massive, 4K par Giant size */
-  text-7xl md:text-[120px] 2xl:text-[200px] 3xl:text-[250px] 
-  font-black transition-all duration-700 pointer-events-none select-none 
-  ${isActive 
-    ? "text-blue-500/15 opacity-100 scale-110" 
-    : "text-white/0 opacity-0 scale-90"
-  }`}
->
-  {item.id}
-</span>
+                      <span className={`absolute -left-8 md:-left-12 top-1/2 -translate-y-1/2 
+                        text-7xl md:text-[120px] 2xl:text-[200px] 3xl:text-[250px] 
+                        font-black transition-all duration-700 pointer-events-none select-none 
+                        ${isActive 
+                          ? "text-blue-500/15 opacity-100 scale-110" 
+                          : "text-white/0 opacity-0 scale-90"
+                        }`}
+                      >
+                        {item.id}
+                      </span>
 
                       <div className="relative z-10">
                         <h3 className={`text-2xl md:text-3xl 2xl:text-6xl font-black tracking-tight leading-none transition-all duration-300 ${isActive ? "text-white translate-x-2" : "text-zinc-500"}`}>
@@ -322,7 +329,7 @@ export default function Services() {
           </div>
         </div>
 
-        {/* ✅ FINAL CTA BUTTON - Slimmed */}
+        {/* ✅ FINAL CTA BUTTON */}
         <div className="mt-16 2xl:mt-24 flex justify-center">
           <Link href="/services">
             <button className="group relative overflow-hidden rounded-full border border-white/10 bg-white/[0.02] px-10 2xl:px-16 py-4 2xl:py-8 text-[10px] 2xl:text-lg font-bold uppercase tracking-[0.3em] text-white transition-all duration-500 hover:bg-white hover:text-black">

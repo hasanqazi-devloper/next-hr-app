@@ -54,41 +54,51 @@ export default function PortfolioBento() {
       <div className="relative z-10 max-w-7xl 2xl:max-w-[110rem] mx-auto px-6">
 
         {/* ⚡ HEADER BLOCK - Now Centered */}
-        <div className="flex flex-col items-center text-center mb-12 md:mb-16 2xl:mb-24">
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="space-y-4"
-          >
-            
-            <h2 className="text-4xl md:text-6xl 2xl:text-[100px] font-black tracking-tighter leading-[0.95]">
-              Selected Works.{" "}
-              <br className="hidden md:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500">
-                Engineered For Impact.
-              </span>
-            </h2>
-          </motion.div>
+    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 md:mb-10 2xl:mb-16 border-b border-white/5 pb-3 pt-0">
+  {/* LEFT SIDE: Heading */}
+  <motion.div
+    initial={{ opacity: 0, y: 15 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.5 }}
+    className="text-left"
+  >
+    <h2 className="text-3xl md:text-5xl lg:text-6xl 2xl:text-8xl font-black tracking-tighter leading-none text-white">
+      Client’s Case Studies
+    </h2>
+  </motion.div>
 
-          {/* Centered View All Link */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="mt-8 md:mt-10"
-          >
-            <Link
-              href="/portfolio"
-              className="flex items-center gap-4 text-xs 2xl:text-lg uppercase tracking-widest font-bold text-gray-400 hover:text-white transition-colors group"
-            >
-              <span>View All Projects</span>
-              <div className="w-9 h-9 2xl:w-14 2xl:h-14 rounded-full border border-white/10 flex items-center justify-center group-hover:rotate-45 group-hover:border-blue-500 group-hover:bg-white/5 transition-all duration-300">
-                <ArrowUpRight size={14} className="text-gray-400 group-hover:text-white 2xl:w-6 2xl:h-6" />
-              </div>
-            </Link>
-          </motion.div>
-        </div>
+  {/* RIGHT SIDE: Ultra Premium View All Button */}
+  <motion.div
+    initial={{ opacity: 0, x: 20 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.5, delay: 0.1 }}
+    className="flex items-center shrink-0"
+  >
+    <Link
+      href="/portfolio"
+      className="flex items-center gap-3 md:gap-4 text-[10px] md:text-xs 2xl:text-xl uppercase tracking-[0.25em] font-bold text-gray-400 hover:text-white transition-all duration-300 group"
+    >
+      {/* Text with animated underline on hover */}
+      <span className="relative pb-1 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-blue-500 after:transition-all after:duration-300 group-hover:after:w-full group-hover:text-blue-400 transition-colors">
+        View All Projects
+      </span>
+      
+      {/* Premium Magnetic Circle */}
+      <div className="w-9 h-9 md:w-11 md:h-11 2xl:w-16 2xl:h-16 rounded-full border border-white/10 bg-white/[0.01] flex items-center justify-center relative overflow-hidden group-hover:border-blue-500/50 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.15)] transition-all duration-300">
+        {/* Hover Radial Glow Inside Circle */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        
+        {/* Arrow Animation */}
+        <ArrowUpRight 
+          size={14} 
+          className="text-gray-400 group-hover:text-white group-hover:rotate-45 group-hover:scale-110 transform transition-all duration-300 2xl:w-6 2xl:h-6" 
+        />
+      </div>
+    </Link>
+  </motion.div>
+</div>
 
         {/* 🎬 THE INTERACTIVE BENTO GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 2xl:gap-8 relative z-10">

@@ -17,7 +17,7 @@ const awardLogos = [
 export default function TrustLogos() {
   return (
     /* 🛠️ Padding Yaha Kam Ki Hai: py-10 (standard) aur 2xl:py-12 (4K ke liye) */
-    <section className="border-y border-white/10 py-10 2xl:py-12 bg-[#020617]">
+    <section className="border-y border-white/10 py-10 2xl:py-12 bg-[#030207] bg-gradient-to-r from-[#030303] via-[#050a18] to-[#030303]">
       <div className="container-main">
         
         {/* 🛠️ 6 LOGOS GRID */}

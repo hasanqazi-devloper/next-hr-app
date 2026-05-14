@@ -19,7 +19,7 @@ type StatProps = {
 
 const StatItem = ({ value, label, icon, suffix = "+" }: StatProps) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const isInView = useInView(ref, { once: true, margin: "-20px" });
   const [isMounted, setIsMounted] = useState(false);
 
   const count = useMotionValue(0);
@@ -39,67 +39,73 @@ const StatItem = ({ value, label, icon, suffix = "+" }: StatProps) => {
   return (
     <motion.div
       ref={ref}
-      whileHover={{ y: -8, scale: 1.02 }}
-      transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      // Padding adjusted for mobile vs 4K
-      className="group relative flex flex-col items-center justify-center py-10 md:py-12 2xl:py-24 px-4 transition-all duration-300 cursor-pointer"
+      whileHover="hover"
+      className="group relative flex flex-col items-center justify-center py-10 md:py-12 2xl:py-20 px-4 transition-all duration-500 overflow-hidden cursor-default"
     >
-      <div className="absolute inset-0 bg-blue-600/10 opacity-0 group-hover:opacity-100 blur-3xl transition-all duration-500 pointer-events-none" />
-      <div className="absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
+      {/* 🎨 HOVER COLOR FILL: Niche se upar fill hone wala gradient */}
+      <motion.div 
+        variants={{
+          hover: { y: 0, opacity: 1 }
+        }}
+        initial={{ y: "100%", opacity: 0 }}
+        transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
+        className="absolute inset-0 bg-gradient-to-t from-blue-600/20 via-blue-500/5 to-transparent z-0"
+      />
 
-      <div className="mb-4 2xl:mb-8 text-zinc-500 group-hover:text-blue-400 group-hover:scale-125 transition-all duration-300">
-        <div className="scale-[1.2] md:scale-100 2xl:scale-[1.8]">
-           {icon}
+      <div className="relative z-10 mb-4 text-zinc-500 group-hover:text-blue-400 transition-all duration-500">
+        <div className="scale-125 md:scale-110 2xl:scale-150 group-hover:drop-shadow-[0_0_10px_rgba(59,130,246,0.5)] transition-transform">
+          {icon}
         </div>
       </div>
 
-      <h3 className="text-4xl md:text-5xl 2xl:text-8xl font-black tracking-tighter text-zinc-100 group-hover:text-white font-mono flex items-center transition-colors duration-300">
+      <h3 className="relative z-10 text-5xl md:text-5xl 2xl:text-7xl font-black tracking-tighter text-white flex items-center leading-none">
         <motion.span>{isMounted ? display : 0}</motion.span>
-        <span className="text-blue-500 font-sans text-2xl md:text-3xl 2xl:text-6xl ml-1 group-hover:text-cyan-400">
+        <span className="text-blue-500 font-black text-2xl md:text-3xl 2xl:text-5xl ml-1">
           {suffix}
         </span>
       </h3>
 
-      <p className="mt-3 2xl:mt-6 text-[10px] md:text-[11px] 2xl:text-xl font-black tracking-[3px] 2xl:tracking-[5px] text-zinc-500 group-hover:text-zinc-300 uppercase">
+      <p className="relative z-10 mt-3 text-[11px] md:text-[12px] 2xl:text-lg font-black tracking-[3px] text-zinc-500 group-hover:text-white uppercase transition-colors duration-500">
         {label}
       </p>
+
+      {/* 🖌️ Bottom Glow Line */}
+      <motion.div 
+        variants={{ hover: { scaleX: 1 } }}
+        initial={{ scaleX: 0 }}
+        className="absolute bottom-0 left-0 right-0 h-[2px] bg-blue-500 shadow-[0_0_15px_#3b82f6] origin-center z-20"
+      />
     </motion.div>
   );
 };
 
 export default function Stats() {
   return (
-    <section className="relative py-16 md:py-24 2xl:py-40 bg-[#020617] border-t border-b border-white/5 overflow-hidden">
+    // 🛠️ PADDING TIGHT: py-6 (mobile) aur py-10 (desktop) kar diya hai
+    <section className="relative py-6 md:py-10 2xl:py-16 bg-[#030207] bg-gradient-to-r from-[#030303] via-[#050a18] to-[#030303]       border-t border-b border-white/5 overflow-hidden">
+      
+      <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:25px_25px] pointer-events-none" />
 
-      {/* Technical Ambient Overlay */}
-      <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] 2xl:w-[1200px] h-[250px] 2xl:h-[500px] bg-blue-500/[0.05] blur-[150px] 2xl:blur-[250px] rounded-full pointer-events-none" />
+      <div className="relative z-10 max-w-7xl 2xl:max-w-[100rem] mx-auto px-6">
 
-      <div className="relative z-10 max-w-6xl 2xl:max-w-[100rem] mx-auto px-6">
-
-        {/* HEADER BLOCK - Slimmed down */}
-        <div className="text-center mb-10 md:mb-16 2xl:mb-24">
-          <h2 className="text-3xl md:text-6xl 2xl:text-9xl font-black text-white tracking-tight leading-none">
+        <div className="text-center mb-6 md:mb-8 2xl:mb-12">
+          <p className="text-2xl md:text-3xl 2xl:text-5xl font-black text-white tracking-tighter leading-none">
             Some Facts About Us
-          </h2>
+          </p>
         </div>
 
-        {/* STATS GRID - Now 1 col on mobile, 4 on desktop */}
         <motion.div
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="relative bg-white/[0.01] border border-white/10 rounded-[2rem] md:rounded-[2.5rem] 2xl:rounded-[5rem] backdrop-blur-md overflow-hidden p-[1px] shadow-2xl"
+          className="relative bg-white/[0.01] border border-white/10 rounded-[2rem] md:rounded-[2.5rem] backdrop-blur-md overflow-hidden"
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-white/[0.05] to-transparent pointer-events-none" />
-
-          {/* grid-cols-1 on Mobile | md:grid-cols-4 on Desktop */}
-          <div className="relative z-10 grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-white/5 bg-black/20">
-            <StatItem value={100} label="Active Clients" icon={<Users size={22} />} />
-            <StatItem value={700} label="projects Completed" icon={<Rocket size={22} />} />
-            <StatItem value={12} label="professional Team" icon={<Zap size={22} />} suffix="+" />
-            <StatItem value={7} label="years of Experience" icon={<Globe size={22} />} />
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-white/10 bg-black/20">
+            <StatItem value={100} label="Active Clients" icon={<Users size={24} />} />
+            <StatItem value={700} label="Projects Completed" icon={<Rocket size={24} />} />
+            <StatItem value={12} label="Professional Team" icon={<Zap size={24} />} />
+            <StatItem value={7} label="Years Experience" icon={<Globe size={24} />} />
           </div>
         </motion.div>
 
