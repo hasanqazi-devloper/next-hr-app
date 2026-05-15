@@ -37,30 +37,31 @@ export default function AuditCTA() {
   className="w-full xl:w-auto flex flex-col md:flex-row items-center gap-4 2xl:gap-6"
 >
   {/* EMAIL INPUT - Cleaner & Sleeker */}
-  <div className="relative w-full md:w-[250px] 2xl:w-[380px]">
-    <Mail className="absolute left-6 top-1/2 -translate-y-1/2 w-4 h-4 2xl:w-5 2xl:h-5 text-white-500" />
-    <input
-      type="email"
-      required
-      value={email}
-      onChange={(e) => setEmail(e.target.value)}
-      placeholder="Business Email"
-      className="w-full h-[54px] 2xl:h-[62px] rounded-full bg-white/[0.05] border border-white pl-14 pr-6 text-sm 2xl:text-base text-white placeholder:text-zinc-500 outline-none transition-all focus:border-blue-500/50 focus:bg-white/[0.08] backdrop-blur-md"
-    />
-  </div>
+ {/* EMAIL INPUT */}
+<div className="relative w-full md:w-[250px] 2xl:w-[380px]">
+  <input
+    type="email"
+    required
+    value={email}
+    onChange={(e) => setEmail(e.target.value)}
+    placeholder="Business Email"
+    /* pl-6 lagaya hai taake text/placeholder start se shuru ho */
+    className="w-full h-[54px] 2xl:h-[62px] rounded-full bg-white/[0.05] border border-white/20 pl-6 pr-6 text-sm 2xl:text-base text-white placeholder:text-zinc-500 outline-none transition-all focus:border-blue-500/50 focus:bg-white/[0.08] backdrop-blur-md"
+  />
+</div>
 
-  {/* URL INPUT - Cleaner & Sleeker */}
-  <div className="relative w-full md:w-[250px] 2xl:w-[380px]">
-    <Globe className=" p absolute left-6 top-1/2 -translate-y-1/2 w-4 h-4 2xl:w-5 2xl:h-5 text-white" />
-    <input
-      type="url"
-      required
-      value={url}
-      onChange={(e) => setUrl(e.target.value)}
-      placeholder="Website URL"
-      className="w-full h-[54px] 2xl:h-[62px] rounded-full bg-white/[0.05] border border-white pl-14 pr-6 text-sm 2xl:text-base text-white placeholder:text-zinc-500 outline-none transition-all focus:border-blue-500/50 focus:bg-white/[0.08] backdrop-blur-md"
-    />
-  </div>
+{/* URL INPUT */}
+<div className="relative w-full md:w-[250px] 2xl:w-[380px]">
+  <input
+    type="url"
+    required
+    value={url}
+    onChange={(e) => setUrl(e.target.value)}
+    placeholder="Website URL"
+    /* pl-6 lagaya hai yahan bhi */
+    className="w-full h-[54px] 2xl:h-[62px] rounded-full bg-white/[0.05] border border-white/20 pl-6 pr-6 text-sm 2xl:text-base text-white placeholder:text-zinc-500 outline-none transition-all focus:border-blue-500/50 focus:bg-white/[0.08] backdrop-blur-md"
+  />
+</div>
 
   {/* ⚡ ANALYZE BUTTON - Matches Global Scheme (White to Gradient Fill) */}
   <button

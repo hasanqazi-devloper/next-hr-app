@@ -64,13 +64,13 @@ export default function PricingPage() {
             </div>
 
             <h1 className="text-6xl md:text-8xl 2xl:text-[130px] font-black tracking-tighter leading-none mb-8">
-              Our Pricing <br />
+              Our  {" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
-                Plans.
+               Pricing Plans.
               </span>
             </h1>
 
-            <p className="text-zinc-400 text-lg md:text-xl 2xl:text-3xl font-medium leading-relaxed max-w-2xl 2xl:max-w-4xl">
+            <p className="text-white-400 text-lg md:text-xl 2xl:text-3xl font-medium leading-relaxed max-w-2xl 2xl:max-w-4xl">
               Affordable, transparent pricing plans designed to fit your business needs and help you grow with powerful digital marketing solutions.
             </p>
           </motion.div>

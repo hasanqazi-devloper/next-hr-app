@@ -40,17 +40,16 @@ export default function BlogPage() {
           <div className="max-w-5xl">
             <div className="flex items-center gap-2.5 mb-8 w-fit px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md">
               <Flame size={12} className="text-blue-400 animate-pulse" />
-              <span className="text-[10px] font-black tracking-[4px] text-blue-300 uppercase">Blog & Resources</span>
+              <span className="text-[10px] font-black tracking-[4px] text-blue-300 ">Blog & Resources</span>
             </div>
 
-            <h1 className="text-6xl sm:text-8xl md:text-[100px] font-black tracking-tighter leading-[0.8] text-white mb-8">
-              Our {" "}
-              <span className="bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
+            <h1 className="text-6xl sm:text-8xl md:text-[100px] font-black tracking-tighter leading-[0.8] text-white mb-8 normal-case">
+              OUR {" "}
+              <span className="uppercase bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
                 Insights.
               </span>
             </h1>
-            
-            <p className="text-zinc-400 text-lg md:text-xl lg:text-2xl max-w-2xl leading-relaxed opacity-80 font-normal">
+            <p className="text-white-500 text-lg md:text-xl lg:text-2xl max-w-2xl leading-relaxed opacity-80 font-normal">
               Explore our architectural blueprints and technical deployments engineered to convert traffic into revenue.
             </p>
           </div>
@@ -72,24 +71,32 @@ export default function BlogPage() {
               >
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="group block relative h-full min-h-[380px] bg-[#030712] border border-white/5 rounded-[2rem] p-6 md:p-8 overflow-hidden transition-all duration-500 hover:border-blue-500/20 hover:bg-zinc-950/50 shadow-xl"
+                  className="group block relative h-full bg-[#030712] border border-white/5 rounded-[2.5rem] overflow-hidden transition-all duration-500 hover:border-blue-500/20 hover:bg-zinc-950/50 shadow-xl"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                  
-                  <div className="relative z-10 flex flex-col h-full">
+                  {/* --- CARD IMAGE SECTION --- */}
+                  <div className="relative w-full h-52 overflow-hidden bg-zinc-900">
+                    <Image 
+                      src={post.image || "/placeholder-blog.jpg"} // Har post mein image hona lazmi hy
+                      alt={post.title}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+                    />
+                    {/* Image Overlay Gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#030712] to-transparent opacity-60" />
+                  </div>
+
+                  <div className="relative z-10 flex flex-col h-full p-6 md:p-8 pt-4">
                     <div className="mb-6">
                       <div className="flex items-center gap-2 text-zinc-500 text-[10px] font-bold tracking-[2px] uppercase mb-4 border-b border-white/5 pb-3">
                         <User size={12} className="text-blue-500/70" /> 
                         <span>{post.author}</span>
                       </div>
                       
-                      {/* FIXED: Title size locked with !important override */}
                       <h2 className="!text-xl md:!text-2xl !font-bold !mb-3 !tracking-tight !leading-tight text-white group-hover:text-blue-400 transition-colors !m-0">
                         {post.title}
                       </h2>
                       
-                      {/* FIXED: Excerpt size locked */}
-                      <p className="!text-zinc-500 !text-sm !leading-relaxed line-clamp-4 !font-normal !max-w-full">
+                      <p className="!text-zinc-500 !text-sm !leading-relaxed line-clamp-3 !font-normal !max-w-full">
                         {post.excerpt}
                       </p>
                     </div>
@@ -107,7 +114,6 @@ export default function BlogPage() {
           </AnimatePresence>
         </div>
       </section>
-
     </main>
   );
 }

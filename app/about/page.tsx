@@ -50,7 +50,7 @@ export default function AboutPage() {
               </span>
             </h1>
             
-            <p className="text-zinc-400 text-lg md:text-xl lg:text-2xl max-w-2xl font-medium leading-relaxed opacity-80 mx-auto md:mx-0">
+            <p className="text-white-500 text-lg md:text-xl lg:text-2xl max-w-2xl font-medium leading-relaxed opacity-80 mx-auto md:mx-0">
               We create powerful digital experiences through innovative marketing, creative design, and strategic solutions that help brands grow and succeed.
             </p>
           </div>

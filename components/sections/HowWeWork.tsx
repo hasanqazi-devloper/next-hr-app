@@ -48,9 +48,9 @@ export default function Process() {
         {/* 📋 HEADER - Slimmer margin */}
         <div className="mb-12 md:mb-16 text-center">
           <h2 className="text-4xl md:text-5xl 2xl:text-8xl font-black text-white tracking-tighter leading-tight">
-            Our Working {" "}
+            Our  {" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500">
-              Process
+             Working Process
             </span>
           </h2>
         </div>

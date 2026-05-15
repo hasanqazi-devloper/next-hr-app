@@ -138,7 +138,7 @@ export default function PortfolioPage() {
               </span>
             </h1>
 
-            <p className="text-zinc-400 text-lg md:text-xl lg:text-2xl 2xl:text-3xl max-w-2xl 2xl:max-w-4xl font-medium leading-relaxed opacity-80">
+            <p className="text-white-500 text-lg md:text-xl lg:text-2xl 2xl:text-3xl max-w-2xl 2xl:max-w-4xl font-medium leading-relaxed opacity-80">
               Showcasing our expert digital marketing work, we’ve helped brands grow globally with proven strategies and measurable success results.
             </p>
           </div>

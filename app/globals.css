@@ -24,27 +24,36 @@
     margin: 0; padding: 0;
   }
 
-  /* --- TYPOGRAPHY --- */
+  /* --- TYPOGRAPHY UPDATED FOR LAPTOP & 4K BALANCE --- */
   h1, h2, h3, h4 {
-    @apply font-bold tracking-tight;
-    line-height: 1.1 !important;
+    @apply font-bold tracking-tighter;
+    line-height: 1.05 !important;
     font-style: normal !important;
-    /* Margin sirf bare content headings ke liye, cards ke liye niche component mein handle kiya hai */
   }
 
-  h1 { font-size: clamp(2.2rem, 5.5vw, 88px) !important; @apply uppercase font-black; margin-bottom: 0.5em; }
-  h2 { font-size: clamp(1.8rem, 4.5vw, 60px) !important; margin-bottom: 0.4em; }
+  h1 { 
+    font-size: clamp(2.2rem, 4.5vw, 95px) !important; 
+    @apply uppercase font-black; 
+    margin-bottom: 0.5em; 
+  }
+
+  h2 { 
+    font-size: clamp(1.8rem, 3.8vw, 75px) !important; 
+    margin-bottom: 0.4em; 
+    @apply font-black;
+  }
   
-  /* H3 ko neutral rakha hai taake cards kharab na hon */
-  h3 { font-size: clamp(1.2rem, 2vw, 28px) !important; }
+  h3 { 
+    font-size: clamp(1.1rem, 1.8vw, 32px) !important; 
+  }
 
   p {
-    @apply text-zinc-400 font-medium;
-    font-size: clamp(0.95rem, 0.8vw + 0.35rem, 1.1rem);
-    line-height: 1.7;
-    max-width: 65ch;
+    @apply text-white font-normal;
+    font-size: clamp(0.9rem, 0.7vw + 0.4rem, 1.4rem);
+    line-height: 1.6;
+    max-width: 75ch;
   }
-}
+} /* <--- Bracket fix yahan kiya hai */
 
 @layer components {
   .container-main {
@@ -57,15 +66,24 @@
     padding-bottom: clamp(4rem, 8vh, 8rem);
   }
 
-  /* Advanced Button */
-  .btn-primary {
-    @apply inline-flex items-center justify-center bg-white text-black rounded-full font-bold uppercase tracking-widest transition-all duration-500;
-    padding: 1rem 2.5rem;
-    font-size: 0.8rem;
+  /* --- GLOBAL GRADIENT FILL BUTTON STYLE --- */
+  .btn-premium {
+    @apply relative overflow-hidden inline-flex items-center justify-center bg-white text-black rounded-full font-black uppercase tracking-[2px] transition-all duration-500 active:scale-95 shadow-xl;
+    padding: clamp(0.8rem, 1.5vh, 1.2rem) clamp(1.5rem, 3vw, 2.5rem);
+    font-size: clamp(0.7rem, 0.8vw, 0.9rem);
   }
 
-  .btn-primary:hover {
-    @apply bg-blue-600 text-white shadow-[0_15px_40px_rgba(37,99,235,0.3)] -translate-y-1;
+  .btn-premium::before {
+    content: '';
+    @apply absolute inset-0 w-0 bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-500 ease-out -z-10;
+  }
+
+  .btn-premium:hover::before {
+    @apply w-full;
+  }
+
+  .btn-premium:hover {
+    @apply text-white border-transparent;
   }
 }
 
@@ -73,6 +91,8 @@
   @apply bg-gradient-to-r from-blue-400 via-blue-500 to-cyan-400 bg-clip-text text-transparent;
 }
 
+/* --- CUSTOM SCROLLBAR --- */
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: #030303; }
 ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #3b82f6; }

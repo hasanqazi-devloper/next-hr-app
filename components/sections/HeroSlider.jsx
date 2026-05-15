@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const awardLogos = [
   { src: "/brands/ahref.png", alt: "Ahrefs" },
-  { src: "/brands/googleleads.png", alt: "Google" },
+  // { src: "/brands/googleleads.png", alt: "Google" },
   { src: "/brands/googleads.png", alt: "Google" },
   { src: "/brands/google-rating.png", alt: "Google" },
   { src: "/brands/Google-Partner.png", alt: "Google" },

@@ -223,9 +223,9 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             className="mt-3 text-3xl md:text-5xl 2xl:text-8xl font-black tracking-tighter leading-none text-white "
           >
-            Digital Marketing {" "}
+            Our  {" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">
-              Services
+             Digital Marketing Services
             </span>
           </motion.h2>
         </div>

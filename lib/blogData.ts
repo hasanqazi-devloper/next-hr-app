@@ -1,3 +1,5 @@
+// lib/blogData.ts
+
 export interface Post {
   slug: string;
   title: string;
@@ -5,7 +7,7 @@ export interface Post {
   author: string;
   date: string;
   excerpt: string;
-  size?: string;
+  size?: string; // '?' ka matlab hai ke ye optional hai
   image: string;
   content: string;
 }
