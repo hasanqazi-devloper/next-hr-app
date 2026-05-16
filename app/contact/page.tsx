@@ -8,6 +8,7 @@ import {
   Send,
   ChevronDown,
   MapPin,
+  Flame
 } from "lucide-react";
 import {
   FaFacebook,
@@ -40,46 +41,45 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="bg-[#030303] text-white min-h-screen selection:bg-blue-600  antialiased overflow-x-hidden">
+    <main className="bg-[#030303] text-white min-h-screen selection:bg-blue-600   overflow-x-hidden">
 
       {/* SECTION 1: HERO - Optimized for 4K */}
-{/* SECTION 1: HERO - Fixed for Background Visibility */}
-<section className="relative w-full min-h-[60vh] md:min-h-[80vh] flex items-center overflow-hidden">
-  
-  {/* 1. Background Image - Isay absolute rakha hai taake ye bilkul top se shuru ho */}
-  <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
-    <Image
-      src="/home-hero.jpg"
-      alt="Mesh Grid"
-      fill
-      priority
-      sizes="100vw"
-      className="object-cover object-top opacity-35" 
-    />
-    {/* 2. Gradient Overlay - Isay thora deep kiya hai taake text clear ho */}
-    <div className="absolute inset-0 bg-gradient-to-b from-[#030303]/80 via-[#030712]/40 to-[#030303]" />
-  </div>
 
-  {/* Ambient Glow */}
-  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] md:w-[1200px] h-[500px] bg-blue-600/[0.1] blur-[120px] pointer-events-none" />
+      {/* 1. HERO SECTION */}
+      <section className="relative w-full overflow-hidden">
+        <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+          <Image
+            src="/home-hero.jpg"
+            alt="Mesh Grid"
+            fill
+            priority 
+            sizes="100vw"
+            className="object-cover object-top opacity-35"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#020617]/40 to-[#020617]" />
+        </div>
 
-  {/* 3. Content Container - Padding top ko 'pt-32' rakha hai taake Navbar ke liye jagah banay */}
-  <div className="relative z-10 max-w-7xl 2xl:max-w-[1600px] mx-auto px-6 w-full pt-32 md:pt-40">
-    <div className="max-w-5xl 2xl:max-w-7xl">
-      
-      <h1 className="text-6xl sm:text-8xl md:text-[100px] 2xl:text-[130px] font-black tracking-tighter leading-[0.8] text-white mb-8">
-        Contact
-        <span className="bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text ml-4">
-          US.
-        </span>
-      </h1>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
 
-      <p className="text-zinc-400 text-lg md:text-xl lg:text-2xl 2xl:text-3xl max-w-2xl 2xl:max-w-4xl font-medium leading-relaxed opacity-80">
-        Connect with our digital experts today for innovative solutions, creative strategies, and personalized support to grow your business successfully online.
-      </p>
-    </div>
-  </div>
-</section>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-16 md:pt-40">
+          <div className="max-w-5xl">
+            <div className="flex items-center gap-2.5 mb-8 w-fit px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md">
+              <Flame size={12} className="text-blue-400 animate-pulse" />
+              <span className="text-[10px] font-black tracking-[4px] text-blue-300 ">Lets Connect</span>
+            </div>
+
+            <h1 className="text-6xl sm:text-8xl md:text-[100px] font-black tracking-tighter leading-[0.8] text-white mb-8 normal-case">
+              Contact {" "}
+              <span className="uppercase bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
+                US.
+              </span>
+            </h1>
+            <p className="text-white-500 text-lg md:text-xl lg:text-2xl max-w-2xl leading-relaxed opacity-80 font-normal">
+              Connect with our digital experts today for innovative solutions, creative strategies, and personalized support to grow your business successfully online.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* SECTION 2: FORM & INFO STACK - Scaled for 2K/4K */}
       <section className="relative z-10 max-w-[1400px] 2xl:max-w-[1700px] mx-auto px-6 py-12 pb-24">
@@ -96,6 +96,7 @@ export default function ContactPage() {
                   </label>
                   <input
                     type="text" required placeholder="Enter your full name"
+                    value={form.name}
                     className="w-full bg-white/[0.03] border border-white/10 rounded-2xl p-4 2xl:p-6 outline-none focus:border-blue-500 focus:bg-white/[0.06] transition-all"
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
                   />
@@ -106,6 +107,7 @@ export default function ContactPage() {
                   </label>
                   <input
                     type="email" required placeholder="email@company.com"
+                    value={form.email}
                     className="w-full bg-white/[0.03] border border-white/10 rounded-2xl p-4 2xl:p-6 outline-none focus:border-blue-500 focus:bg-white/[0.06] transition-all"
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
                   />
@@ -118,7 +120,8 @@ export default function ContactPage() {
                     Phone Number <span className="text-red-500">*</span>
                   </label>
                   <input
-                    type="tel" required placeholder="+92 300 0000000"
+                    type="tel" required placeholder=""
+                    value={form.phone}
                     className="w-full bg-white/[0.03] border border-white/10 rounded-2xl p-4 2xl:p-6 outline-none focus:border-blue-500 focus:bg-white/[0.06] transition-all"
                     onChange={(e) => setForm({ ...form, phone: e.target.value })}
                   />
@@ -132,7 +135,7 @@ export default function ContactPage() {
                       required
                       className="w-full bg-zinc-900/50 border border-white/10 rounded-[1.5rem] p-4 2xl:p-6 pr-12 outline-none appearance-none text-zinc-300 cursor-pointer hover:bg-white/[0.05] transition-all"
                       onChange={(e) => setForm({ ...form, service: e.target.value })}
-                      defaultValue=""
+                      value={form.service}
                     >
                       <option value="" disabled className="bg-[#0a0a0a]">Select a service</option>
                       <option value="Website Development" className="bg-[#0a0a0a]">Website Development</option>
@@ -140,6 +143,9 @@ export default function ContactPage() {
                       <option value="Social Media Marketing" className="bg-[#0a0a0a]">Social Media Marketing</option>
                       <option value="Branding" className="bg-[#0a0a0a]">Branding</option>
                       <option value="AI Automation" className="bg-[#0a0a0a]">AI Automation</option>
+                      <option value="Content Creation" className="bg-[#0a0a0a]">Content Creation</option>
+                      <option value="Ecommerce Management" className="bg-[#0a0a0a]">Ecommerce Management</option>
+                      <option value="Google Ads" className="bg-[#0a0a0a]">Google Ads</option>
                     </select>
                     <div className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-zinc-500 transition-all">
                       <ChevronDown size={18} strokeWidth={2.5} />
@@ -154,6 +160,7 @@ export default function ContactPage() {
                 </label>
                 <input
                   type="text" required placeholder="How can we help you?"
+                  value={form.subject}
                   className="w-full bg-white/[0.03] border border-white/10 rounded-2xl p-4 2xl:p-6 outline-none focus:border-blue-500 transition-all"
                   onChange={(e) => setForm({ ...form, subject: e.target.value })}
                 />
@@ -165,14 +172,27 @@ export default function ContactPage() {
                 </label>
                 <textarea
                   required placeholder="Tell us more about your project goals..."
+                  value={form.message}
                   className="w-full bg-white/[0.03] border border-white/10 rounded-2xl p-4 2xl:p-6 outline-none focus:border-blue-500 min-h-[120px] 2xl:min-h-[200px] resize-none transition-all"
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
                 />
               </div>
 
-              <button className="group flex items-center justify-center gap-3 px-12 py-5 2xl:px-16 2xl:py-7 bg-blue-600 text-white font-bold text-xs 2xl:text-sm uppercase tracking-[2px] rounded-full hover:bg-blue-500 transition-all w-full sm:w-auto">
-                Send Proposal Request
-                <Send size={14} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              <button 
+                type="submit"
+                className="group relative overflow-hidden flex items-center justify-center gap-3 px-8 py-4 md:px-10 md:py-5 bg-white text-black font-black text-[10px] tracking-[3px] uppercase rounded-full active:scale-95 transition-all duration-500 w-full sm:w-auto shadow-lg shadow-black/10"
+              >
+                {/* Left-to-Right Expanding Gradient Hover Layer */}
+                <div className="absolute inset-0 w-0 bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-500 ease-out group-hover:w-full" />
+                
+                {/* Text Layer wrapped in z-10 for color shifting */}
+                <span className="relative z-10 group-hover:text-white transition-colors duration-500 flex items-center gap-3">
+                  Send Proposal Request
+                  <Send 
+                    size={14} 
+                    className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-500 text-zinc-700 group-hover:text-white" 
+                  />
+                </span>
               </button>
             </form>
           </div>
@@ -218,7 +238,7 @@ export default function ContactPage() {
             </div>
 
             <div className="p-8 2xl:p-12 bg-gradient-to-br from-blue-600/10 to-transparent border border-blue-500/20 rounded-[2.5rem] flex-1 shadow-xl">
-              <h3 className="text-sm 2xl:text-base font-bold tracking-[3px] text-blue-400 mb-8">Our Global Bases</h3>
+              <h3 className="text-sm 2xl:text-base font-bold tracking-[3px] text-blue-400 mb-8">Locations</h3>
               <div className="space-y-8">
                 {[
                   { city: "Multan, Pakistan", address: "Suite # 19, Block-M, Wapda Town Phase 2, Multan." },

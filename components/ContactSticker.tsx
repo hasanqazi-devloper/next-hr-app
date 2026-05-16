@@ -5,6 +5,34 @@ import { MessageSquare, X, Send } from "lucide-react";
 
 const ContactSticker = () => {
   const [isOpen, setIsOpen] = useState(false);
+  
+  // Form State
+  const [stickerForm, setStickerForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    service: "",
+    message: "",
+  });
+
+  // Email Submit Handler
+  const handleStickerSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const mailtoSubject = encodeURIComponent(`New Project Inquiry: ${stickerForm.service}`);
+    const mailtoBody = encodeURIComponent(
+      `Name: ${stickerForm.name}\n` +
+      `Email: ${stickerForm.email}\n` +
+      `Phone: ${stickerForm.phone}\n` +
+      `Service: ${stickerForm.service}\n\n` +
+      `Details:\n${stickerForm.message}`
+    );
+    
+    window.location.href = `mailto:info@highrisedigital.io?subject=${mailtoSubject}&body=${mailtoBody}`;
+    
+    // Reset and Close
+    setIsOpen(false);
+    setStickerForm({ name: "", email: "", phone: "", service: "", message: "" });
+  };
 
   return (
     <div className="fixed right-0 top-1/2 -translate-y-1/2 z-[999] flex items-end flex-col gap-4">
@@ -31,36 +59,68 @@ const ContactSticker = () => {
             </div>
 
             {/* Form Body */}
-            <form className="p-5 flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
+            <form className="p-5 flex flex-col gap-3" onSubmit={handleStickerSubmit}>
               <div className="space-y-1">
                 <input 
                   type="text" 
+                  required
                   placeholder="Your Name" 
+                  value={stickerForm.name}
+                  onChange={(e) => setStickerForm({ ...stickerForm, name: e.target.value })}
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white outline-none focus:border-blue-500/50 transition-all"
                 />
               </div>
               <div className="space-y-1">
                 <input 
                   type="email" 
+                  required
                   placeholder="Email Address" 
+                  value={stickerForm.email}
+                  onChange={(e) => setStickerForm({ ...stickerForm, email: e.target.value })}
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white outline-none focus:border-blue-500/50 transition-all"
                 />
               </div>
               <div className="space-y-1">
                 <input 
-                  type="phone" 
+                  type="tel" 
+                  required
                   placeholder="Phone Number" 
+                  value={stickerForm.phone}
+                  onChange={(e) => setStickerForm({ ...stickerForm, phone: e.target.value })}
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white outline-none focus:border-blue-500/50 transition-all"
                 />
               </div>
+
+              {/* Added Service Dropdown List with Pure Dark Theme */}
+              <div className="space-y-1">
+                <select 
+                  required
+                  value={stickerForm.service}
+                  onChange={(e) => setStickerForm({ ...stickerForm, service: e.target.value })}
+                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-zinc-400 outline-none focus:border-blue-500/50 cursor-pointer transition-all appearance-none"
+                >
+                  <option value="" disabled className="bg-[#09090b] text-zinc-500">Select Service</option>
+                  <option value="Web Development" className="bg-[#09090b] text-white">Web Development</option>
+                  <option value="SEO Optimization" className="bg-[#09090b] text-white">SEO Optimization</option>
+                  <option value="Social Media Marketing" className="bg-[#09090b] text-white">Social Media Marketing</option>
+                  <option value="AI Automation" className="bg-[#09090b] text-white">AI Automation</option>
+                  <option value="Branding" className="bg-[#09090b] text-white">Branding</option>
+                  <option value="Google Ads" className="bg-[#09090b] text-white">Google Ads</option>
+                  <option value="E-commerce Management" className="bg-[#09090b] text-white">E-commerce Management</option>
+                </select>
+              </div>
+
               <div className="space-y-1">
                 <textarea 
                   placeholder="How can we help?" 
+                  required
                   rows={3}
+                  value={stickerForm.message}
+                  onChange={(e) => setStickerForm({ ...stickerForm, message: e.target.value })}
                   className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white outline-none focus:border-blue-500/50 transition-all resize-none"
                 ></textarea>
               </div>
-              <button className="w-full bg-blue-600 hover:bg-blue-500 text-white py-3 rounded-xl text-[11px] font-bold uppercase tracking-widest flex items-center justify-center gap-2 transition-all group">
+              <button type="submit" className="w-full bg-blue-600 hover:bg-blue-500 text-white py-3 rounded-xl text-[11px] font-bold uppercase tracking-widest flex items-center justify-center gap-2 transition-all group">
                 Send Message
                 <Send size={14} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </button>

@@ -67,16 +67,17 @@ export default function HeroSection() {
             className="lg:col-span-7 space-y-0 text-center lg:text-left flex flex-col items-center lg:items-start"
           >
             {/* 🖥️ Heading: Responsive & Tight */}
-            <h1 className="text-[2.2rem] sm:text-5xl lg:text-[3.2rem] 2xl:text-7xl 3xl:text-8xl font-black leading-[1.05] lg:leading-[1] tracking-tighter text-white">
-              Digital
-              <br />
-              <span className="bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
-                Marketing Agency
-              </span>
-            </h1>
+           {/* 🎯 Important modifier ke sath fully responsive optimized H1 */}
+<h1 className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.8rem] xl:!text-[3rem] 2xl:!text-7xl 3xl:!text-8xl font-black leading-[1.1] lg:leading-[1] tracking-tighter text-white">
+  Digital
+  <br />
+  <span className="bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
+    Marketing Agency
+  </span>
+</h1>
 
             {/* 🖥️ Paragraph: No extra margin, clear and professional */}
-            <p className="mt-2 text-zinc-400 text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0">
+            <p className="mt-2 text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0">
               We are a results-driven digital marketing agency providing SEO, PPC, social media, and web solutions for businesses across the USA, UK, Australia, UAE, and worldwide markets.
             </p>
 
@@ -114,7 +115,7 @@ export default function HeroSection() {
                   <Star key={i} size={10} className="fill-yellow-500 text-yellow-500 2xl:w-4 2xl:h-4" />
                 ))}
               </div>
-              <p className="text-zinc-500 font-bold text-[9px] 2xl:text-xs uppercase tracking-widest">
+              <p className="text-white-500 font-bold text-[9px] 2xl:text-xs uppercase tracking-widest">
                 Trusted by 150+ rapid-scale founders
               </p>
             </div>

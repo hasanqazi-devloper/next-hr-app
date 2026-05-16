@@ -9,7 +9,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 // Components Imports
-import TrustedBy from "@/components/sections/TrustedBy";
+
 import CTA from "@/components/sections/CTA";
 
 // 1. Service List Data (Content Exactly Same)
@@ -60,7 +60,7 @@ export default function ServicesPage() {
               </span>
             </h1>
             
-            <p className="text-zinc-400 text-lg md:text-xl lg:text-2xl max-w-2xl font-medium leading-relaxed opacity-80 mx-auto md:mx-0">
+            <p className="text-white-500 text-lg md:text-xl lg:text-2xl max-w-2xl font-medium leading-relaxed opacity-80 mx-auto md:mx-0">
 We provide SEO, social media marketing, PPC, branding, and web development services to help your business grow and succeed online.            </p>
           </div>
         </div>
@@ -116,7 +116,7 @@ We provide SEO, social media marketing, PPC, branding, and web development servi
             </div>
 
             <div className="space-y-6">
-              <p className="text-zinc-400 text-sm md:text-base 2xl:text-2xl leading-relaxed opacity-90 font-medium border-l-2 border-blue-500/30 pl-6 italic">
+              <p className="text-whwite-500 text-sm md:text-base 2xl:text-2xl leading-relaxed opacity-90 font-medium border-l-2 border-blue-500/30 pl-6 ">
                 High Rise Digital Agency has years of experience helping businesses grow worldwide through modern digital marketing strategies. 
                 <br /><br />
                 We use advanced AI tools and data-driven technologies to deliver better results and smarter solutions. 

@@ -95,7 +95,7 @@ export default function Footer() {
     {[
       { title: "Social Media Marketing", slug: "social-media" },
       { title: "Search Engine Optimization", slug: "seo" },
-      { title: "Creative Content Writing", slug: "content-writing" },
+      { title: "AI Automation", slug: "ai-automation" },
       { title: "Full-Stack Development", slug: "web-dev" },
       { title: "Digital Branding", slug: "branding" },
     ].map((service, idx) => (

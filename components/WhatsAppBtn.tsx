@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 
 const WhatsAppBtn = () => {
-  const phoneNumber = "923001234567"; // 👈 Apna number change karein
+  const phoneNumber = "+923002777587"; // 👈 Apna number change karein
   const message = "Hi High Raise Digital, I'm interested in your services!";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 

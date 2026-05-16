@@ -53,45 +53,53 @@ export default function FAQPage() {
   return (
     <main className="min-h-screen bg-[#020617] text-white overflow-x-hidden selection:bg-blue-600">
       
-      {/* --- HERO SECTION - Optimized for High Res --- */}
-      <section className="relative w-full pt-40 pb-24 px-6 border-b border-white/5 2xl:pt-56 2xl:pb-36">
-        <div className="absolute inset-0 w-full h-full pointer-events-none">
-          <Image
-            src="/home-hero.jpg" 
-            alt="Mesh Grid"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-top opacity-20"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#020617]/60 to-[#020617]" />
-        </div>
+    {/* 1. HERO SECTION (FAQ) */}
+<section className="relative w-full overflow-hidden">
+  {/* Background Image Container with Exact Matching Premium CSS */}
+  <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+    <Image
+      src="/home-hero.jpg"
+      alt="Mesh Grid"
+      fill
+      priority 
+      sizes="100vw"
+      className="object-cover object-top opacity-35" // Standardized opacity for depth consistency
+    />
+    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#020617]/40 to-[#020617]" />
+  </div>
 
-        <div className="relative z-10 max-w-7xl 2xl:max-w-[1600px] mx-auto">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="max-w-4xl 2xl:max-w-6xl"
-          >
-            <div className="flex items-center gap-2.5 mb-8 w-fit px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md">
-              <HelpCircle size={14} className="text-blue-400 animate-pulse" />
-              <span className="text-[10px] 2xl:text-[12px] font-black tracking-[4px] text-blue-300 uppercase">Support Center</span>
-            </div>
+  {/* Ambient Blur Dot to lock the signature aesthetic */}
+  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
 
-            <h1 className="text-6xl md:text-8xl 2xl:text-[130px] font-black tracking-tighter leading-none mb-8">
-              Frequently <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
-                Asked Questions.
-              </span>
-            </h1>
+  {/* Full Sized Padded Content Wrapper - Identical to Insights Page */}
+  <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-16 md:pt-40">
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4 }}
+      className="max-w-5xl"
+    >
+      {/* Badge Container */}
+      <div className="flex items-center gap-2.5 mb-8 w-fit px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md">
+        <HelpCircle size={12} className="text-blue-400 animate-pulse" />
+        <span className="text-[10px] font-black tracking-[4px] text-blue-300 uppercase">Support Center</span>
+      </div>
 
-            <p className="text-zinc-400 text-lg md:text-xl 2xl:text-3xl font-medium leading-relaxed max-w-2xl 2xl:max-w-4xl opacity-80">
-              Everything you need to know about our digital marketing processes, timelines, and how we help your brand reach new heights.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      {/* Main Large Typography Block */}
+      <h1 className="text-6xl sm:text-8xl md:text-[100px] font-black tracking-tighter leading-[0.8] text-white mb-8 normal-case">
+        FREQUENTLY <br />
+        <span className="uppercase bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
+          Asked Questions.
+        </span>
+      </h1>
 
+      {/* Paragraph aligned with the same typography standards */}
+      <p className="text-white-500 text-lg md:text-xl lg:text-2xl max-w-2xl leading-relaxed font-normal opacity-80">
+        Everything you need to know about our digital marketing processes, timelines, and how we help your brand reach new heights.
+      </p>
+    </motion.div>
+  </div>
+</section>
       {/* --- FAQ ACCORDION SECTION - Better Scaling --- */}
       <section className="py-24 px-6 relative 2xl:py-36">
         <div className="max-w-4xl 2xl:max-w-6xl mx-auto">

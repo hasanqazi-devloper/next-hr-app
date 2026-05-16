@@ -24,12 +24,13 @@ export default function AuditCTA() {
       <div className="relative z-10 max-w-7xl 2xl:max-w-[1800px] mx-auto flex flex-col xl:flex-row items-center justify-between gap-12">
         
         {/* 📝 LEFT: HEADING (2xl par size barha diya hai) */}
-        <div className="text-center xl:text-left flex-1">
-          <h2 className="text-3xl md:text-4xl 2xl:text-6xl font-black tracking-tighter leading-tight text-white  ">
-            Get a Free {" "}
-            <span className="text-blue-500">Website Audit</span>
-          </h2>
-        </div>
+      <div className="text-center xl:text-left flex-1">
+  {/* 🎯 Important modifier ke sath chote laptops aur screens ke liye fully optimized h2 */}
+  <h2 className="!text-[2rem] sm:!text-3xl md:!text-3xl lg:!text-4xl 2xl:!text-6xl font-black tracking-tighter leading-tight text-white">
+    Get a Free {" "}
+    <span className="text-blue-500">Website Audit</span>
+  </h2>
+</div>
 
         {/* 📥 RIGHT: FORM (Inputs aur Button ka size badi screen par scale kiya hai) */}
      <form

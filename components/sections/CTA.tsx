@@ -13,15 +13,18 @@ export default function CTA() {
       <div className="relative z-10 max-w-7xl 2xl:max-w-[110rem] mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 2xl:gap-16">
         
         {/* 📝 LEFT SIDE: TEXT CONTENT */}
-        <div className="text-left space-y-3 2xl:space-y-6 flex-1">
-          <h2 className="text-3xl md:text-5xl 2xl:text-7xl font-bolder tracking-tighter leading-[1.1] text-white">
-            Ready To Grow Your <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Brand Online?</span>
-          </h2>
-          <p className="text-white text-base md:text-lg 2xl:text-2xl font-normal max-w-xl 2xl:max-w-3xl leading-relaxed">
-            Transform your ideas into digital reality with our expert marketing and design strategies.
-          </p>
-        </div>
+      <div className="text-left space-y-4 md:space-y-5 2xl:space-y-6 flex-1">
+  {/* 🎯 Heading: Balanced size for small laptops, fixed with ! modifier */}
+  <h2 className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.8rem] xl:!text-[3rem] 2xl:!text-7xl font-black tracking-tighter leading-[1.2] lg:leading-[1.1] text-white">
+    Ready To Grow Your <br />
+    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Brand Online?</span>
+  </h2>
+  
+  {/* ⚪ Paragraph: Crisper look and easily readable font weight */}
+  <p className="text-white text-sm md:text-[15px] 2xl:text-2xl font-medium max-w-xl 2xl:max-w-3xl leading-relaxed opacity-90">
+    Transform your ideas into digital reality with our expert marketing and design strategies.
+  </p>
+</div>
 
         {/* ⚡ RIGHT SIDE: ACTIONS */}
         <div className="flex flex-wrap items-center justify-center lg:justify-end gap-8 md:gap-12 2xl:gap-16 flex-1 w-full lg:w-auto">
