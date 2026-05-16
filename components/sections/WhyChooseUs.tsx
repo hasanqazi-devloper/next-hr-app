@@ -47,10 +47,14 @@ export default function WhyChooseUs() {
               transition={{ duration: 0.8 }}
             >
               {/* 🎯 Adjusted Responsive Heading for Laptop Screen Balance */}
-              <h2 className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.8rem] xl:!text-[3rem] 2xl:!text-7xl font-black text-white tracking-tighter leading-[1.2] lg:leading-[1.1] mb-6 md:mb-8">
-                Why Choose <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">High Rise Digital</span>
-              </h2>
+<h2 className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.8rem] xl:!text-[3rem] 2xl:!text-7xl font-black text-white tracking-tighter leading-[1.2] lg:leading-[1.1] mb-6 md:mb-8">
+  Why Choose 
+  <br />
+  {/* 🎯 FIXED OVERFLOW: Changed to 'block' with 'mt-1 py-1 pr-4' to give the heavy gradient font breathing room so it never clips */}
+  <span className="block mt-1 py-1 pr-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+    High Rise Digital
+  </span>
+</h2>
 
               <div className="space-y-5 text-zinc-300 text-sm md:text-base 2xl:text-lg 4xl:text-2xl font-normal leading-relaxed max-w-xl 2xl:max-w-3xl">
                 <p>

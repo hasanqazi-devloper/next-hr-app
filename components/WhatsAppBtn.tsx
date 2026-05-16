@@ -15,7 +15,7 @@ const WhatsAppBtn = () => {
       animate={{ scale: 1, opacity: 1, y: 0 }}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
-      className="fixed bottom-8 right-8 z-[999] flex items-center justify-center w-16 h-16 bg-[#25D366] rounded-full shadow-[0_10px_24px_rgba(37,211,102,0.5)] group overflow-visible"
+      className="fixed bottom-8 right-8 z-[999] flex items-center justify-center w-16 h-16 bg-[#25D366] rounded-full  group overflow-visible"
     >
       {/* 🟢 Tooltip */}
       <span className="absolute right-20 bg-[#1e1e1e] text-white text-[10px] font-black uppercase tracking-widest px-3 py-2 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none whitespace-nowrap shadow-2xl border border-white/5">

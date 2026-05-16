@@ -13,15 +13,15 @@ export default function CTA() {
       <div className="relative z-10 max-w-7xl 2xl:max-w-[110rem] mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 2xl:gap-16">
         
         {/* 📝 LEFT SIDE: TEXT CONTENT */}
-      <div className="text-left space-y-4 md:space-y-5 2xl:space-y-6 flex-1">
-  {/* 🎯 Heading: Balanced size for small laptops, fixed with ! modifier */}
-  <h2 className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.8rem] xl:!text-[3rem] 2xl:!text-7xl font-black tracking-tighter leading-[1.2] lg:leading-[1.1] text-white">
-    Ready To Grow Your <br />
+    <div className="text-left space-y-3 md:space-y-4 flex-1">
+  {/* 🎯 Small laptops ke liye perfectly optimized dynamic scale size */}
+  <h2 className="!text-[1.6rem] sm:!text-3xl md:!text-3xl lg:!text-[2rem] xl:!text-[2.4rem] 2xl:!text-7xl font-bold tracking-tighter leading-[1.2] lg:leading-[1.1] text-white">
+    Ready To Grow Your {" "}
     <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Brand Online?</span>
   </h2>
   
-  {/* ⚪ Paragraph: Crisper look and easily readable font weight */}
-  <p className="text-white text-sm md:text-[15px] 2xl:text-2xl font-medium max-w-xl 2xl:max-w-3xl leading-relaxed opacity-90">
+  {/* ⚪ Paragraph: Munasib size taake heading ke sath bura na lage */}
+  <p className="text-zinc-300 text-xs md:text-sm lg:text-[14px] 2xl:text-2xl font-normal max-w-xl 2xl:max-w-3xl leading-relaxed opacity-90">
     Transform your ideas into digital reality with our expert marketing and design strategies.
   </p>
 </div>

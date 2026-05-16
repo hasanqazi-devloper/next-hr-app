@@ -40,13 +40,16 @@ export default function AboutPreview() {
           <div className="space-y-6 md:space-y-8 order-1 lg:order-2">
             
             {/* 🛠️ HEADING AS P TAG: Adjusted for perfect scaling */}
-            <div className="space-y-1">
-              <p className="text-white font-black tracking-tighter leading-[1.1] text-2xl md:text-4xl 2xl:text-6xl ">
-                Leading Digital Marketing 
-              </p>
-              <p className="font-black tracking-tighter leading-[1.1] text-2xl md:text-4xl 2xl:text-6xl  text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-               Company Working Globally
-              </p>
+            <div className="">
+            {/* 🎯 Paragraphs converted to H2 with forced utility breakpoints */}
+{/* 🎯 FIX: Combined into a single <h2> with inline-block and mt-2 for perfect normal spacing */}
+<h2 className="!text-[1.8rem] sm:!text-3xl md:!text-4xl lg:!text-4xl 2xl:!text-6xl font-black tracking-tighter leading-[1.15] text-white">
+  Leading Digital Marketing
+  <br />
+  <span className="inline-block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+    Company Working Globally
+  </span>
+</h2>
             </div>
 
             <motion.div

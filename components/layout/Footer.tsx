@@ -12,9 +12,9 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const offices = [
-    { region: "Primary Hub", city: "Pakistan", address: "Suite # 19, Block-M, Wapda Town Phase 2, Multan, Pakistan." },
-    { region: "Tech Operations", city: "United States", address: "3564 AVALON PARK EAST BLVD, STE 1 PMB 2002, ORLANDO, FL 32828" },
-    { region: "Development Core", city: "United Kingdom", address: "Suite 105, Fence House Fence Avenue Macclesfield Cheshire SK10 1LT United Kingdom" }
+    {  city: "Pakistan", address: "Suite # 19, Block-M, Wapda Town Phase 2, Multan, Pakistan." },
+    {  city: "United States", address: "3564 AVALON PARK EAST BLVD, STE 1 PMB 2002, ORLANDO, FL 32828" },
+    {  city: "United Kingdom", address: "Suite 105, Fence House Fence Avenue Macclesfield Cheshire SK10 1LT United Kingdom" }
   ];
 
   const socials = [
@@ -38,17 +38,16 @@ export default function Footer() {
 
           {/* Column 1: Brand & Logo Section */}
           <div className="lg:col-span-3 flex flex-col items-start justify-start">
-            <Link href="/" className="inline-block outline-none p-0 m-0 leading-[0] group">
-              <Image 
-                src="/Hr Logo White.svg" 
-                alt="High Raise Digital Logo"
-                width={800}
-                height={250}
-                priority
-                /* mt-[-25px] aur mb-[-20px] se gap khatam ho jayega */
-                className="h-28 md:h-36 lg:h-48 2xl:h-72 w-auto object-contain origin-left select-none ml-[-12px] mt-[-25px] mb-[-20px] transition-transform duration-500 group-hover:scale-[1.01]" 
-              />
-            </Link>
+           <Link href="/" className="inline-block outline-none p-0 m-0 leading-[0] group">
+    <Image 
+      src="/Hr Logo White.svg" 
+      alt="High Raise Digital Logo"
+      width={800}
+      height={250}
+      priority
+      className="h-24 md:h-32 lg:h-40 2xl:h-60 w-auto object-contain origin-left select-none ml-[-12px] mt-[-20px] mb-[-15px] transition-transform duration-500 group-hover:scale-[1.01]" 
+    />
+  </Link>
 
             {/* Negative margin-top (-mt-2) on P tag for absolute closeness */}
             <p className="text-zinc-400 text-[12px] md:text-sm 2xl:text-2xl font-medium leading-tight max-w-[300px] 2xl:max-w-xl -mt-2">
@@ -70,7 +69,7 @@ export default function Footer() {
 
           {/* Column 2: Quick Links */}
           <div className="lg:col-span-2 pt-6 lg:pt-10 2xl:pt-16 space-y-6 2xl:space-y-12">
-            <h4 className="text-[12px] md:text-[14px] 2xl:text-xl font-black text-white tracking-[3px] uppercase">Quick Links</h4>
+            <h4 className="text-[12px] md:text-[14px] 2xl:text-xl font-black text-white tracking-[3px] ">Quick Links</h4>
             <div className="flex flex-col space-y-3 2xl:space-y-6 text-[11px] md:text-[13px] 2xl:text-xl font-bold">
               {[
                 { name: "Home", href: "/" },
@@ -88,16 +87,16 @@ export default function Footer() {
 
           {/* Column 3: Our Services */}
         <div className="lg:col-span-2 pt-6 lg:pt-10 2xl:pt-16 space-y-6 2xl:space-y-12">
-  <h4 className="text-[12px] md:text-[14px] 2xl:text-xl font-black text-white tracking-[3px] uppercase">
+  <h4 className="text-[12px] md:text-[14px] 2xl:text-xl font-black text-white tracking-[3px] ">
     Expertise
   </h4>
   <div className="flex flex-col space-y-3 2xl:space-y-6 text-[11px] md:text-[13px] 2xl:text-xl font-bold">
     {[
-      { title: "Social Media Marketing", slug: "social-media" },
-      { title: "Search Engine Optimization", slug: "seo" },
-      { title: "AI Automation", slug: "ai-automation" },
       { title: "Full-Stack Development", slug: "web-dev" },
-      { title: "Digital Branding", slug: "branding" },
+      { title: "Search Engine Optimization", slug: "seo" },
+      { title: "Social Media Marketing", slug: "social-media" },
+      { title: "AI Automation", slug: "ai-automation" },
+      { title: "Ecommerce Management", slug: "ecommerce" },
     ].map((service, idx) => (
       <Link 
         key={idx} 
@@ -112,7 +111,7 @@ export default function Footer() {
 
           {/* Column 4: Compliance */}
           <div className="lg:col-span-2 pt-6 lg:pt-10 2xl:pt-16 space-y-6 2xl:space-y-12">
-            <h4 className="text-[12px] md:text-[14px] 2xl:text-xl font-black text-white tracking-[3px] uppercase">Compliance</h4>
+            <h4 className="text-[12px] md:text-[14px] 2xl:text-xl font-black text-white tracking-[3px] ">Compliance</h4>
             <div className="flex flex-col space-y-3 2xl:space-y-6 text-[11px] md:text-[13px] 2xl:text-xl font-bold">
               {[
                 { name: "Privacy Policy", href: "/privacy" },
@@ -130,7 +129,7 @@ export default function Footer() {
 
           {/* Column 5: Inquiries */}
           <div className="lg:col-span-3 pt-6 lg:pt-10 2xl:pt-16 space-y-6 2xl:space-y-12">
-            <h4 className="text-[12px] md:text-[14px] 2xl:text-xl font-black text-white tracking-[3px] uppercase">Inquiries</h4>
+            <h4 className="text-[12px] md:text-[14px] 2xl:text-xl font-black text-white tracking-[3px] ">Inquiries</h4>
             <div className="space-y-4 2xl:space-y-8">
               <a href="mailto:info@highrisedigital.io" className="flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-blue-500/30 transition-all duration-300 group">
                 <Mail size={18} className="text-blue-400 shrink-0 2xl:w-8 2xl:h-8" />
@@ -154,10 +153,7 @@ export default function Footer() {
         <div className="py-12 md:py-16 grid grid-cols-1 sm:grid-cols-3 gap-6 2xl:gap-12 border-b border-white/5">
           {offices.map((office, idx) => (
             <div key={idx} className="p-6 md:p-8 rounded-2xl bg-white/[0.01] border border-white/5 space-y-4 hover:border-blue-500/20 transition-all duration-300 group">
-              <div className="flex items-center gap-3">
-                <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 shadow-[0_0_8px_rgba(59,130,246,0.5)]" />
-                <span className="text-[10px] 2xl:text-lg uppercase tracking-[2px] font-black text-zinc-500 group-hover:text-zinc-300 transition-colors">{office.region}</span>
-              </div>
+           
               <div className="space-y-2">
                 <h5 className="text-base md:text-lg 2xl:text-3xl font-black text-white uppercase tracking-tight">{office.city}</h5>
                 <p className="text-[11px] md:text-xs 2xl:text-xl text-zinc-400 font-normal leading-relaxed">{office.address}</p>
