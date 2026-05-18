@@ -47,7 +47,7 @@ export default function WhyChooseUs() {
     transition={{ duration: 0.8 }}
   >
     {/* 🎯 MATCHED DESIGN SYSTEM: Exact consistent sizes, line-height, and tracking to match core framework */}
-    <h2 className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.2rem] xl:!text-[2.5rem] 2xl:!text-7xl 3xl:!text-8xl font-black text-white tracking-tighter leading-[1.1] lg:leading-[1] mb-6">
+    <h2 className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.5rem] xl:!text-[2.8rem] 2xl:!text-7xl 3xl:!text-8xl font-black text-white tracking-tighter leading-[1.1] lg:leading-[1] mb-6">
       Why Choose
       <br />
       {/* 🎯 FIXED OVERFLOW & BREAKING: Changed to 'block' with precise margins and safety right padding */}

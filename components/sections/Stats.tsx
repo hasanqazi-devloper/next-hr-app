@@ -89,7 +89,7 @@ export default function Stats() {
       <div className="relative z-10 max-w-7xl 2xl:max-w-[100rem] mx-auto px-6">
 
         <div className="text-center mb-6 md:mb-8 2xl:mb-12">
-         <h3 className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.2rem] xl:!text-[2.5rem] 2xl:!text-7xl 3xl:!text-8xl font-black tracking-tighter leading-[1.1] lg:leading-none text-white">
+         <h3 className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.5rem] xl:!text-[2.8rem] 2xl:!text-7xl 3xl:!text-8xl font-black tracking-tighter leading-[1.1] lg:leading-none text-white">
   Some {" "}
   <span className="block sm:inline bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
     Facts About Us

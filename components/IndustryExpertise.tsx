@@ -38,7 +38,7 @@ export default function IndustryExpertise() {
   whileInView={{ opacity: 1, y: 0 }}
   viewport={{ once: true }}
   /* 🎯 MATCHED DESIGN SYSTEM: Identical responsive sizes, line-height, and safety padding cloned from your core heading framework */
-  className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.2rem] xl:!text-[2.5rem] 2xl:!text-7xl 3xl:!text-8xl font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case pr-4 py-1"
+  className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.5rem] xl:!text-[2.8rem] 2xl:!text-7xl 3xl:!text-8xl font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case pr-4 py-1"
 >
   Industries We 
  {" "}

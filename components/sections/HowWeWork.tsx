@@ -48,7 +48,7 @@ export default function Process() {
         {/* 📋 HEADER */}
  <div className="mb-12 md:mb-16 pt-0 text-center">
   {/* 🎯 MATCHED DESIGN SYSTEM: Applied identical fluid sizes, tracking, and leading from the reference design layout */}
-  <h3 className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.8rem] xl:!text-[2.5rem] 2xl:!text-7xl 3xl:!text-8xl font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case">
+  <h3 className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.5rem] xl:!text-[2.8rem] 2xl:!text-7xl 3xl:!text-8xl font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case">
     Our 
   {" "}
     {/* 🎯 MATCHED GRADIENT BLOCK: Made 'block' with precise margins and horizontal breathing space padding to avoid letter cut-offs */}

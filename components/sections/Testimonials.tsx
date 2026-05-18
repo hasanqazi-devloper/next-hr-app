@@ -31,7 +31,7 @@ export default function Testimonials() {
     viewport={{ once: true }}
   >
     {/* 🎯 MATCHED DESIGN SYSTEM: 100% synchronized layout scale, tight letter-tracking and consistent responsive flow */}
-    <h3 className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.2rem] xl:!text-[2.5rem] 2xl:!text-7xl 3xl:!text-8xl font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case">
+    <h3 className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.5rem] xl:!text-[2.8rem] 2xl:!text-7xl 3xl:!text-8xl font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case">
       Verified{" "}
       {/* 🎯 MATCHED GRADIENT BLOCK: Set to 'block' with top margin, exact drop shadow framework, and padding safety bounds */}
       <span className=" mt-2 py-1 pr-4 bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text drop-shadow-[0_0_8px_rgba(0,242,255,0.15)]">

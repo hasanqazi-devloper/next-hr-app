@@ -33,7 +33,7 @@ export default function Services() {
   initial={{ opacity: 0, y: 10 }}
   whileInView={{ opacity: 1, y: 0 }}
   viewport={{ once: true }}
-  className="mt-3 !text-[2rem] sm:!text-4xl md:!text-5xl lg:!text-[2.2rem] xl:!text-[2.2rem] 2xl:!text-[2.5rem] 3xl:!text-[6.5rem] font-black tracking-tighter leading-[1.1] lg:leading-none text-white pr-4 py-1"
+  className="mt-3 !text-[2rem] sm:!text-4xl md:!text-5xl lg:!text-[2.2rem] xl:!text-[2.5rem] 2xl:!text-[2.8rem] 3xl:!text-[6.5rem] font-black tracking-tighter leading-[1.1] lg:leading-none text-white pr-4 py-1"
 >
   Our {" "}
   <span className="block sm:inline bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">

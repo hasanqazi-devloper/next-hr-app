@@ -35,7 +35,7 @@ export default function ClientTrust() {
     whileInView={{ opacity: 1, x: 0 }}
     viewport={{ once: true }}
     /* 🎯 MATCHED DESIGN SYSTEM: Exact consistent fluid sizing scale, tight tracking, and layout line-height */
-    className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.2rem] xl:!text-[2.5rem] 2xl:!text-7xl 3xl:!text-8xl font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case"
+    className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.5rem] xl:!text-[2.8rem] 2xl:!text-7xl 3xl:!text-8xl font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case"
   >
     Our{" "}
     {/* 🎯 MATCHED GRADIENT BLOCK: Set to 'block' with top margin spacing and right padding safety bounds */}
