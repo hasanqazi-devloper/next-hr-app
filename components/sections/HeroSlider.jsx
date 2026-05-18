@@ -23,7 +23,7 @@ export default function HeroSlider() {
   const duplicated = [...awardLogos, ...awardLogos];
 
   return (
-    <section className="relative py-6 md:py-10 2xl:py-12 bg-gradient-to-r from-[#030303] via-[#050a18] to-[#030303] overflow-hidden border-y border-white/5">
+    <section className="relative py-4 md:py-5 2xl:py-6 bg-gradient-to-r from-[#030303] via-[#050a18] to-[#030303] overflow-hidden border-y border-white/5">
       
       {/* Side Fades: Ambient Edge Blending */}
       <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-[#030303] to-transparent z-10 pointer-events-none" />
@@ -51,7 +51,7 @@ export default function HeroSlider() {
                 alt={logo.alt}
                 width={180}
                 height={60}
-                className="h-10 md:h-9 2xl:h-10 w-auto object-contain transition-all duration-500 opacity-80 group-hover/logo:opacity-100 filter brightness-110 group-hover/logo:scale-105"
+                className="h-6 md:h-9 2xl:h-10 w-auto object-contain transition-all duration-500 opacity-80 group-hover/logo:opacity-100 filter brightness-110 group-hover/logo:scale-105"
                 sizes="(max-width: 768px) 120px, (max-width: 1536px) 150px, 180px"
               />
 
