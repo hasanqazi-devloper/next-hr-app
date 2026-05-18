@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { 
-  Globe, 
-  ArrowRight, 
+import {
+  Globe,
+  ArrowRight,
   Sparkles,
   Flame,
   Target,
@@ -18,122 +18,124 @@ import Image from "next/image"; // Next.js Optimization ke liye
 export default function AboutPage() {
   return (
     <main className="bg-[#020617] text-white overflow-hidden selection:bg-blue-600 ">
-      
+
       {/* 1. HERO SECTION (Optimized) */}
-    <section className="relative w-full overflow-hidden bg-[#030712]">
-      <div className="container-wide">
-        
-        {/* Background Image Container with Exact Matching Premium CSS */}
-        <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
-          <Image
-            src="/home-hero.jpg"
-            alt="Mesh Grid"
-            fill
-            sizes="100vw"
-            priority // 🔥 PageSpeed boost: Hero image jaldi load hogi
-            className="object-cover object-top opacity-35"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#030712]/40 to-[#030712]" />
-        </div>
+      <section className="relative w-full overflow-hidden bg-[#030712]">
+        <div className="container-wide">
 
-        {/* Ambient Blur Dot to lock the signature aesthetic */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
+          {/* Background Image Container with Exact Matching Premium CSS */}
+          <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+            <Image
+              src="/home-hero.jpg"
+              alt="Mesh Grid"
+              fill
+              sizes="100vw"
+              priority // 🔥 PageSpeed boost: Hero image jaldi load hogi
+              className="object-cover object-top opacity-35"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#030712]/40 to-[#030712]" />
+          </div>
 
-        {/* Full Sized Padded Content Wrapper */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-16 md:pt-40 text-center md:text-left">
-          <div className="max-w-5xl">
-            
-            {/* Glassmorphism Badge Container */}
-            <div className="flex items-center gap-2.5 mb-8 w-fit px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md mx-auto md:mx-0">
-              <Flame size={12} className="text-blue-400 animate-pulse" />
-              <span className="text-[10px] font-black tracking-[4px] text-blue-300 uppercase">ABOUT HIGH RISE</span>
+          {/* Ambient Blur Dot to lock the signature aesthetic */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
+
+          {/* Full Sized Padded Content Wrapper */}
+          <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-16 md:pt-40 text-center md:text-left">
+            <div className="max-w-5xl">
+
+              {/* Glassmorphism Badge Container */}
+              <div className="flex items-center gap-2.5 mb-8 w-fit px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md mx-auto md:mx-0">
+                <Flame size={12} className="text-blue-400 animate-pulse" />
+                <span className="text-[10px] font-black tracking-[4px] text-blue-300 uppercase">ABOUT HIGH RISE</span>
+              </div>
+
+              {/* Main Typography Block with Tight Line Height */}
+              <h1 className="text-6xl sm:text-8xl md:text-[100px] font-black tracking-tighter leading-[0.8] text-white mb-8">
+                ABOUT {" "}
+                <span className="bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
+                  US.
+                </span>
+              </h1>
+
+              {/* Description Paragraph */}
+              <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
+                We create powerful digital experiences through innovative marketing, creative design, and strategic solutions that help brands grow and succeed.
+              </p>
             </div>
-
-            {/* Main Typography Block with Tight Line Height */}
-            <h1 className="text-6xl sm:text-8xl md:text-[100px] font-black tracking-tighter leading-[0.8] text-white mb-8">
-              ABOUT {" "}
-              <span className="bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
-                US.
-              </span>
-            </h1>
-
-            {/* Description Paragraph */}
-           <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
-  We create powerful digital experiences through innovative marketing, creative design, and strategic solutions that help brands grow and succeed.
-</p>
           </div>
         </div>
-      </div>
-    
+
       </section>
 
       {/* 2. OUR IDENTITY (CLS Fix) */}
       <section className="py-20 px-6 bg-gradient-to-b from-[#020617] to-[#0b1329] relative z-10 border-t border-white/5">
-       <div className="container-wide">
-        <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-blue-500/[0.04] blur-[140px] pointer-events-none" />
+        <div className="container-wide">
+          <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-blue-500/[0.04] blur-[140px] pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="relative group"
-          >
-            <div className="absolute inset-0 bg-blue-500/15 blur-3xl pointer-events-none rounded-[3rem] opacity-50 group-hover:opacity-80 transition-opacity duration-700" />
-            
-            <div className="relative rounded-[2.5rem] overflow-hidden aspect-square bg-slate-950/40 border border-white/10 flex items-center justify-center group transition-all duration-500 hover:border-blue-500/30">
-              <div className="relative w-full h-full p-4 md:p-8">
-                <Image 
-                  src="/About High Rise Digital Agency.jpg" 
-                  alt="High Rise Digital Identity" 
-                  width={600}
-                  height={600}
-                  className="w-full h-full object-cover rounded-[1.5rem] transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-105 h-auto" 
-                />
+          <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative group"
+            >
+              <div className="absolute inset-0 bg-blue-500/15 blur-3xl pointer-events-none rounded-[3rem] opacity-50 group-hover:opacity-80 transition-opacity duration-700" />
+
+              <div className="relative rounded-[2.5rem] overflow-hidden aspect-square bg-slate-950/40 border border-white/10 flex items-center justify-center group transition-all duration-500 hover:border-blue-500/30">
+                <div className="relative w-full h-full p-4 md:p-8">
+                  <Image
+                    src="/About High Rise Digital Agency.jpg"
+                    alt="High Rise Digital Identity"
+                    width={600}
+                    height={600}
+                    className="w-full h-full object-cover rounded-[1.5rem] transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-105 h-auto"
+                  />
+                </div>
+                <div className="absolute inset-0 rounded-[2.5rem] bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
               </div>
-              <div className="absolute inset-0 rounded-[2.5rem] bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
-            </div>
-          </motion.div>
+            </motion.div>
 
-          <motion.div 
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="space-y-8"
-          >
-            <div className="space-y-4">
-              <span className="text-[10px]  tracking-[4px] text-cyan-400 font-extrabold block">OUR IDENTITY</span>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-[0.9]">
-                WHO WE <span className="mt-2 py-1 pr-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">ARE</span>
-              </h2>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="space-y-8"
+            >
+              <div className="space-y-4">
+                <span className="text-[10px]  tracking-[4px] text-cyan-400 font-extrabold block">OUR IDENTITY</span>
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-[0.9]">
+                  WHO WE <span className="mt-2 py-1 pr-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">ARE</span>
+                </h2>
+              </div>
 
-            <p className="text-zinc-200 text-lg md:text-xl leading-relaxed font-medium">
-              High Rise Digital was founded in 2019. We are a growing <span className="text-blue-400">AI-enabled digital solutions</span> company powered by 12+ skilled professionals.
-            </p>
+          <p className="text-white text-lg md:text-xl 2xl:text-2xl 3xl:text-3xl leading-relaxed font-semibold antialiased tracking-wide">
+  High Rise Digital was founded in 2019. We are a growing <span className="text-blue-400">AI-enabled digital solutions</span> company powered by 12+ skilled professionals.
+</p>
 
-           <div className="space-y-5 lg:space-y-6 text-zinc-400 font-medium leading-relaxed opacity-90 w-full">
-  
+<div className="space-y-5 lg:space-y-6 text-white font-medium leading-relaxed opacity-90 w-full mt-6">
+
   {/* Paragraph 1 */}
-  <p className="border-l-2 border-blue-500/30 pl-4 text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0">
+  <p className="border-l-2 border-blue-500/30 pl-4 text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl max-w-xl lg:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto lg:mx-0 antialiased tracking-wide">
     Over the years, we have successfully worked with clients from the USA, UK, Australia, UAE, and many other countries, helping businesses strengthen their online presence.
   </p>
-  
+
   {/* Paragraph 2 */}
-  <p className="border-l-2 border-white/10 pl-4 text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0">
-    With experience across multiple industries, we have completed <span className="text-white font-bold">700+ projects</span>, delivering creative designs, SEO, and effective marketing strategies.
+  <p className="border-l-2 border-white/10 pl-4 text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl max-w-xl lg:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto lg:mx-0 antialiased tracking-wide">
+    With experience across multiple industries, we have completed <span className="text-blue-400 font-black">700+ projects</span>, delivering creative designs, SEO, and effective marketing strategies.
   </p>
-  
+
   {/* Paragraph 3 */}
-  <p className="border-l-2 border-white/10 pl-4 text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0">
+  <p className="border-l-2 border-white/10 pl-4 text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl max-w-xl lg:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto lg:mx-0 antialiased tracking-wide">
     Our focus is simple — providing quality work, building long-term relationships, and helping brands grow with confidence.
   </p>
 
-</div>
-          </motion.div>
-        </div>
+
+
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -141,7 +143,7 @@ export default function AboutPage() {
       <section className="py-32 bg-[#02040a] px-6 relative border-y border-white/[0.03]">
 
         <div className="max-w-7xl mx-auto relative z-10">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -172,9 +174,9 @@ export default function AboutPage() {
                   {val.icon}
                 </div>
                 <h3 className="text-xl font-bold mb-4">{val.title}</h3>
-<p className="text-white text-sm md:text-base lg:text-[15px] 2xl:text-base 3xl:text-lg font-medium leading-relaxed max-w-xl 2xl:max-w-2xl opacity-90 antialiased">
-  {val.desc}
-</p>            </motion.div>
+                <p className="text-white text-sm md:text-base lg:text-[15px] 2xl:text-base 3xl:text-lg font-medium leading-relaxed max-w-xl 2xl:max-w-2xl opacity-90 antialiased">
+                  {val.desc}
+                </p>            </motion.div>
             ))}
           </div>
         </div>
@@ -196,7 +198,7 @@ export default function AboutPage() {
               { step: "04", title: "Launch", desc: "Optimization and performance marketing." },
               { step: "05", title: "Growth", desc: "Monitoring and long-term support." }
             ].map((proc, idx) => (
-              <motion.div 
+              <motion.div
                 key={idx}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -206,9 +208,9 @@ export default function AboutPage() {
               >
                 <span className="text-blue-500 font-black text-xl mb-4 block opacity-50">{proc.step}</span>
                 <h3 className="text-lg font-bold mb-2">{proc.title}</h3>
-<p className="text-white text-xs leading-relaxed antialiased">
-  {proc.desc}
-</p>              </motion.div>
+                <p className="text-white text-xs leading-relaxed antialiased">
+                  {proc.desc}
+                </p>              </motion.div>
             ))}
           </div>
         </div>
@@ -226,12 +228,12 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              { icon: <Users size={24}/>, title: "Experienced Team", desc: "Our skilled professionals bring creativity, expertise, and industry knowledge to deliver high-quality digital solutions." },
-              { icon: <Globe size={24}/>, title: "Global Client Network", desc: "We have successfully worked with clients from the USA, UK, Australia, UAE, and many other countries worldwide." },
-              { icon: <Award size={24}/>, title: "Proven Track Record", desc: "With 700+ completed projects across multiple industries, we deliver reliable results that help businesses grow online." },
-              { icon: <CheckCircle2 size={24}/>, title: "Client-Focused Approach", desc: "We prioritize clear communication, personalized strategies, and long-term partnerships to ensure success." }
+              { icon: <Users size={24} />, title: "Experienced Team", desc: "Our skilled professionals bring creativity, expertise, and industry knowledge to deliver high-quality digital solutions." },
+              { icon: <Globe size={24} />, title: "Global Client Network", desc: "We have successfully worked with clients from the USA, UK, Australia, UAE, and many other countries worldwide." },
+              { icon: <Award size={24} />, title: "Proven Track Record", desc: "With 700+ completed projects across multiple industries, we deliver reliable results that help businesses grow online." },
+              { icon: <CheckCircle2 size={24} />, title: "Client-Focused Approach", desc: "We prioritize clear communication, personalized strategies, and long-term partnerships to ensure success." }
             ].map((reason, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 whileHover={{ x: 10 }}
                 className="flex gap-6 p-8 rounded-[2.5rem] bg-zinc-950 border border-white/5 hover:border-blue-500/20 transition-all"
@@ -239,16 +241,16 @@ export default function AboutPage() {
                 <div className="text-blue-400 shrink-0">{reason.icon}</div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">{reason.title}</h3>
-<p className="text-white text-sm md:text-base lg:text-[15px] 2xl:text-base 3xl:text-lg font-medium leading-relaxed max-w-xl 2xl:max-w-2xl opacity-90 antialiased">
-  {reason.desc}
-</p>            </div>
+                  <p className="text-white text-sm md:text-base lg:text-[15px] 2xl:text-base 3xl:text-lg font-medium leading-relaxed max-w-xl 2xl:max-w-2xl opacity-90 antialiased">
+                    {reason.desc}
+                  </p>            </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-    
+
 
     </main>
   );
