@@ -53,7 +53,7 @@ export default function ServicesPage() {
 
               <h1 className="text-[3rem]  md:text-[3.2rem] lg:text-[3.8rem] font-black tracking-tighter leading-[0.8] text-white mb-8">
                 Our {" "}
-                <span className="bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
+                <span className="inline-block mt-2 bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
                   Services.
                 </span>
               </h1>
@@ -179,15 +179,11 @@ export default function ServicesPage() {
                     {service.icon}
                   </div>
                   {/* <span className="text-zinc-600 font-black text-xs 2xl:text-base uppercase tracking-widest">{service.id} // SERVICE</span> */}
-                  <h3 className="text-3xl 2xl:text-5xl font-black   mt-4 group-hover:text-blue-400 transition-colors leading-tight">
+                  <h4 className="text-[2.2rem] md:text-[2rem] lg:text-[2.5rem]  font-bold   mt-4 group-hover:text-blue-400 transition-colors leading-tight">
                     {service.title}
-                  </h3>
+                  </h4>
                 </div>
-                <div className="mt-12 flex justify-between items-end">
-                  <p className="text-white text-sm 2xl:text-xl max-w-[150px] 2xl:max-w-[250px] font-medium antialiased">
-                    Production-grade scale & precision.
-                  </p>                  <ArrowUpRight className="text-white-700 group-hover:text-blue-500 transition-colors 2xl:w-8 2xl:h-8" />
-                </div>
+              
               </motion.div>
             </Link>
           ))}

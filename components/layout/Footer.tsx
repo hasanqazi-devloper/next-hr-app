@@ -177,10 +177,10 @@ export default function Footer() {
 
         {/* 🔒 BOTTOM BAR */}
         <div className="py-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-[16px] 2xl:text-lg text-white-500 font-semibold uppercase tracking-wider">
+          <p className="text-[10px] 2xl:text-lg text-white-500 font-semibold uppercase tracking-wider">
             © {currentYear} High Raise Digital LLC.
           </p>
-          <p className="text-[16px] 2xl:text-base tracking-[3px] text-white-600 font-bold uppercase">
+          <p className="text-[10px] 2xl:text-base tracking-[3px] text-white-600 font-bold uppercase">
             Built for growth • Designed for dominance
           </p>
         </div>
