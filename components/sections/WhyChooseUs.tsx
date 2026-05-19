@@ -61,7 +61,7 @@ export default function WhyChooseUs() {
 <div className="space-y-8 max-w-xl 2xl:max-w-3xl">
   
   {/* Paragraph 1 */}
-  <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+  <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
     Choosing High Rise Digital means working with a team that is fully committed to your success.
   </p>
 
@@ -69,12 +69,12 @@ export default function WhyChooseUs() {
   <div className="space-y-6 border-l-2 border-blue-500/50 pl-5 mt-6">
     
     {/* Paragraph 2 inside Border Block */}
-    <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+    <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
       Our experts use modern tools, creative thinking, and proven methods to deliver meaningful results. We value clear communication and timely delivery.
     </p>
 
     {/* Paragraph 3 inside Border Block */}
-    <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+    <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
       Every project is handled with care and attention, ensuring your brand gets the visibility, trust, and growth it deserves.
     </p>
   </div>

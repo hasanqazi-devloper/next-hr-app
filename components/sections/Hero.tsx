@@ -44,7 +44,7 @@ export default function HeroSection() {
   </h1>
 
   {/* 🖥️ Paragraph: Adjusted for a clean hierarchy */}
-  <p className="mt-4 text-white-500 text-xs sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed max-w-xl 2xl:max-w-2xl mx-auto lg:mx-0">
+  <p className="mt-4 text-white-500 text-[16px] sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed max-w-xl 2xl:max-w-2xl mx-auto lg:mx-0">
     We are a results-driven digital marketing agency providing SEO, PPC, social media, and web solutions for businesses across the USA, UK, Australia, UAE, and worldwide markets.
   </p>
 
