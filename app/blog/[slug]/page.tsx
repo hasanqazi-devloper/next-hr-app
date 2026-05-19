@@ -93,7 +93,7 @@ export default async function BlogDetail({ params }: PageProps) {
               <h2 className="!text-2xl !font-black text-white tracking-tight pt-4 uppercase !mb-4">
                 Strategy Overview
               </h2>
-<p className="text-zinc-300 text-base md:text-lg lg:text-[19px] 2xl:text-xl 3xl:text-2xl font-normal leading-relaxed max-w-3xl 2xl:max-w-4xl mx-auto lg:mx-0 antialiased selection:bg-blue-500 selection:text-white">
+<p className="text-white-300 text-[16px] md:text-lg lg:text-[19px] 2xl:text-xl 3xl:text-2xl font-normal leading-relaxed max-w-3xl 2xl:max-w-4xl mx-auto lg:mx-0 antialiased selection:bg-blue-500 selection:text-white">
   {post.content}
 </p>
               {/* Callout Box */}
@@ -118,7 +118,7 @@ export default async function BlogDetail({ params }: PageProps) {
           <div className="p-8 rounded-[2.5rem] bg-gradient-to-br from-blue-600 to-blue-900 border border-white/10 shadow-2xl relative overflow-hidden text-left">
             <Bookmark className="text-white/40 mb-4" size={24} />
             <h3 className="!text-xl !font-black text-white tracking-tight leading-tight mb-2 uppercase !m-0">Stay Updated</h3>
-<p className="text-white/65 text-[11px] sm:text-[12px] lg:text-[13px] 2xl:text-sm leading-relaxed mb-6 font-normal tracking-wide antialiased">
+<p className="text-white/65 text-[16px] sm:text-[12px] lg:text-[13px] 2xl:text-sm leading-relaxed mb-6 font-normal tracking-wide antialiased">
   Get our latest digital frameworks directly.
 </p>            <div className="space-y-3 relative z-10">
               <input type="email" placeholder="email@agency.com" className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-xs text-white placeholder-white/40 outline-none" />

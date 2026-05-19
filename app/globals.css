@@ -59,7 +59,13 @@ p {
   max-width: 70ch;
 }
 }
-
+@layer utilities {
+  .text-sm {
+    font-size: 16px !important;    /* Size ko 16px kiya */
+    color: #ffffff !important;     /* Color ko permanently white kiya */
+    line-height: 1.5;              /* Spacing ko adjust kiya */
+  }
+}
 @layer components {
   .container-main {
     @apply w-full mx-auto px-6 md:px-12;

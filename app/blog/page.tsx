@@ -59,7 +59,7 @@ export default function BlogPage() {
             </h1>
 
             {/* Description Paragraph */}
-           <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
+           <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
   Explore our architectural blueprints and technical deployments engineered to convert traffic into revenue.
 </p>
           </div>
@@ -107,7 +107,7 @@ export default function BlogPage() {
                   {post.title}
                 </h3>
                 
-                <p className="text-white/90 text-xs md:text-sm lg:text-[14px] 2xl:text-base font-normal leading-relaxed line-clamp-3 max-w-full antialiased">
+                <p className="text-white/90 text-[16px] md:text-[16px] lg:text-[14px] 2xl:text-base font-normal leading-relaxed line-clamp-3 max-w-full antialiased">
                   {post.excerpt}
                 </p>
               </div>

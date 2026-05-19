@@ -51,7 +51,7 @@ export default function Footer() {
               />
             </Link>
 
-            <p className="text-white text-[13px] md:text-sm 2xl:text-xl font-medium leading-relaxed max-w-[300px] 2xl:max-w-xl -mt-2">
+            <p className="text-white text-[16px] md:text-sm 2xl:text-xl font-medium leading-relaxed max-w-[300px] 2xl:max-w-xl -mt-2">
               Let’s discuss your goals and create a powerful strategy to boost your business growth online.
             </p>
 
@@ -141,15 +141,15 @@ export default function Footer() {
       <a href="mailto:info@highrisedigital.io" className="flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-blue-500/30 transition-all duration-300 group">
         <Mail size={18} className="text-blue-400 shrink-0 2xl:w-8 2xl:h-8" />
         <div className="space-y-1">
-          <p className="text-[12px] 2xl:text-[13px] text-zinc-500 uppercase font-black tracking-wider">Drop an email</p>
-          <p className="text-[15px] md:text-[16px] lg:text-[15px] xl:text-[17px] 2xl:text-xl font-bold text-zinc-300 group-hover:text-white transition-colors break-all">info@highrisedigital.io</p>
+          <p className="text-[16px] 2xl:text-[13px] text-white-500 uppercase font-black tracking-wider">Drop an email</p>
+          <p className="text-[16px] md:text-[16px] lg:text-[15px] xl:text-[17px] 2xl:text-xl font-bold text-white-300 group-hover:text-white transition-colors break-all">info@highrisedigital.io</p>
         </div>
       </a>
       <a href="tel:+923002777587" className="flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-all duration-300 group">
         <Phone size={18} className="text-cyan-400 shrink-0 2xl:w-8 2xl:h-8" />
         <div className="space-y-1">
-          <p className="text-[12px] 2xl:text-[13px] text-zinc-500 uppercase font-black tracking-wider">Corporate Support</p>
-          <p className="text-[15px] md:text-[16px] lg:text-[15px] xl:text-[17px] 2xl:text-xl font-bold text-zinc-300 group-hover:text-white transition-colors">+92 300 2777587</p>
+          <p className="text-[16px] 2xl:text-[13px] text-white-500 uppercase font-black tracking-wider">Corporate Support</p>
+          <p className="text-[16px] md:text-[16px] lg:text-[15px] xl:text-[17px] 2xl:text-xl font-bold text-white-300 group-hover:text-white transition-colors">+92 300 2777587</p>
         </div>
       </a>
     </div>
@@ -167,7 +167,7 @@ export default function Footer() {
                 <span className="block text-sm md:text-base 2xl:text-xl font-black text-white tracking-tight uppercase">
                   {office.city}
                 </span>
-                <p className="text-[13px] md:text-[14px] 2xl:text-[15px] text-white-400 font-normal leading-relaxed">
+                <p className="text-[16px] md:text-[14px] 2xl:text-[15px] text-white-400 font-normal leading-relaxed">
                   {office.address}
                 </p>
               </div>
@@ -177,10 +177,10 @@ export default function Footer() {
 
         {/* 🔒 BOTTOM BAR */}
         <div className="py-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-[10px] 2xl:text-lg text-white-500 font-semibold uppercase tracking-wider">
+          <p className="text-[16px] 2xl:text-lg text-white-500 font-semibold uppercase tracking-wider">
             © {currentYear} High Raise Digital LLC.
           </p>
-          <p className="text-[8px] 2xl:text-base tracking-[3px] text-white-600 font-bold uppercase">
+          <p className="text-[16px] 2xl:text-base tracking-[3px] text-white-600 font-bold uppercase">
             Built for growth • Designed for dominance
           </p>
         </div>

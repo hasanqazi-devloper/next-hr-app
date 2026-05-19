@@ -69,7 +69,7 @@ export default function BrandingPage() {
         </h1>
 
         {/* Description Paragraph - Aligned perfectly with global layout standards */}
-      <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
+      <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
   Scale your workflow with intelligent digital deployments, automated workflows, and smart integrations engineered to supercharge performance.
 </p>
       </div>
@@ -97,7 +97,7 @@ export default function BrandingPage() {
                 Identity <br /> <span className="text-blue-600">& Emotion.</span>
               </h2>
             </div>
-          <p className="text-zinc-500 font-bold text-lg md:text-xl lg:text-[22px] 2xl:text-2xl 3xl:text-3xl italic leading-snug max-w-xs md:max-w-md 2xl:max-w-lg border-r-2 md:border-r-0 md:border-l-2 border-blue-600 pr-6 md:pr-0 md:pl-6 text-right md:text-left antialiased">
+          <p className="text-zinc-500 font-bold text-[16px] md:text-xl lg:text-[22px] 2xl:text-2xl 3xl:text-3xl italic leading-snug max-w-xs md:max-w-md 2xl:max-w-lg border-r-2 md:border-r-0 md:border-l-2 border-blue-600 pr-6 md:pr-0 md:pl-6 text-right md:text-left antialiased">
   "We build visual legacies that command market authority."
 </p>
           </div>
@@ -124,7 +124,7 @@ export default function BrandingPage() {
                   <h3 className="text-2xl 2xl:text-4xl font-black uppercase italic mb-3 leading-tight group-hover:text-blue-400 transition-colors tracking-tight">
                     {s.title}
                   </h3>
-               <p className="text-zinc-500 group-hover:text-zinc-300 text-sm md:text-base lg:text-[15px] 2xl:text-base 3xl:text-lg font-medium leading-relaxed max-w-xl 2xl:max-w-2xl opacity-90 transition-colors duration-300 antialiased">
+               <p className="text-zinc-500 group-hover:text-zinc-300 text-[16px] md:text-base lg:text-[15px] 2xl:text-base 3xl:text-lg font-medium leading-relaxed max-w-xl 2xl:max-w-2xl opacity-90 transition-colors duration-300 antialiased">
   {s.desc}
 </p>
                   <div className="mt-8 flex items-center gap-2 text-[8px] 2xl:text-xs font-black uppercase tracking-widest text-zinc-700 group-hover:text-blue-400/60 transition-colors">
@@ -156,7 +156,7 @@ export default function BrandingPage() {
             <h2 className="text-5xl md:text-8xl 2xl:text-[130px] font-black leading-[0.85] tracking-tighter text-white mb-6 uppercase italic">
               The Identity <br /> <span className="text-blue-600">Loop.</span>
             </h2>
-         <p className="text-zinc-500 font-bold text-lg md:text-xl lg:text-[22px] 2xl:text-3xl 3xl:text-4xl italic leading-tight max-w-2xl 2xl:max-w-4xl mx-auto antialiased tracking-wide">
+         <p className="text-zinc-500 font-bold text-[16px] md:text-xl lg:text-[22px] 2xl:text-3xl 3xl:text-4xl italic leading-tight max-w-2xl 2xl:max-w-4xl mx-auto antialiased tracking-wide">
   "Designing psychological triggers that transform a business into a cult-followed brand."
 </p>
           </div>
@@ -185,12 +185,12 @@ export default function BrandingPage() {
                <div className="bg-blue-600/[0.03] border border-blue-600/10 rounded-xl p-3 lg:p-4 2xl:p-5 group-hover:bg-blue-600/10 transition-colors duration-300">
   
   {/* Tactical DNA Label */}
-  <p className="text-[9px] md:text-[10px] lg:text-[11px] 2xl:text-xs font-black text-blue-500 uppercase tracking-widest mb-1 italic antialiased leading-none">
+  <p className="text-[16px] md:text-[10px] lg:text-[11px] 2xl:text-xs font-black text-blue-500 uppercase tracking-widest mb-1 italic antialiased leading-none">
     Tactical DNA:
   </p>
   
   {/* Project Keywords Dynamic Text */}
-  <p className="text-[11px] sm:text-xs md:text-sm lg:text-[15px] 2xl:text-base 3xl:text-lg text-zinc-400 font-bold leading-relaxed antialiased">
+  <p className="text-[16px] sm:text-xs md:text-sm lg:text-[15px] 2xl:text-base 3xl:text-lg text-zinc-400 font-bold leading-relaxed antialiased">
     {p.keywords}
   </p>
   

@@ -96,7 +96,7 @@ export default function FAQPage() {
         </h1>
 
         {/* Paragraph aligned with the same typography standards (Centered on mobile) */}
-     <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
+     <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
   Everything you need to know about our digital marketing processes, timelines, and how we help your brand reach new heights.
 </p>
       </motion.div>
@@ -153,7 +153,7 @@ export default function FAQPage() {
           {/* Need More Help? - Scaling for 4K */}
           <div className="mt-20 2xl:mt-32 text-center p-12 2xl:p-20 rounded-[3rem] border border-white/5 bg-white/[0.01]">
             <h3 className="text-2xl md:text-3xl 2xl:text-5xl font-bold mb-4">Still have questions?</h3>
-<p className="text-zinc-500 text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mb-6 md:mb-8 max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 antialiased">
+<p className="text-white-500 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mb-6 md:mb-8 max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 antialiased">
   Can't find the answer you're looking for? Please chat with our friendly team.
 </p>            <button className="px-10 py-4 2xl:px-16 2xl:py-6 bg-blue-600 hover:bg-blue-500 text-white font-black rounded-full transition-all text-sm 2xl:text-xl shadow-[0_0_30px_rgba(37,99,235,0.2)]">
               Get in Touch

@@ -175,7 +175,7 @@ export default function SEOPage() {
               </h1>
 
               {/* Description Paragraph */}
-              <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
+              <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
                 We help your business rank higher on Google, drive targeted search traffic, and turn everyday clicks into paying customers with smart SEO strategies that deliver real growth.
               </p>
             </div>
@@ -198,16 +198,16 @@ export default function SEOPage() {
             </h3>
 
             <div className="space-y-5 lg:space-y-6 text-white font-medium leading-relaxed w-full">
-              <p className="text-white text-xs sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
+              <p className="text-white text-[16px] sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
                 Getting traffic to your website is only half the battle; the real goal is turning those clicks into actual buyers. Our tailored search engine optimization focuses on attracting high-intent visitors who are actively looking for the exact services or products you offer.
               </p>
 
-              <p className="text-white text-xs sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
+              <p className="text-white text-[16px] sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
                 By targeting commercial keywords, fixing technical site errors, and creating helpful content that builds genuine topical authority, we streamline the path from a simple Google search straight to your checkout page.
               </p>
 
               <div className="border-l-2 border-blue-500 pl-5 mt-6">
-                <p className="text-white text-xs sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
+                <p className="text-white text-[16px] sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
                   We don’t just chase vanity ranking numbers that look good on paper. Instead, we optimize your entire digital presence to build user trust, capture qualified leads, and consistently grow your bottom line through sustainable, long-term organic visibility.
                 </p>
               </div>
@@ -281,7 +281,7 @@ export default function SEOPage() {
                   <h3 className="text-xl 2xl:text-2xl font-black uppercase tracking-wider text-white-500 mb-4 transition-colors">
                     {s.title}
                   </h3>
-                  <p className="text-white text-xs sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed antialiased tracking-wide opacity-90 transition-colors">
+                  <p className="text-white text-[16px] sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed antialiased tracking-wide opacity-90 transition-colors">
                     {s.desc}
                   </p>
                   <div className="mt-8 flex items-center gap-2 text-[8px] 2xl:text-xs font-black uppercase tracking-widest text-zinc-600 group-hover:text-blue-400/60 transition-colors">
@@ -313,7 +313,7 @@ export default function SEOPage() {
               <h3 className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.5rem] xl:!text-[3rem] font-black tracking-tighter leading-[1.1] lg:leading-none text-white">
                 Our {" "}<span className="  sm:inline bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">SEO Results</span>
               </h3>
-              <p className=" mt-2 text-white text-xs sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed antialiased tracking-wide opacity-90 transition-colors">
+              <p className=" mt-2 text-white text-[16px] sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed antialiased tracking-wide opacity-90 transition-colors">
                 We deliver clear, measurable growth by boosting your Google rankings, increasing organic traffic, and driving real revenue to your business.
               </p>
             </motion.div>
@@ -466,7 +466,7 @@ export default function SEOPage() {
                             </h3>
                           </div>
 
-                          <p className="text-white text-xs sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed antialiased tracking-wide opacity-90 group-hover:opacity-100 transition-all duration-300">
+                          <p className="text-white text-[16px] sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed antialiased tracking-wide opacity-90 group-hover:opacity-100 transition-all duration-300">
                             {step.desc}
                           </p>
                         </div>
@@ -522,19 +522,19 @@ export default function SEOPage() {
 
                 <div className="space-y-8 max-w-xl 2xl:max-w-3xl">
                   {/* Paragraph 1 */}
-                  <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+                  <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
                     We design high-ranking websites that don't just look great—they actively grow your business online. By blending clean design with advanced SEO strategies, we build fast, mobile-friendly sites that catch Google's attention and turn everyday search traffic into loyal customers.
                   </p>
 
                   {/* Border section left panel */}
                   <div className="space-y-6 border-l-2 border-blue-500/50 pl-5 mt-6">
                     {/* Paragraph 2 */}
-                    <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+                    <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
                       Our team works side-by-side with you to understand your market, target high-volume keywords, and deliver an online presence that perfectly fits your brand.
                     </p>
 
                     {/* Paragraph 3 */}
-                    <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+                    <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
                       From the first line of code to ongoing optimization, we offer complete digital solutions backed by clear communication, fair pricing, and reliable results to help your business outrank the competition.
                     </p>
                   </div>
@@ -572,7 +572,7 @@ export default function SEOPage() {
                       </div>
 
                       {/* Card Description */}
-                      <p className="text-white text-sm md:text-base lg:text-[16px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-white text-[16px] md:text-base lg:text-[16px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
                         {item.desc}
                       </p>
                     </div>

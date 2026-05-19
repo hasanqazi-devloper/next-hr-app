@@ -146,7 +146,7 @@ export default function PortfolioPage() {
               </h1>
 
               {/* Description Paragraph centered on mobile */}
-              <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
+              <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
                 Showcasing our expert digital marketing work, we’ve helped brands grow globally with proven strategies and measurable success results.
               </p>
             </div>
@@ -219,7 +219,7 @@ export default function PortfolioPage() {
                   {item.title}
                 </h3>
                 
-                <p className="text-white text-xs sm:text-[13px] lg:text-sm 2xl:text-sm 3xl:text-base font-medium leading-relaxed line-clamp-2 max-w-full antialiased opacity-90">
+                <p className="text-white text-[16px] sm:text-[13px] lg:text-sm 2xl:text-sm 3xl:text-base font-medium leading-relaxed line-clamp-2 max-w-full antialiased opacity-90">
                   {item.tagline}
                 </p>
               </div>

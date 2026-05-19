@@ -59,7 +59,7 @@ export default function AboutPage() {
               </h1>
 
               {/* Description Paragraph */}
-              <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 ">
+              <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 ">
                 We create powerful digital experiences through innovative marketing, creative design, and strategic solutions that help brands grow and succeed.
               </p>
             </div>
@@ -117,24 +117,24 @@ export default function AboutPage() {
   </div>
 
   {/* Main Lead Paragraph */}
-  <p className="text-white text-xs sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-semibold leading-relaxed antialiased tracking-wide opacity-90">
+  <p className="text-white text-[16px] sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-semibold leading-relaxed antialiased tracking-wide opacity-90">
     High Rise Digital was founded in 2019. We are a growing <span className="text-blue-400">AI-enabled digital solutions</span> company powered by 12+ skilled professionals.
   </p>
 
   <div className="space-y-5 lg:space-y-6 text-white font-medium leading-relaxed w-full mt-6">
 
     {/* Paragraph 1 */}
-    <p className="border-l-2 border-blue-500 pl-4 text-white text-xs sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl max-w-xl lg:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto lg:mx-0 antialiased tracking-wide opacity-90">
+    <p className="border-l-2 border-blue-500 pl-4 text-white text-[16px] text-[16px] md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl max-w-xl lg:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto lg:mx-0 antialiased tracking-wide opacity-90">
       Over the years, we have successfully worked with clients from the USA, UK, Australia, UAE, and many other countries, helping businesses strengthen their online presence.
     </p>
 
     {/* Paragraph 2 */}
-    <p className="border-l-2 border-white/20 pl-4 text-white text-xs sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl max-w-xl lg:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto lg:mx-0 antialiased tracking-wide opacity-90">
+    <p className="border-l-2 border-white/20 pl-4 text-white text-[16px] text-[16px] md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl max-w-xl lg:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto lg:mx-0 antialiased tracking-wide opacity-90">
       With experience across multiple industries, we have completed <span className="text-blue-400 font-black">700+ projects</span>, delivering creative designs, SEO, and effective marketing strategies.
     </p>
 
     {/* Paragraph 3 */}
-    <p className="border-l-2 border-white/20 pl-4 text-white text-xs sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl max-w-xl lg:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto lg:mx-0 antialiased tracking-wide opacity-90">
+    <p className="border-l-2 border-white/20 pl-4 text-white text-[16px] sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl max-w-xl lg:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto lg:mx-0 antialiased tracking-wide opacity-90">
       Our focus is simple — providing quality work, building long-term relationships, and helping brands grow with confidence.
     </p>
 
@@ -179,7 +179,7 @@ export default function AboutPage() {
                   {val.icon}
                 </div>
                 <h3 className="text-[20px] font-bold mb-4">{val.title}</h3>
-                <p className="text-white text-[10px] md:text-[12px] lg:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-2xl opacity-90 antialiased">
+                <p className="text-white text-[16px] md:text-[12px] lg:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-2xl opacity-90 antialiased">
                   {val.desc}
                 </p>            </motion.div>
             ))}
@@ -213,7 +213,7 @@ export default function AboutPage() {
               >
                 <span className="text-blue-500 font-black text-xl mb-4 block opacity-50">{proc.step}</span>
                 <h3 className="text-[25px] font-bold mb-2">{proc.title}</h3>
-                <p className="text-white text-white text-[10px] md:text-[12px] lg:text-[15px] leading-relaxed antialiased">
+                <p className="text-white text-white text-[16px] md:text-[12px] lg:text-[15px] leading-relaxed antialiased">
                   {proc.desc}
                 </p>              </motion.div>
             ))}
@@ -246,7 +246,7 @@ export default function AboutPage() {
                 <div className="text-blue-400 shrink-0">{reason.icon}</div>
                 <div>
                   <h3 className="text-[20px] font-bold mb-2">{reason.title}</h3>
-                  <p className="text-white text-[10px] md:text-[12px] lg:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-2xl opacity-90 antialiased">
+                  <p className="text-white text-[16px] md:text-[12px] lg:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-2xl opacity-90 antialiased">
                     {reason.desc}
                   </p>            </div>
               </motion.div>

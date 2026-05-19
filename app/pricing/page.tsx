@@ -80,7 +80,7 @@ export default function PricingPage() {
         </h1>
 
         {/* Paragraph aligned with the same typography standards (Centered on mobile) */}
-     <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
+     <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
   Affordable, transparent pricing plans designed to fit your business needs and help you grow with powerful digital marketing solutions.
 </p>
       </motion.div>
@@ -114,7 +114,7 @@ export default function PricingPage() {
               </div>
 
               <h3 className="text-2xl 2xl:text-4xl font-black mb-2">{plan.name}</h3>
-              <p className="text-zinc-500 text-sm 2xl:text-xl mb-8 leading-relaxed">{plan.desc}</p>
+              <p className="text-zinc-500 text-[16px] 2xl:text-xl mb-8 leading-relaxed">{plan.desc}</p>
 
               <div className="flex items-baseline gap-1 mb-10">
                 <span className="text-5xl 2xl:text-7xl font-black text-white">{plan.price}</span>
@@ -155,7 +155,7 @@ export default function PricingPage() {
                </div>
                <h3 className="text-3xl 2xl:text-5xl font-black italic">Enterprise Plan</h3>
             </div>
-          <p className="text-zinc-400 text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-4xl opacity-90 antialiased">
+          <p className="text-zinc-400 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-4xl opacity-90 antialiased">
   For large-scale business growth. Custom Marketing Strategy, Full Funnel Optimization, Advanced PPC + Retargeting, and 24/7 Priority Support.
 </p>
           </div>

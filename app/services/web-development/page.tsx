@@ -159,7 +159,7 @@ export default function WebDevPage() {
               </h1>
 
               {/* Description Paragraph - Aligned perfectly with global layout standards */}
-              <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
+              <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
                 Professional website development agency delivering responsive, user-friendly, and high-performing websites that help businesses grow, attract customers, and increase online visibility.
               </p>
             </div>
@@ -194,7 +194,7 @@ export default function WebDevPage() {
             </h3>
 
             {/* 3. Perfectly Bounded Centered Paragraphs */}
-            <div className="space-y-6 text-white-400 text-base md:text-lg lg:text-xl font-normal leading-relaxed max-w-3xl mb-14">
+            <div className="space-y-6 text-white-400 text-[16px] md:text-lg lg:text-xl font-normal leading-relaxed max-w-3xl mb-14">
               <p>
                 Our web design and development services help businesses of all sizes build a commanding online presence with modern, intuitive, and easy-to-use websites. We engineer digital assets that look stunningly professional, load instantly, and perform smoothly across all device metrics.
               </p>
@@ -278,7 +278,7 @@ export default function WebDevPage() {
                   <h3 className="text-2xl 2xl:text-4xl font-black   mb-3 group-hover:text-blue-400 transition-colors">
                     {s.title}
                   </h3>
-                  <p className="text-white-500 group-hover:text-white-300 text-sm md:text-base lg:text-[15px] 2xl:text-base 3xl:text-lg font-medium leading-relaxed max-w-xl 2xl:max-w-2xl opacity-90 transition-colors duration-300 antialiased">
+                  <p className="text-white-500 group-hover:text-white-300 text-[16px] md:text-base lg:text-[15px] 2xl:text-base 3xl:text-lg font-medium leading-relaxed max-w-xl 2xl:max-w-2xl opacity-90 transition-colors duration-300 antialiased">
                     {s.desc}
                   </p>
                 </div>
@@ -315,7 +315,7 @@ export default function WebDevPage() {
                     Website Design Projects
                   </span>
             </h3>
-              <p className=" mt-4 text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed  opacity-80">
+              <p className=" mt-4 text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed  opacity-80">
 We love helping businesses grow with websites that get results. Browse our recent projects to see how we can bring your ideas to life.              </p>
           </motion.div>
 
@@ -483,7 +483,7 @@ We love helping businesses grow with websites that get results. Browse our recen
                         </div>
 
                         {/* Description Below */}
-                        <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-all duration-300">
+                        <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-all duration-300">
                           {step.desc}
                         </p>
                       </div>
@@ -671,23 +671,23 @@ We love helping businesses grow with websites that get results. Browse our recen
               </div>
 
               <div className="space-y-4 flex-grow">
-                <h3 className="text-2xl 2xl:text-4xl font-black uppercase italic text-white group-hover:text-blue-500 transition-colors">
+                <h3 className="text-[16px] 2xl:text-4xl font-black uppercase italic text-white group-hover:text-blue-500 transition-colors">
                   {p.title}
                 </h3>
 
                 <div className="bg-blue-600/5 border border-blue-600/10 rounded-xl p-3 lg:p-4 2xl:p-5">
                   {/* Tech Specs Label */}
-                  <p className="text-[10px] md:text-[11px] lg:text-xs 2xl:text-sm font-black text-blue-400 uppercase tracking-widest mb-1 italic antialiased leading-none">
+                  <p className="text-[16px] md:text-[11px] lg:text-xs 2xl:text-sm font-black text-blue-400 uppercase tracking-widest mb-1 italic antialiased leading-none">
                     Tech Stack Focus:
                   </p>
 
                   {/* Dynamic Keywords / Tech Specs Text */}
-                  <p className="text-[11px] sm:text-xs md:text-sm lg:text-[15px] 2xl:text-base 3xl:text-lg text-zinc-400 font-medium leading-relaxed antialiased">
+                  <p className="text-[16px] sm:text-xs md:text-sm lg:text-[15px] 2xl:text-base 3xl:text-lg text-zinc-400 font-medium leading-relaxed antialiased">
                     {p.keywords}
                   </p>
                 </div>
 
-                <p className="text-white-500 text-sm md:text-base lg:text-[15px] 2xl:text-base 3xl:text-lg font-medium leading-relaxed pt-2 max-w-xl 2xl:max-w-2xl antialiased">
+                <p className="text-white-500 text-[16px] md:text-base lg:text-[15px] 2xl:text-base 3xl:text-lg font-medium leading-relaxed pt-2 max-w-xl 2xl:max-w-2xl antialiased">
                   {p.desc}
                 </p>
               </div>

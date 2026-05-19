@@ -127,7 +127,7 @@ export default function Services() {
     className="overflow-hidden"
   >
     {/* ⚪ Description: High readability and clear text on small/laptop screens */}
- <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
+ <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
   {item.desc}
 </p>
   </motion.div>

@@ -24,7 +24,7 @@ export default function CTA() {
   </h3>
   
   {/* 🎯 GLOBAL TEXT SIZE SYSTEM (Locked to 1-Line on Desktop) */}
-  <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-none lg:whitespace-nowrap opacity-80 antialiased tracking-wide">
+  <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-none lg:whitespace-nowrap opacity-80 antialiased tracking-wide">
     Transform your ideas into digital reality with our expert marketing and design strategies.
   </p>
 </div>
