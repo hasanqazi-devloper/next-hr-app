@@ -6,7 +6,7 @@ import Link from "next/link";
 import { ArrowUpRight, Cpu, BarChart3 } from "lucide-react";
 
 const bentoProjects = [
- {
+  {
     id: "01",
     title: "Rhino Roofing Orlando Scale",
     image: "/rino-roffers.jpg", // 🎯 Apni SEO result screenshot ka real image path yahan dalo
@@ -38,12 +38,12 @@ const bentoProjects = [
 
 export default function PortfolioBento() {
   return (
-     <section className="relative py-16 md:py-20 2xl:py-32 bg-[#030303] text-white overflow-hidden select-none border-t border-white/5">
+    <section className="relative py-16 md:py-20 2xl:py-32 bg-[#030303] text-white overflow-hidden select-none border-t border-white/5">
       {/* Background Glows */}
       <div className="absolute top-1/3 left-1/4 w-[600px] 2xl:w-[1000px] h-[600px] bg-blue-600/[0.02] blur-[150px] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl 2xl:max-w-[110rem] mx-auto px-6">
-        
+
         {/* HEADER BLOCK */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 md:mb-10 2xl:mb-16 border-b border-white/5 pb-4 pt-0">
           <motion.div
@@ -56,7 +56,7 @@ export default function PortfolioBento() {
             <h3 className="text-[2.3rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-none text-white">
               Our{" "}
               <span className="sm:inline bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                 Results
+                Results
               </span>
             </h3>
             {/* <p className="mt-4 text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed opacity-80 w-full mx-auto lg:mx-0">
@@ -72,8 +72,8 @@ export default function PortfolioBento() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="flex items-center shrink-0"
           >
-            <Link 
-              href="/portfolio" 
+            <Link
+              href="/portfolio"
               className="flex items-center gap-3 md:gap-4 text-[10px] md:text-xs 2xl:text-[13px] uppercase tracking-[0.25em] font-black text-zinc-500 hover:text-white transition-all duration-500 group"
             >
               <span className="relative pb-1 transition-colors duration-500 group-hover:text-white">

@@ -1,10 +1,82 @@
 "use client";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowUpRight, Loader2 } from "lucide-react";
 
 export default function ConsultationCTA() {
+  // 🎯 Form Input States
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  // 🎯 API Status Feedback State
+  const [status, setStatus] = useState<{
+    loading: boolean;
+    success: boolean | null;
+    message: string;
+  }>({
+    loading: false,
+    success: null,
+    message: "",
+  });
+
+  // 🚀 FIXED: Next.js API Secure Handler
+  const handleCtaSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus({ loading: true, success: null, message: "" });
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          // Combining First & Last Name as the pipeline expects "name"
+          name: `${formData.firstName} ${formData.lastName}`.trim(),
+          email: formData.email,
+          phone: formData.phone || "Not Provided",
+          service: "Strategy Consultation (CTA Hook)",
+          subject: "New Free Strategy Consultation Request 🚀",
+          message: formData.message,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setStatus({
+          loading: false,
+          success: true,
+          message: "Your strategy consultation request has been sent! 🚀",
+        });
+
+        // Form Fields Clear
+        setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" });
+
+        // 🕒 3.5 seconds baad status banner hide karne ke liye
+        setTimeout(() => {
+          setStatus({ loading: false, success: null, message: "" });
+        }, 3500);
+
+      } else {
+        throw new Error(data.error || "Failed to submit consultation payload.");
+      }
+    } catch (error: any) {
+      setStatus({
+        loading: false,
+        success: false,
+        message: error.message || "Network error. Please try again later.",
+      });
+    }
+  };
+
   return (
     <section className="w-full bg-[#020617] py-20 px-6">
       <div className="max-w-7xl mx-auto">
@@ -33,29 +105,29 @@ export default function ConsultationCTA() {
                 branding, or marketing growth system.
               </p>
 
-              {/* 🎯 FORM ACTION HERE (Choose Tareeqa 1 or Tareeqa 2) */}
-              <form 
-                action="https://formspree.io/f/YOUR_FORM_ID_HERE" // <-- Formspree ID ya "mailto:info@highrise.com"
-                method="POST" 
-                className="mt-10 space-y-4"
-              >
+              {/* 🚀 UPGRADED: Ab Bina Reload Ke Live API Hit Hogi */}
+              <form onSubmit={handleCtaSubmit} className="mt-10 space-y-4">
 
                 {/* ROW */}
                 <div className="grid sm:grid-cols-2 gap-4">
                   <input
                     type="text"
-                    name="First Name"
                     required
+                    disabled={status.loading}
                     placeholder="First Name"
-                    className="h-14 rounded-2xl bg-[#0B1220] border border-white/10 px-5 text-white placeholder:text-slate-500 outline-none focus:border-blue-500/40 transition-all"
+                    value={formData.firstName}
+                    onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                    className="h-14 rounded-2xl bg-[#0B1220] border border-white/10 px-5 text-white placeholder:text-slate-500 outline-none focus:border-blue-500/40 transition-all disabled:opacity-40"
                   />
 
                   <input
                     type="text"
-                    name="Last Name"
                     required
+                    disabled={status.loading}
                     placeholder="Last Name"
-                    className="h-14 rounded-2xl bg-[#0B1220] border border-white/10 px-5 text-white placeholder:text-slate-500 outline-none focus:border-blue-500/40 transition-all"
+                    value={formData.lastName}
+                    onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+                    className="h-14 rounded-2xl bg-[#0B1220] border border-white/10 px-5 text-white placeholder:text-slate-500 outline-none focus:border-blue-500/40 transition-all disabled:opacity-40"
                   />
                 </div>
 
@@ -63,45 +135,78 @@ export default function ConsultationCTA() {
                 <div className="grid sm:grid-cols-2 gap-4">
                   <input
                     type="email"
-                    name="Email"
                     required
+                    disabled={status.loading}
                     placeholder="Business Email"
-                    className="h-14 rounded-2xl bg-[#0B1220] border border-white/10 px-5 text-white placeholder:text-slate-500 outline-none focus:border-blue-500/40 transition-all"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    className="h-14 rounded-2xl bg-[#0B1220] border border-white/10 px-5 text-white placeholder:text-slate-500 outline-none focus:border-blue-500/40 transition-all disabled:opacity-40"
                   />
 
                   <input
                     type="text"
-                    name="Phone"
+                    disabled={status.loading}
                     placeholder="Phone Number"
-                    className="h-14 rounded-2xl bg-[#0B1220] border border-white/10 px-5 text-white placeholder:text-slate-500 outline-none focus:border-blue-500/40 transition-all"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    className="h-14 rounded-2xl bg-[#0B1220] border border-white/10 px-5 text-white placeholder:text-slate-500 outline-none focus:border-blue-500/40 transition-all disabled:opacity-40"
                   />
                 </div>
 
                 {/* TEXTAREA */}
                 <textarea
-                  name="Message"
                   required
+                  disabled={status.loading}
                   placeholder="Tell us about your project..."
                   rows={5}
-                  className="w-full rounded-[24px] bg-[#0B1220] border border-white/10 px-5 py-4 text-white placeholder:text-slate-500 outline-none resize-none focus:border-blue-500/40 transition-all"
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  className="w-full rounded-[24px] bg-[#0B1220] border border-white/10 px-5 py-4 text-white placeholder:text-slate-500 outline-none resize-none focus:border-blue-500/40 transition-all disabled:opacity-40"
                 />
+
+                {/* Live Banner Feedback Alert inside CTA */}
+                <AnimatePresence mode="wait">
+                  {status.message && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      className={`p-4 rounded-2xl text-center text-xs font-bold border ${status.success
+                          ? "bg-emerald-500/10 border-emerald-500/20 text-emerald-400"
+                          : "bg-rose-500/10 border-rose-500/20 text-rose-400"
+                        }`}
+                    >
+                      {status.message}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
 
                 {/* SUBMIT BUTTON */}
                 <div className="w-full block mt-3">
                   <motion.button
-                    whileTap={{ scale: 0.97 }}
-                    whileHover={{ y: -2 }}
-                    type="submit" // 🎯 Type submit khud form action ko trigger karega
-                    className="group relative overflow-hidden h-14 w-full rounded-full bg-white border border-white/5 text-black font-black uppercase tracking-[0.25em] text-xs flex items-center justify-center gap-3 transition-all duration-500 shadow-[0_10px_40px_rgba(37,99,235,0.15)] cursor-pointer"
+                    whileTap={{ scale: status.loading ? 1 : 0.97 }}
+                    whileHover={{ y: status.loading ? 0 : -2 }}
+                    type="submit"
+                    disabled={status.loading}
+                    className="group relative overflow-hidden h-14 w-full rounded-full bg-white border border-white/5 text-black font-black uppercase tracking-[0.25em] text-xs flex items-center justify-center gap-3 transition-all duration-500 shadow-[0_10px_40px_rgba(37,99,235,0.15)] cursor-pointer disabled:opacity-50"
                   >
                     <div className="absolute top-0 left-0 bottom-0 w-0 bg-gradient-to-r from-blue-600 to-cyan-500 transition-all duration-500 ease-out group-hover:w-full pointer-events-none z-0" />
 
                     <span className="relative z-10 flex items-center justify-center gap-3 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 group-hover:text-white transition-colors duration-500 font-bold tracking-[0.25em]">
-                      Send Request
-                      <ArrowUpRight
-                        size={18}
-                        className="text-blue-600 group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-500"
-                      />
+                      {status.loading ? (
+                        <>
+                          Transmitting...
+                          <Loader2 size={16} className="animate-spin text-blue-600 group-hover:text-white" />
+                        </>
+                      ) : (
+                        <>
+                          Send Request
+                          <ArrowUpRight
+                            size={18}
+                            className="text-blue-600 group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-500"
+                          />
+                        </>
+                      )}
                     </span>
                   </motion.button>
                 </div>

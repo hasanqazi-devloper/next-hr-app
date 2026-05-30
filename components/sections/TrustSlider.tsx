@@ -19,7 +19,7 @@ export default function TrustLogos() {
     /* 🛠️ Padding Yaha Kam Ki Hai: py-10 (standard) aur 2xl:py-12 (4K ke liye) */
     <section className="border-y border-white/10 py-10 2xl:py-12 bg-[#030207]">
       <div className="container-main">
-        
+
         {/* 🛠️ 6 LOGOS GRID */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-16 2xl:gap-15 items-center justify-items-center">
           {awardLogos.map((logo, index) => (

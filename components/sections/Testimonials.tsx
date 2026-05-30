@@ -32,7 +32,7 @@ export default function JuicerReviews() {
 
         {/* ⚡ Top Section: Heading & Button in 1 Single Line (Desktop) */}
         <div className="mb-8 flex flex-col md:flex-row items-center justify-between text-left gap-6 border-b border-white/[0.03] pb-6">
-          
+
           {/* Left Block: Headings */}
           <div className="max-w-2xl text-center md:text-left">
             <h2 className="text-[2.2rem] md:text-[2.6rem] lg:text-[3rem] font-black tracking-tight text-white bg-gradient-to-r from-white via-zinc-100 to-zinc-400 bg-clip-text text-transparent leading-none">
@@ -83,7 +83,7 @@ export default function JuicerReviews() {
           <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-[#030303] to-transparent z-20 pointer-events-none" />
 
           {/* Track Animation at perfect slow speed */}
-          <div 
+          <div
             className="flex gap-6 w-max animate-marquee hover:[animation-play-state:paused] py-2 items-center"
             style={{ animationDuration: "80s" }}
           >

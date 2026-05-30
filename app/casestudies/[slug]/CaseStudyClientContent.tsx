@@ -48,7 +48,7 @@ export default function CaseStudyClientContent({ project }: CaseStudyProps) {
                 className="group inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[3px] text-zinc-400 hover:text-white transition-all duration-300 mb-8"
               >
                 <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1.5 transition-transform duration-300" /> 
-                Back to Case Studies
+                Back to Case Study
               </Link>
 
               {/* Glassmorphism Badge Container */}
@@ -81,19 +81,22 @@ export default function CaseStudyClientContent({ project }: CaseStudyProps) {
     ======================================================== */}
 <section className="w-full bg-[#030303] py-20 border-t border-white/[0.02]">
   <div className="max-w-7xl mx-auto px-6">
+    {/* Grid setup with proper top items alignment */}
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
 
-      {/* LEFT: Project Details Card */}
-      <div className="lg:col-span-4 space-y-8 lg:sticky lg:top-28 transition-all duration-500 animate-slideUp">
-        <div className="relative aspect-square w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+      {/* LEFT: Project Details Card (🛠️ Sticky implementation balances the height during scroll) */}
+      <div className="lg:col-span-4 space-y-6 lg:sticky lg:top-28 transition-all duration-500 animate-slideUp">
+        {/* Image wrapper with custom aspect ratio to prevent overwelming height */}
+        <div className="relative aspect-[4/3] sm:aspect-square w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
           <Image src={project.image} alt={project.title} fill className="object-cover" />
         </div>
 
-        <div className="bg-[#0a0a0a] border border-white/[0.08] rounded-2xl p-8 space-y-6 shadow-2xl relative overflow-hidden group">
+        {/* Clean details card with tight spacing */}
+        <div className="bg-[#0a0a0a] border border-white/[0.08] rounded-2xl p-6 relative overflow-hidden group shadow-xl">
           <div className={`absolute top-0 left-0 w-1 h-full ${isSocial ? 'bg-pink-500' : 'bg-blue-500'}`} />
-          <h3 className="text-[2.3rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black mb-4">Project Details</h3>
+          <h3 className="text-lg font-black uppercase tracking-wider text-zinc-300 mb-4">Project Details</h3>
 
-          <div className="space-y-5">
+          <div className="space-y-4">
             <DetailItem label="Category" value={project.category === 'seo' ? 'Ecommerce SEO' : 'Paid Social'} icon={<Tag size={14} />} />
             <DetailItem label="Client" value={project.title} icon={<Globe size={14} />} />
             <DetailItem label="Location" value="Australia / Global" icon={<MapPin size={14} />} />
@@ -102,30 +105,30 @@ export default function CaseStudyClientContent({ project }: CaseStudyProps) {
         </div>
       </div>
 
-      {/* RIGHT: Main Punchy Content + Metrics (Fixed Layout Flex Spacing) */}
-      <div className="lg:col-span-8 pt-4 flex flex-col justify-start space-y-10 animate-fadeIn delay-100">
+      {/* RIGHT: Main Punchy Content + Metrics (🛠️ Top started but visually expanded) */}
+      <div className="lg:col-span-8 lg:pt-2 flex flex-col justify-start space-y-12 animate-fadeIn delay-100">
         
-        {/* Text Block */}
-        <div className="space-y-6">
-          <h2 className="text-[2.3rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tight leading-tight text-white">
+        {/* Text Block with elegant block spacing */}
+        <div className="space-y-6 lg:pr-6">
+          <h2 className="text-[2.3rem] md:text-[2.8rem] lg:text-[3rem] 2xl:text-[3.5rem] font-black tracking-tight leading-[1.1] text-white ">
             {project.description}
           </h2>
-          <div className={`h-1 w-20 ${isSocial ? 'bg-pink-500' : 'bg-blue-500'}`} />
-          <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:textxl 3xl:text-2xl font-medium leading-relaxed">
-            “Transforming a fragmented digital presence into a high-yielding, conversion-focused revenue engine through data-driven technical optimization.”
+          <div className={`h-1 w-24 ${isSocial ? 'bg-pink-500' : 'bg-blue-500'}`} />
+          <p className="text-zinc-300 text-[16px] md:text-lg lg:text-[19px] 2xl:text-xl font-medium leading-relaxed max-w-3xl">
+          Transforming a fragmented digital presence into a high-yielding, conversion-focused revenue engine through data-driven technical optimization.
           </p>
         </div>
 
-        {/* FITTED METRICS STRIP: Safely spaced without giant empty dead gaps underneath text */}
+        {/* FITTED METRICS STRIP: Clean border separator to anchor the content bottom */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-10 border-t border-white/[0.06]">
           {project.metrics.map((metric, i) => (
-            <div key={i} className="flex flex-col border-l border-zinc-800 pl-4 hover:border-zinc-500 transition-colors duration-300">
-              <span className={`text-4xl md:text-5xl font-black tracking-tighter leading-none ${
+            <div key={i} className="flex flex-col border-l border-zinc-800 pl-5 hover:border-zinc-400 transition-colors duration-300">
+              <span className={`text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-none ${
                 metric.highlight ? (isSocial ? 'text-pink-500' : 'text-blue-500') : 'text-white'
               }`}>
                 {metric.value}
               </span>
-              <span className="text-[10px] font-bold uppercase tracking-[1.5px] text-white mt-2 block leading-tight">
+              <span className="text-[10px] font-bold uppercase tracking-[2px] text-zinc-400 mt-3 block leading-tight">
                 {metric.label}
               </span>
             </div>
@@ -198,18 +201,7 @@ export default function CaseStudyClientContent({ project }: CaseStudyProps) {
       <section className="w-full bg-[#030303] py-24 border-b border-white/[0.02]">
         <div className="max-w-7xl mx-auto px-6 space-y-20">
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 animate-fadeIn">
-            <div className="lg:col-span-4">
-              <h3 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter">
-                The Result
-              </h3>
-            </div>
-            <div className="lg:col-span-8">
-              <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed ">
-                {project.results.description}
-              </p>
-            </div>
-          </div>
+         
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-slideUp">
             {project.results.cards.map((card, idx) => (

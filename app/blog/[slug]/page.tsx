@@ -175,18 +175,7 @@ export default async function BlogDetail({ params }: PageProps) {
                     {post.content}
                   </div>
                   
-                  {/* Technical Box */}
-                  {/* <div className="p-6 md:p-8 bg-blue-500/5 border border-blue-500/10 rounded-[2rem] mt-8">
-                    <h3 className="text-[10px] font-black tracking-widest text-blue-400 uppercase mb-4 flex items-center gap-2">
-                      <Sparkles size={14} /> Technical Directives
-                    </h3>
-                    <ul className="space-y-4 mt-4">
-                      <li className="flex items-start gap-3 text-sm text-zinc-300">
-                        <ChevronRight size={14} className="text-blue-500 mt-1 shrink-0" />
-                        <span>Implementation of high-frequency conversion mapping.</span>
-                      </li>
-                    </ul>
-                  </div> */}
+                
                 </div>
               </div>
             </article>

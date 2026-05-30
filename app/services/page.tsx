@@ -57,7 +57,8 @@ export default function ServicesPage() {
 
               <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
                 We provide SEO, social media marketing, PPC, branding, and web development services to help your business grow and succeed online.
-              </p>            </div>
+              </p>            
+              </div>
           </div>
         </div>
       </section>

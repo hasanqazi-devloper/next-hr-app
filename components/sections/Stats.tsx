@@ -43,7 +43,7 @@ const StatItem = ({ value, label, icon, suffix = "+" }: StatProps) => {
       className="group relative flex flex-col items-center justify-center py-10 md:py-12 2xl:py-20 px-4 transition-all duration-500 overflow-hidden cursor-default"
     >
       {/* 🎨 HOVER COLOR FILL: Niche se upar fill hone wala gradient */}
-      <motion.div 
+      <motion.div
         variants={{
           hover: { y: 0, opacity: 1 }
         }}
@@ -70,7 +70,7 @@ const StatItem = ({ value, label, icon, suffix = "+" }: StatProps) => {
       </p>
 
       {/* 🖌️ Bottom Glow Line */}
-      <motion.div 
+      <motion.div
         variants={{ hover: { scaleX: 1 } }}
         initial={{ scaleX: 0 }}
         className="absolute bottom-0 left-0 right-0 h-[2px] bg-blue-500 shadow-[0_0_15px_#3b82f6] origin-center z-20"
@@ -83,18 +83,18 @@ export default function Stats() {
   return (
     // 🛠️ PADDING TIGHT: py-6 (mobile) aur py-10 (desktop) kar diya hai
     <section className="relative py-6 md:py-10 2xl:py-16 bg-[#030207] bg-gradient-to-r from-[#030303] via-[#050a18] to-[#030303]       border-t border-b border-white/5 overflow-hidden">
-      
+
       <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:25px_25px] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl 2xl:max-w-[100rem] mx-auto px-6">
 
         <div className="text-center mb-6 md:mb-8 2xl:mb-12">
-         <h3 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem]  font-black tracking-tighter leading-[1.1] lg:leading-none text-white">
-  Some {" "}
-  <span className="block sm:inline bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
-    Facts About Us
-  </span>
-</h3>
+          <h3 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem]  font-black tracking-tighter leading-[1.1] lg:leading-none text-white">
+            Some {" "}
+            <span className="block sm:inline bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Facts About Us
+            </span>
+          </h3>
         </div>
 
         <motion.div

@@ -10,17 +10,17 @@ export default function CustomCursor() {
   // Core coordinates for tracking
   const dotX = useMotionValue(-100);
   const dotY = useMotionValue(-100);
-  
+
   const ringX = useMotionValue(-100);
   const ringY = useMotionValue(-100);
 
   // 🕹️ RE-ENGINEERED PHYSICS: Higher stiffness & lower mass for lag-free performance
-  const dotSpringConfig = { damping: 20, stiffness: 900, mass: 0.05 }; 
+  const dotSpringConfig = { damping: 20, stiffness: 900, mass: 0.05 };
   const ringSpringConfig = { damping: 25, stiffness: 450, mass: 0.15 }; // Mass lower kiya taake heavy feel na ho
 
   const dotXSpring = useSpring(dotX, dotSpringConfig);
   const dotYSpring = useSpring(dotY, dotSpringConfig);
-  
+
   const ringXSpring = useSpring(ringX, ringSpringConfig);
   const ringYSpring = useSpring(ringY, ringSpringConfig);
 
@@ -29,7 +29,7 @@ export default function CustomCursor() {
       // Small dot stays accurate under the tip (8px size = offset 4)
       dotX.set(e.clientX - 4);
       dotY.set(e.clientY - 4);
-      
+
       // Outer ring smoothly lags behind (40px size = offset 20)
       ringX.set(e.clientX - 20);
       ringY.set(e.clientY - 20);
@@ -40,9 +40,9 @@ export default function CustomCursor() {
     const handleMouseOver = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       if (
-        target.tagName === "A" || 
-        target.tagName === "BUTTON" || 
-        target.closest("a") || 
+        target.tagName === "A" ||
+        target.tagName === "BUTTON" ||
+        target.closest("a") ||
         target.closest("button") ||
         target.getAttribute("role") === "button"
       ) {

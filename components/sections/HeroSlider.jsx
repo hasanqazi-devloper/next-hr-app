@@ -12,7 +12,7 @@ const awardLogos = [
   { src: "/brands/wp-partner.png", alt: "WordPress Partner" },
   { src: "/brands/linkedin.png", alt: "LinkedIn" },
   { src: "/brands/meta-business-logo.png", alt: "Meta Business" },
-  { src: "/brands/semrush.png", alt: "Semrush" }, 
+  { src: "/brands/semrush.png", alt: "Semrush" },
   { src: "/brands/shopify.png", alt: "Shopify" },
   { src: "/brands/tic-tok.png", alt: "TikTok" },
   { src: "/brands/woocommerce-partner.png", alt: "WooCommerce Partner" },
@@ -24,20 +24,20 @@ export default function HeroSlider() {
 
   return (
     <section className="relative py-4 md:py-5 2xl:py-5 bg-gradient-to-r from-[#030303] via-[#050a18] to-[#030303] overflow-hidden border-y border-white/5">
-      
+
       {/* Side Fades: Ambient Edge Blending */}
       <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-[#030303] to-transparent z-10 pointer-events-none" />
       <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-[#030303] to-transparent z-10 pointer-events-none" />
 
       {/* Track Wrapper (Height & Padding Synced with ClientTrust) */}
       <div className="w-full relative h-20 md:h-24 2xl:h-32 flex items-center overflow-hidden px-4 sm:px-6">
-        <motion.div 
+        <motion.div
           className="flex gap-4 md:gap-8 2xl:gap-16 w-max items-center"
           animate={{ x: ["0%", "-50%"] }}
-          transition={{ 
-            duration: 35, 
-            ease: "linear", 
-            repeat: Infinity 
+          transition={{
+            duration: 35,
+            ease: "linear",
+            repeat: Infinity
           }}
           whileHover={{ transition: { duration: 70 } }}
         >

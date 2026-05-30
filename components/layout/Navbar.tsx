@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown, Plus, Minus } from "lucide-react"; 
+import { Menu, X, ChevronDown, Plus, Minus, Loader2 } from "lucide-react"; 
 import Image from "next/image";
 import { createClient } from 'contentful';
 
@@ -23,6 +23,17 @@ export default function Navbar() {
   const [isProposalOpen, setIsProposalOpen] = useState(false);
   const [dynamicLinks, setDynamicLinks] = useState<any[]>([]); // 🎯 Dynamic links state
   const pathname = usePathname();
+
+  // 🎯 Modal submission feedback status state
+  const [modalStatus, setModalStatus] = useState<{
+    loading: boolean;
+    success: boolean | null;
+    message: string;
+  }>({
+    loading: false,
+    success: null,
+    message: "",
+  });
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 15);
@@ -64,18 +75,55 @@ export default function Navbar() {
     message: "",
   });
 
-  const handleModalSubmit = (e: React.FormEvent) => {
+  // 🚀 FIXED: Ab ye mailto open nahi karega balkay direct API hit karega!
+  const handleModalSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const mailtoSubject = encodeURIComponent("New Popup Proposal Request from High Rise");
-    const mailtoBody = encodeURIComponent(
-      `Full Name: ${modalForm.name}\n` +
-      `Email: ${modalForm.email}\n` +
-      `Service Selected: ${modalForm.service}\n\n` +
-      `Message:\n${modalForm.message}`
-    );
-    window.location.href = `mailto:info@highrisedigital.io?subject=${mailtoSubject}&body=${mailtoBody}`;
-    alert("Opening your Email Client... Please click 'Send' in Gmail. 🚀");
-    setIsProposalOpen(false);
+    setModalStatus({ loading: true, success: null, message: "" });
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: modalForm.name,
+          email: modalForm.email,
+          phone: "Not Provided (Modal PopUp Hook)", 
+          service: modalForm.service,
+          subject: `Strategy Call Request: ${modalForm.service}`,
+          message: modalForm.message,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setModalStatus({
+          loading: false,
+          success: true,
+          message: "Strategy call requested successfully! 🚀",
+        });
+        
+        // Clear fields
+        setModalForm({ name: "", email: "", service: "", message: "" });
+
+        // 🕒 2.5 seconds ke baad automatic modal close ho jayega
+        setTimeout(() => {
+          setIsProposalOpen(false);
+          setModalStatus({ loading: false, success: null, message: "" });
+        }, 2500);
+
+      } else {
+        throw new Error(data.error || "Something went wrong inside pipeline.");
+      }
+    } catch (error: any) {
+      setModalStatus({
+        loading: false,
+        success: false,
+        message: error.message || "Network error. Please try again later.",
+      });
+    }
   };
 
   // Static Links aur Services dropdown ko maintain rakha hai
@@ -105,7 +153,7 @@ export default function Navbar() {
   // 🎯 COMBINED LINKS array: Jo layout order ko tabah nahi karega
   const links = [
     ...baseLinksLeft,
-    ...dynamicLinks, // Contentful wale dynamic pages automatic About wagera yahan inject honge
+    ...dynamicLinks, 
     servicesDropdown,
     ...baseLinksRight
   ];
@@ -138,7 +186,6 @@ export default function Navbar() {
                     <AnimatePresence>
                       {showServices && (
                         <motion.div initial={{ opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 5 }} className="absolute top-full left-0 w-56 p-2 bg-black border border-white/10 rounded-2xl shadow-2xl mt-1">
-                          {/* 🎯 FIXED: sub parameters typed as any */}
                           {link.subLinks?.map((sub: any) => (
                             <Link key={sub.name} href={sub.href} className="block px-4 py-2.5 text-[13px] font-bold text-white-400 hover:text-white hover:bg-white/5 rounded-lg transition-all">
                               {sub.name}
@@ -183,7 +230,6 @@ export default function Navbar() {
                         </div>
                         <motion.div initial={false} animate={{ height: mobileServicesOpen ? "auto" : 0, opacity: mobileServicesOpen ? 1 : 0 }} className="overflow-hidden bg-white/[0.02] rounded-xl mx-2">
                           <div className="flex flex-col py-1 pl-4 border-l border-white/10 my-1 gap-1">
-                            {/* 🎯 FIXED: sub parameters typed as any */}
                             {link.subLinks?.map((sub: any) => (
                               <Link key={sub.name} href={sub.href} className="text-[10px] font-bold uppercase tracking-wider text-zinc-500 hover:text-white py-2.5 px-3 rounded-lg block transition-colors" onClick={() => setIsOpen(false)}>{sub.name}</Link>
                             ))}
@@ -206,10 +252,10 @@ export default function Navbar() {
       <AnimatePresence>
         {isProposalOpen && (
           <div className="fixed inset-0 z-[999] flex items-center justify-center p-4 pointer-events-auto">
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setIsProposalOpen(false)} className="absolute inset-0 bg-black/85 backdrop-blur-md" />
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => !modalStatus.loading && setIsProposalOpen(false)} className="absolute inset-0 bg-black/85 backdrop-blur-md" />
             <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }} className="relative w-full max-w-lg bg-[#070707] border border-white/10 rounded-[2.5rem] p-8 shadow-2xl">
               <div className="absolute top-0 left-0 w-full h-1 bg-blue-600" />
-              <button onClick={() => setIsProposalOpen(false)} className="absolute top-6 right-6 text-zinc-500 hover:text-white transition-colors"><X size={24} /></button>
+              <button onClick={() => setIsProposalOpen(false)} disabled={modalStatus.loading} className="absolute top-6 right-6 text-zinc-500 hover:text-white transition-colors disabled:opacity-30"><X size={24} /></button>
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-black text-white uppercase tracking-tighter">Book A Strategy Call</h3>
                 <p className="text-zinc-500 text-xs">Let's build your project together.</p>
@@ -220,25 +266,28 @@ export default function Navbar() {
                   <input 
                     type="text" 
                     required
+                    disabled={modalStatus.loading}
                     placeholder="Name" 
                     value={modalForm.name}
                     onChange={(e) => setModalForm({ ...modalForm, name: e.target.value })}
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white outline-none focus:border-blue-500" 
+                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white outline-none focus:border-blue-500 transition-all disabled:opacity-40" 
                   />
                   <input 
                     type="email" 
                     required
+                    disabled={modalStatus.loading}
                     placeholder="Email" 
                     value={modalForm.email}
                     onChange={(e) => setModalForm({ ...modalForm, email: e.target.value })}
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white outline-none focus:border-blue-500" 
+                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white outline-none focus:border-blue-500 transition-all disabled:opacity-40" 
                   />
                 </div>
                 <select 
                   required
+                  disabled={modalStatus.loading}
                   value={modalForm.service}
                   onChange={(e) => setModalForm({ ...modalForm, service: e.target.value })}
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-zinc-300 outline-none appearance-none cursor-pointer hover:bg-white/[0.08] transition-all"
+                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-zinc-300 outline-none appearance-none cursor-pointer hover:bg-white/[0.08] transition-all disabled:opacity-40"
                 >
                   <option value="" disabled className="bg-[#070707] text-zinc-500">Select Service</option>
                   <option value="Web Development" className="bg-[#070707] text-white">Web Development</option>
@@ -251,15 +300,43 @@ export default function Navbar() {
                 </select>
                 <textarea 
                   required
+                  disabled={modalStatus.loading}
                   placeholder="Your Message" 
                   rows={3} 
                   value={modalForm.message}
                   onChange={(e) => setModalForm({ ...modalForm, message: e.target.value })}
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white outline-none focus:border-blue-500 resize-none"
+                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white outline-none focus:border-blue-500 resize-none transition-all disabled:opacity-40"
                 ></textarea>
                 
-                <button type="submit" className="w-full bg-blue-600 py-4 rounded-xl font-bold text-[11px] uppercase tracking-widest text-white shadow-lg shadow-blue-600/20 active:scale-[0.98] transition-transform">
-                  Submit
+                {/* 🎯 Real-Time Feedback Alert Messages inside Modal */}
+                <AnimatePresence mode="wait">
+                  {modalStatus.message && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 8 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -8 }}
+                      className={`p-3 rounded-xl text-center text-xs font-bold border ${
+                        modalStatus.success 
+                          ? "bg-emerald-500/10 border-emerald-500/20 text-emerald-400" 
+                          : "bg-rose-500/10 border-rose-500/20 text-rose-400"
+                      }`}
+                    >
+                      {modalStatus.message}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+                
+                <button 
+                  type="submit" 
+                  disabled={modalStatus.loading}
+                  className="w-full bg-blue-600 py-4 rounded-xl font-bold text-[11px] uppercase tracking-widest text-white shadow-lg shadow-blue-600/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:scale-100"
+                >
+                  {modalStatus.loading ? (
+                    <>
+                      Submitting Pipeline...
+                      <Loader2 size={12} className="animate-spin" />
+                    </>
+                  ) : "Submit Request"}
                 </button>
               </form>
             </motion.div>

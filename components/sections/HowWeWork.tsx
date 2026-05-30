@@ -46,17 +46,17 @@ export default function Process() {
       <div className="relative z-10 max-w-6xl 2xl:max-w-[85rem] mx-auto px-6">
 
         {/* 📋 HEADER */}
- <div className="mb-12 md:mb-16 pt-0 text-center">
-  {/* 🎯 MATCHED DESIGN SYSTEM: Applied identical fluid sizes, tracking, and leading from the reference design layout */}
-  <h3 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case">
-    Our 
-  {" "}
-    {/* 🎯 MATCHED GRADIENT BLOCK: Made 'block' with precise margins and horizontal breathing space padding to avoid letter cut-offs */}
-    <span className=" mt-2 py-1 pr-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
-      Working Process
-    </span>
-  </h3>
-</div>
+        <div className="mb-12 md:mb-16 pt-0 text-center">
+          {/* 🎯 MATCHED DESIGN SYSTEM: Applied identical fluid sizes, tracking, and leading from the reference design layout */}
+          <h3 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case">
+            Our
+            {" "}
+            {/* 🎯 MATCHED GRADIENT BLOCK: Made 'block' with precise margins and horizontal breathing space padding to avoid letter cut-offs */}
+            <span className=" mt-2 py-1 pr-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Working Process
+            </span>
+          </h3>
+        </div>
 
         {/* 🧠 TIMELINE MATRIX */}
         <div className="relative">
@@ -72,9 +72,8 @@ export default function Process() {
               return (
                 <div
                   key={step.id}
-                  className={`relative flex flex-col md:flex-row items-start md:items-center justify-between w-full group ${
-                    isEven ? "md:flex-row" : "md:flex-row-reverse"
-                  }`}
+                  className={`relative flex flex-col md:flex-row items-start md:items-center justify-between w-full group ${isEven ? "md:flex-row" : "md:flex-row-reverse"
+                    }`}
                 >
                   {/* CARD CONTAINER */}
                   <div className="w-full md:w-[45%] pl-8 md:pl-0">
@@ -102,9 +101,9 @@ export default function Process() {
                         </div>
 
                         {/* ⬇️ Description Below - Fixed Font Sizes for Perfect Readability */}
-                     <p className="text-white text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px]  font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-all duration-300">
-  {step.desc}
-</p>
+                        <p className="text-white text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px]  font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-all duration-300">
+                          {step.desc}
+                        </p>
                       </div>
 
                       {/* Bottom Accent Line */}

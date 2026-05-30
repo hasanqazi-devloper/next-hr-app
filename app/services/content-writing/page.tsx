@@ -14,7 +14,7 @@ import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import Process from "@/components/sections/HowWeWork";
 import Testimonials from "@/components/sections/Testimonials";
 import Portfolio from "@/components/sections/PortfolioPreview";
-import ContentFAQ from "@/components/faqs/ContentFAQ";
+// import ContentFAQ from "@/components/faqs/ContentFAQ";
 
 export default function ContentWritingPage() {
   return (
@@ -194,7 +194,7 @@ export default function ContentWritingPage() {
       <Stats />
       <WhyChooseUs />
       <Testimonials />
-      <ContentFAQ />
+      {/* <ContentFAQ /> */}
       <CTA />
 
     </main>
