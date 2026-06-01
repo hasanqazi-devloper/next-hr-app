@@ -197,7 +197,7 @@ export default function AboutPreview({ content }: AboutPreviewProps) {
 
   return (
     <>
-      <section className="relative pt-12 md:pt-20 2xl:pt-32 pb-0 bg-[#030303] overflow-hidden">
+      <section className="relative pt-12 md:pt-20 2xl:pt-32 pb-4 bg-[#0D3042] overflow-hidden">
         <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[300px] md:w-[600px] h-[200px] bg-blue-600/[0.04] blur-[120px] pointer-events-none" />
 
         <div className="max-w-7xl 2xl:max-w-[110rem] mx-auto px-6">

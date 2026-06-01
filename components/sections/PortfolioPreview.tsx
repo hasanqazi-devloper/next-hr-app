@@ -38,8 +38,7 @@ const bentoProjects = [
 
 export default function PortfolioBento() {
   return (
-    <section className="relative py-16 md:py-20 2xl:py-32 bg-[#023675] text-white overflow-hidden select-none border-t border-white/5">
-      {/* Background Glows */}
+<section className="relative py-16 md:py-20 2xl:py-32 bg-gradient-to-bl from-[#0971A6] via-[#054f7a] to-[#021526] text-white overflow-hidden select-none border-t border-white/5">      {/* Background Glows */}
       <div className="absolute top-1/3 left-1/4 w-[600px] 2xl:w-[1000px] h-[600px] bg-blue-600/[0.02] blur-[150px] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl 2xl:max-w-[110rem] mx-auto px-6">
