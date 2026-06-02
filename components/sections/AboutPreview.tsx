@@ -123,7 +123,7 @@ export default function AboutPreview() {
       </section>
 
       {/* 🎯 LOGO SECTION */}
-      <section className="pt-12 pb-12 md:pb-16 2xl:pb-20 bg-[#030303]">
+      <section className="pt-12 pb-12 md:pb-16 2xl:pb-20 bg-[#1E2939]">
         <div className="max-w-7xl 2xl:max-w-[110rem] mx-auto px-6 flex justify-center items-center">
 
           {/* LOGOS GRID (🎯 FIXED: 1 COLUMN WITH BIGGER GAPS ON MOBILE) */}

@@ -81,7 +81,7 @@ const StatItem = ({ value, label, icon, suffix = "+" }: StatProps) => {
 
 export default function Stats() {
   return (
-    <section className="relative py-6 md:py-10 2xl:py-16 bg-[#030207] bg-gradient-to-r from-[#030303] via-[#050a18] to-[#030303] border-t border-b border-white/5 overflow-hidden">
+    <section className="relative py-6 md:py-10 2xl:py-16 bg-gradient-to-bl from-[#0971A6] via-[#054f7a] to-[#021526] border-t border-b border-white/5 overflow-hidden">
 
       <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:25px_25px] pointer-events-none" />
 

@@ -28,7 +28,7 @@ const FEATURES = [
 
 export default function ProvenExcellence() {
   return (
-    <section className="relative bg-[#030303] py-16 md:py-24 2xl:py-32 px-6 overflow-hidden border-b border-white/5">
+    <section className="relative bg-[#1E2939] py-16 md:py-24 2xl:py-32 px-6 overflow-hidden border-b border-white/5">
 
       {/* 🌌 Decorative Glows */}
       <div className="absolute top-1/4 -left-20 w-[400px] 2xl:w-[800px] h-[400px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />

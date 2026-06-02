@@ -19,23 +19,24 @@ export default function JuicerReviews() {
   const doubledReviews = [...reviewsList, ...reviewsList];
 
   return (
-    <div className="w-full bg-[#030303] py-12 text-center relative z-10 overflow-hidden border-b border-white/[0.03]">
+    // 🎯 FIXED: Section boundaries pushed to max-w-full to prevent layout limitations
+    <div className="w-full bg-[#1E2939] py-12 text-center relative z-10 overflow-hidden border-b border-white/[0.03]">
 
       {/* Premium Tech Mesh Lines */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none opacity-30" />
 
       {/* Top Ambient Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[250px] bg-blue-500/[0.04] blur-[100px] pointer-events-none rounded-full" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-blue-500/[0.04] blur-[120px] pointer-events-none rounded-full" />
 
-      {/* Main Container */}
-      <div className="w-full relative z-10 px-6 md:px-12 max-w-[1440px] mx-auto">
+      {/* Main Container - 🎯 FIXED: Replaced standard max-w constraints with fluid responsive viewports */}
+      <div className="w-full relative z-10 px-4 md:px-12 max-w-full mx-auto">
 
         {/* ⚡ Top Section: Heading & Button in 1 Single Line (Desktop) */}
-        <div className="mb-8 flex flex-col md:flex-row items-center justify-between text-left gap-6 border-b border-white/[0.03] pb-6">
+        <div className="mb-8 flex flex-col md:flex-row items-center justify-between text-left gap-6 border-b border-white/[0.03] pb-6 max-w-[1800px] mx-auto">
 
           {/* Left Block: Headings */}
           <div className="max-w-2xl text-center md:text-left">
-            <h2 className="text-[2.2rem] md:text-[2.6rem] lg:text-[3rem] font-black tracking-tight text-white bg-gradient-to-r from-white via-zinc-100 to-zinc-400 bg-clip-text text-transparent leading-none">
+            <h2 className="text-[2.2rem] md:text-[2.6rem] lg:text-[3rem] 2xl:text-[3.5rem] font-black tracking-tight text-white bg-gradient-to-r from-white via-zinc-100 to-zinc-400 bg-clip-text text-transparent leading-none">
               What Our{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
                 Clients
@@ -61,7 +62,7 @@ export default function JuicerReviews() {
 
               {/* GMB Review Redirection Link */}
               <a
-                href="https://www.google.com/search?q=high+rise+seo+agency&oq=high&gs_lcrp=EgZjaHJvbWUqBggCEEUYOzIGCAAQRRg8MgYIARBFGDkyBggCEEUYOzIKCAMQABixAxiABDINCAQQABixAxjJAxiABDIGCAUQRRg9MgYIBhBFGD0yBggHEEUYPNIBCDQwMjJqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#lrd=0x393b35e34334fc47:0x25379b3f2855f11c,3,,,,"
+                href="https://www.google.com/search?q=high+rise+seo+agency"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg font-bold text-[10px] uppercase tracking-widest text-black bg-gradient-to-r from-blue-400 to-cyan-400 hover:from-blue-500 hover:to-cyan-500 shadow-[0_4px_15px_rgba(56,189,248,0.15)] transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 text-center whitespace-nowrap"
@@ -76,20 +77,19 @@ export default function JuicerReviews() {
 
         </div>
 
-        {/* 🔥 Infinite Marquee Slider (Shadows Removed - Style Untouched) */}
-        <div className="relative w-full overflow-hidden flex items-center">
+        {/* 🔥 Infinite Marquee Slider - 🎯 FIXED: Set to absolute full bleed width */}
+        <div className="relative w-screen left-1/2 right-1/2 -ml-[50vw] +mr-[50vw] overflow-hidden flex items-center">
           
-          {/* ❌ Left and Right black shadow overlay divs removed from here */}
-
           {/* Track Animation at perfect slow speed */}
           <div
-            className="flex gap-6 w-max animate-marquee hover:[animation-play-state:paused] py-2 items-center"
-            style={{ animationDuration: "80s" }}
+            className="flex gap-4 md:gap-6 w-max animate-marquee hover:[animation-play-state:paused] py-4 items-center pl-6"
+            style={{ animationDuration: "65s" }}
           >
             {doubledReviews.map((review, index) => (
+              // 🎯 FIXED: Dynamic calculation percentage metrics to fill huge 2K/4K monitors smoothly
               <div
                 key={`${review.id}-${index}`}
-                className="w-[450px] md:w-[540px] lg:w-[600px] shrink-0 rounded-2xl border border-white/[0.05] bg-[#09090b]/60 backdrop-blur-md p-2 overflow-hidden hover:border-blue-500/20 hover:scale-[1.01] transition-all duration-500 group"
+                className="w-[85vw] sm:w-[45vw] md:w-[35vw] lg:w-[28vw] xl:w-[24vw] 2xl:w-[20vw] 3xl:w-[16vw] shrink-0 rounded-2xl border border-white/[0.05] bg-[#09090b]/60 backdrop-blur-md p-2 overflow-hidden hover:border-blue-500/20 hover:scale-[1.01] transition-all duration-500 group"
               >
                 <div className="relative w-full overflow-hidden rounded-xl bg-zinc-950/20">
                   <img

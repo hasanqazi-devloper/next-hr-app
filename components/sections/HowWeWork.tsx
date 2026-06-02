@@ -38,7 +38,7 @@ const steps = [
 
 export default function Process() {
   return (
-   <section className="relative py-16 md:py-24 bg-[#023675] overflow-hidden selection:bg-blue-600/30">
+   <section className="relative py-16 md:py-24 bg-[#111827] overflow-hidden selection:bg-blue-600/30">
 
   {/* 🌌 Luxury Background Grid Elements */}
   <div className="absolute inset-0 opacity-[0.07] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:30px_30px] pointer-events-none" />
@@ -81,7 +81,7 @@ export default function Process() {
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
                   // 🎯 REFINED: Dark card with specialized premium glow states and drop shadows on hover
-                  className="relative p-6 md:p-8 2xl:p-12 rounded-[1.8rem] 2xl:rounded-[2.5rem] bg-[#030303] border border-white/5 backdrop-blur-3xl hover:bg-[#030303]/90 hover:border-cyan-400/40 hover:shadow-[0_0_40px_rgba(34,211,238,0.15)] transition-all duration-500"
+                  className="relative p-6 md:p-8 2xl:p-12 rounded-[1.8rem] 2xl:rounded-[2.5rem] bg-[#023675] border border-white/5 backdrop-blur-3xl hover:bg-[#030303]/90 hover:border-cyan-400/40 hover:shadow-[0_0_40px_rgba(34,211,238,0.15)] transition-all duration-500"
                 >
                   {/* Floating Step Number */}
                   <div className="absolute -top-3 -right-3 w-10 h-10 2xl:w-14 2xl:h-14 rounded-full bg-[#030303] border border-white/10 flex items-center justify-center text-white font-mono text-[11px] 2xl:text-sm font-bold group-hover:border-cyan-400/50 group-hover:text-cyan-400 transition-colors z-10 shadow-xl">

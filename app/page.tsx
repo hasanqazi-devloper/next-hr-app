@@ -13,6 +13,7 @@ import IndustryExpertise from "@/components/IndustryExpertise";
 import HeroSlider from "@/components/sections/HeroSlider";
 import AuditCTA from "@/components/sections/AuditCTA";
 import ProvenExcellence from "@/components/sections/ProvenExcellence";
+import Stats from "@/components/sections/Stats";
 
 // 🎯 Contentful Client Setup
 const client = createClient({
@@ -40,20 +41,22 @@ export default async function Home() {
     <main>
       {/* 🎯 FIXED: Yahan se content={heroData} mukammal tor par hata diya hai */}
       <Hero />
-      
+
       <HeroSlider />
-      
+
       {/* 🎯 About Preview Contentful se data uthaye gaa */}
-      <AboutPreview content={aboutData} />
-      
+      <AboutPreview />
+
       <PortfolioPreview />
+      <Stats />
       <Services />
       <AuditCTA />
       <ProvenExcellence />
       <HowWeWork />
       <IndustryExpertise />
-      <WhyChooseUs />
       <Testimonials />
+
+      <WhyChooseUs />
       <ClientTrust />
     </main>
   );

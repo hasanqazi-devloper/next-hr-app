@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function CTA() {
   return (
     <section className="relative w-full overflow-hidden border-t border-b border-white/5 
-    bg-[#023675]
+   bg-gradient-to-bl from-[#0971A6] via-[#054f7a] to-[#021526]
      px-4 sm:px-6 md:px-8 lg:px-16 2xl:px-24 py-10 md:py-14 2xl:py-20">
       
       {/* 🌌 Background Glow */}

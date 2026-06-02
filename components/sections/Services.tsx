@@ -19,7 +19,7 @@ export default function Services() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="relative bg-[#030303] py-12 md:py-20 2xl:py-32 pt-10 overflow-hidden border-t border-white/5">
+    <section className="relative bg-[#111827] py-12 md:py-20 2xl:py-32 pt-10 overflow-hidden border-t border-white/5">
 
       {/* Background Glows */}
       <div className="absolute top-0 left-0 w-[400px] h-[400px]  pointer-events-none" />

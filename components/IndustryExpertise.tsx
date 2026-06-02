@@ -36,7 +36,7 @@ export default function IndustryExpertise() {
 
   return (
     // 🛠️ Main Section Component
-    <section className="bg-[#030303] text-white py-8 md:py-12 relative overflow-hidden border-t border-white/5">
+    <section className="bg-gradient-to-bl from-[#0971A6] via-[#054f7a] to-[#021526] text-white py-8 md:py-12 relative overflow-hidden border-t border-white/5">
 
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
 
@@ -78,9 +78,10 @@ export default function IndustryExpertise() {
                 key={index}
                 className="flex-shrink-0 w-[140px] h-[150px] md:w-[220px] md:h-[200px] 2xl:w-[320px] 2xl:h-[280px] 
                            rounded-2xl md:rounded-[2rem] border transition-all duration-500 group/card pointer-events-auto
-                           bg-gradient-to-br from-blue-900/40 to-black border-blue-500/50 -translate-y-1
+                           bg-[#111827] -translate-y-1
                            flex flex-col items-center justify-center gap-4 hover:border-cyan-400/80"
               >
+                 {/* bg-gradient-to-br from-blue-900/40 to-black border-blue-500/50 */}
                 {/* 🌀 Icon Wrapper */}
                 <div className="relative overflow-hidden">
                   {/* 🔄 HOVER ICON SPIN: Default simple text-white hai, mouse lane par spin karega */}

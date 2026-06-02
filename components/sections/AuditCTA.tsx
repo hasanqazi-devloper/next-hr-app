@@ -71,66 +71,70 @@ export default function AuditCTA() {
 
   return (
     // 🛠️ Premium Padding: Restored healthy vertical height so the section feels premium and spacious
-    <section className="relative w-full overflow-hidden border-y border-white/5 bg-[#023675]
-    px-6 md:px-12 lg:px-20 2xl:px-32 py-12 md:py-16 2xl:py-20">
-          {/* bg-gradient-to-r from-[#030303] via-[#050a18] to-[#030303]  */}
+   <section className="relative w-full overflow-hidden px-4 sm:px-6 py-12 md:py-16 2xl:py-24">
+  
+  {/* 🌌 Background Ambient Glows outside the wrapper container */}
+  <div className="absolute top-1/2 left-4 -translate-y-1/2 w-[500px] h-[250px] bg-blue-600/[0.04] blur-[120px] rounded-full pointer-events-none" />
+  <div className="absolute top-1/2 right-4 -translate-y-1/2 w-[400px] h-[200px] bg-indigo-600/[0.03] blur-[100px] rounded-full pointer-events-none" />
 
-      {/* 🌌 Background Glows */}
-      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[600px] h-[300px] bg-blue-600/[0.06] blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[250px] bg-indigo-600/[0.04] blur-[100px] rounded-full pointer-events-none" />
+  {/* 🎯 FLOATING ROUNDED BOX: Centered CTA block matching all devices */}
+  <div className="relative z-10 max-w-7xl 2xl:max-w-[100rem] mx-auto overflow-hidden rounded-[2.2rem] md:rounded-[3rem] border border-white/5 bg-gradient-to-bl from-[#043653] via-[#021320] to-[#01070d] px-6 py-10 sm:px-10 sm:py-14 lg:px-16 2xl:px-24 2xl:py-20 shadow-[0_24px_60px_-15px_rgba(0,0,0,0.8)]">
+    
+    {/* Inner Master Framework Flex Layout */}
+    <div className="relative z-10 flex flex-col xl:flex-row items-center justify-between gap-8 xl:gap-12 2xl:gap-16">
+      
+      {/* 📝 LEFT: HEADING */}
+      <div className="text-center xl:text-left flex-initial lg:whitespace-nowrap">
+        <h3 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl 2xl:text-5xl 3xl:text-[3.5rem] font-black tracking-tight text-white normal-case leading-none">
+          Get a Free {" "}
+          <span className="inline-block py-0.5 pr-2 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            Website Audit
+          </span>
+        </h3>
+      </div>
 
-      {/* 📐 Master Framework Flex Layout */}
-      <div className="relative z-10 max-w-7xl 2xl:max-w-[110rem] mx-auto flex flex-col xl:flex-row xl:flex-nowrap items-center justify-between gap-8 xl:gap-12 2xl:gap-16">
-        
-        {/* 📝 LEFT: UPGRADED HEADING (Bigger, punchier, but strictly locked in 1 line) */}
-        <div className="text-center xl:text-left flex-initial whitespace-nowrap">
-          <h3 className="!text-2xl sm:!text-3xl md:!text-3xl lg:!text-4xl 2xl:!text-5xl 3xl:!text-[3.5rem] font-black tracking-tight text-white normal-case leading-none">
-            Get a Free {" "}
-            <span className="inline-block py-0.5 pr-2 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Website Audit
-            </span>
-          </h3>
-        </div>
+      {/* 📥 RIGHT: FORM BLOCK */}
+      <div className="w-full xl:w-auto flex flex-col gap-3 flex-1 xl:justify-end">
+        <form
+          onSubmit={handleSubmit}
+          className="w-full flex flex-col sm:flex-row items-stretch sm:items-center justify-end gap-3 sm:gap-4 2xl:gap-6"
+        >
+          {/* EMAIL INPUT */}
+          <div className="relative w-full sm:w-[200px] md:w-[240px] 2xl:w-[320px] shrink-0">
+            <label className="block text-[10px] uppercase tracking-widest text-zinc-400 mb-1.5 font-bold pl-1">Business Email</label>
+            <input
+              type="email"
+              required
+              disabled={status.loading}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="name@company.com"
+              className="w-full h-[48px] 2xl:h-[54px] rounded-full bg-white/[0.05] border border-white/20 pl-5 pr-5 text-xs sm:text-sm 2xl:text-base text-white placeholder:text-zinc-500 outline-none transition-all focus:border-blue-500/50 focus:bg-white/[0.08] backdrop-blur-md disabled:opacity-40"
+            />
+          </div>
 
-        {/* 📥 RIGHT: FORM (Maintained sleekness to perfectly balance with the bigger heading) */}
-        <div className="w-full xl:w-auto flex flex-col gap-3 flex-1 xl:justify-end">
-          <form
-            onSubmit={handleSubmit}
-            className="w-full flex flex-col sm:flex-row sm:flex-nowrap items-center gap-3 sm:gap-4 2xl:gap-6"
-          >
-            {/* EMAIL INPUT */}
-            <div className="relative w-full sm:w-[200px] md:w-[240px] 2xl:w-[320px] shrink-0">
-              <input
-                type="email"
-                required
-                disabled={status.loading}
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Business Email"
-                className="w-full h-[46px] 2xl:h-[54px] rounded-full bg-white/[0.05] border border-white pl-5 pr-5 text-xs sm:text-sm 2xl:text-base text-white placeholder:text-white outline-none transition-all focus:border-blue-500/50 focus:bg-white/[0.08] backdrop-blur-md disabled:opacity-40"
-              />
-            </div>
+          {/* URL INPUT */}
+          <div className="relative w-full sm:w-[200px] md:w-[240px] 2xl:w-[320px] shrink-0">
+            <label className="block text-[10px] uppercase tracking-widest text-zinc-400 mb-1.5 font-bold pl-1">Website URL</label>
+            <input
+              type="url"
+              required
+              disabled={status.loading}
+              value={url}
+              onChange={(e) => setUrl(e.target.value)}
+              placeholder="example.com"
+              className="w-full h-[48px] 2xl:h-[54px] rounded-full bg-white/[0.05] border border-white/20 pl-5 pr-5 text-xs sm:text-sm 2xl:text-base text-white placeholder:text-zinc-500 outline-none transition-all focus:border-blue-500/50 focus:bg-white/[0.08] backdrop-blur-md disabled:opacity-40"
+            />
+          </div>
 
-            {/* URL INPUT */}
-            <div className="relative w-full sm:w-[200px] md:w-[240px] 2xl:w-[320px] shrink-0">
-              <input
-                type="url"
-                required
-                disabled={status.loading}
-                value={url}
-                onChange={(e) => setUrl(e.target.value)}
-                placeholder="Website URL"
-                className="w-full h-[46px] 2xl:h-[54px] rounded-full bg-white/[0.05] border border-white pl-5 pr-5 text-xs sm:text-sm 2xl:text-base text-white placeholder:text-white outline-none transition-all focus:border-blue-500/50 focus:bg-white/[0.08] backdrop-blur-md disabled:opacity-40"
-              />
-            </div>
-
-            {/* ⚡ ANALYZE BUTTON */}
+          {/* ⚡ ANALYZE BUTTON (Perfected alignment alignment height with layout baseline) */}
+          <div className="w-full sm:w-auto flex flex-col justify-end pt-5 sm:pt-0">
             <button
               type="submit"
               disabled={status.loading}
-              className="group relative h-[46px] 2xl:h-[54px] px-8 2xl:px-12 rounded-full bg-white overflow-hidden transition-all duration-500 active:scale-95 shadow-xl whitespace-nowrap shrink-0 w-full sm:w-auto disabled:opacity-50"
+              className="group relative h-[48px] 2xl:h-[54px] px-8 2xl:px-12 rounded-full bg-white overflow-hidden transition-all duration-500 active:scale-95 shadow-xl whitespace-nowrap shrink-0 w-full sm:w-auto disabled:opacity-50"
             >
-              {/* 🛠️ GRADIENT FILL LAYER */}
+              {/* GRADIENT FILL LAYER */}
               <div className="absolute inset-0 w-0 bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-500 ease-out group-hover:w-full" />
               
               <span className="relative z-10 flex items-center justify-center gap-2 sm:gap-3 text-black font-black text-[10px] sm:text-[11px] 2xl:text-[13px] tracking-[1.5px] sm:tracking-[2px] group-hover:text-white transition-colors duration-500">
@@ -147,28 +151,30 @@ export default function AuditCTA() {
                 )}
               </span>
             </button>
-          </form>
+          </div>
+        </form>
 
-          {/* 🎯 Real-Time Status Notification Alert under Row */}
-          <AnimatePresence mode="wait">
-            {status.message && (
-              <motion.div
-                initial={{ opacity: 0, y: 5 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -5 }}
-                className={`w-full p-2 rounded-xl text-center text-xs font-bold border sm:text-left sm:px-4 ${
-                  status.success 
-                    ? "bg-emerald-500/10 border-emerald-500/20 text-emerald-400" 
-                    : "bg-rose-500/10 border-rose-500/20 text-rose-400"
-                }`}
-              >
-                {status.message}
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-
+        {/* Real-Time Status Notification Alert under Row */}
+        <AnimatePresence mode="wait">
+          {status.message && (
+            <motion.div
+              initial={{ opacity: 0, y: 5 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -5 }}
+              className={`w-full p-2 rounded-xl text-center text-xs font-bold border sm:text-left sm:px-4 ${
+                status.success 
+                  ? "bg-emerald-500/10 border-emerald-500/20 text-emerald-400" 
+                  : "bg-rose-500/10 border-rose-500/20 text-rose-400"
+              }`}
+            >
+              {status.message}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
-    </section>
+
+    </div>
+  </div>
+</section>
   );
 }

@@ -28,7 +28,7 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="relative py-16 md:py-24 2xl:py-32 bg-[#023675] overflow-hidden border-b border-white/5">
+    <section className="relative py-16 md:py-24 2xl:py-32 bg-[#111827] overflow-hidden border-b border-white/5">
 
       {/* Background Dots & Glow */}
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none"
@@ -100,7 +100,7 @@ export default function WhyChooseUs() {
         transition={{ duration: 0.5, delay: index * 0.1 }}
         viewport={{ once: true }}
         // 🎯 FIXED: Background is now fully deep solid #030303 with luxury glowing state configurations
-        className={`relative p-6 md:p-8 2xl:p-12 rounded-3xl border border-white/5 bg-[#030303] backdrop-blur-xl group transition-all duration-500 hover:border-cyan-400/40 hover:shadow-[0_0_40px_rgba(34,211,238,0.12)] flex flex-col justify-between ${
+        className={`relative p-6 md:p-8 2xl:p-12 rounded-3xl border border-white/5 bg-[#023675] backdrop-blur-xl group transition-all duration-500 hover:border-cyan-400/40 hover:shadow-[0_0_40px_rgba(34,211,238,0.12)] flex flex-col justify-between ${
           index % 2 !== 0 ? 'sm:translate-y-8 md:translate-y-10 2xl:translate-y-16' : ''
         }`}
       >
