@@ -130,7 +130,7 @@ export default function SEOPage() {
     <main className="bg-[#030712] text-white selection:bg-blue-600 overflow-x-hidden">
 
     {/* 🎯 SYNCED SEO HERO SECTION: Formatted exactly on top of your verified master framework */}
-<section className="relative w-full overflow-hidden bg-[#030712]">
+<section className="relative w-full overflow-hidden bg-[#1E2939]">
   <div className="container-wide">
 
     {/* Background Image Container with Exact Matching Premium CSS */}
@@ -150,7 +150,7 @@ export default function SEOPage() {
     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
 
     {/* Full Sized Padded Content Wrapper - 🎯 FIXED: Aligned perfectly with your global framework layout */}
-    <div className="relative z-10 w-full mx-auto text-center lg:text-left px-6 py-24 md:py-32 lg:py-40 max-w-7xl lg:px-12 xl:px-16 2xl:max-w-[1500px] 3xl:max-w-[1800px]">
+          <div className="relative z-10 w-full mx-auto text-center lg:text-left px-6 pt-32 pb-16 md:pt-20 md:pb-24 lg:max-w-full lg:pt-40 lg:pb-28 lg:pl-40 2xl:mx-0 2xl:max-w-[1500px] 2xl:pt-48 2xl:pb-36 2xl:pl-80 3xl:mx-0 3xl:max-w-[1800px] 3xl:pt-60 3xl:pb-44 3xl:pl-72">
       <div className="max-w-5xl">
 
         {/* Glassmorphism Badge Container */}
@@ -175,7 +175,7 @@ export default function SEOPage() {
 
 
 
-      <section className="relative pt-12 md:pt-20 2xl:pt-32 pb-0 bg-[#030303] overflow-hidden">
+      <section className="relative pt-12 md:pt-20 2xl:pt-32 pb-4 bg-[#111827] overflow-hidden">
 
         {/* Background Glow */}
         <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[300px] md:w-[600px] h-[200px] bg-blue-600/[0.04] blur-[120px] pointer-events-none" />
@@ -271,7 +271,7 @@ export default function SEOPage() {
         </div>
       </section>
    {/* STRATEGIC FOUNDATION (Services Matrix Grid) */}
-<section className="relative py-24 2xl:py-40 px-6 overflow-hidden bg-[#030303]">
+<section className="relative py-24 2xl:py-40 px-6 overflow-hidden bg-[#1E2939]">
   <div className="absolute inset-0 z-0">
     <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:32px_32px]" />
     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.07)_0%,transparent_70%)]" />
@@ -288,54 +288,59 @@ export default function SEOPage() {
       </div>
     </div>
 
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 2xl:gap-10">
-      {[
-        { title: "AI SEO", desc: "We leverage smart AI tools to analyze data, find hidden keyword opportunities, and speed up growth.", icon: <FileCode2 size={24} /> },
-        { title: "Technical SEO", desc: "We fix backend site issues, boost page speed, and optimize code so Google can rank you.", icon: <Search size={24} /> },
-        { title: "eCommerce SEO", desc: "We optimize product pages and category structures to drive targeted shoppers directly to your online store.", icon: <Link2 size={24} /> },
-        { title: "Local SEO", desc: "We put your business on the map, helping nearby customers find you first on Google.", icon: <Globe2 size={24} /> },
-        { title: "Link Building", desc: "We earn high-quality, trusted backlinks that boost your website’s authority and push rankings higher.", icon: <BarChart4 size={24} /> },
-        { title: "Content Writing", desc: "We create engaging, helpful blog posts that rank well and turn everyday readers into buyers.", icon: <LineChart size={24} /> }
-      ].map((s, i) => (
-        <motion.div
-          key={i}
-          whileHover={{ y: -10 }}
-          className="group relative bg-[#070707] p-10 2xl:p-16 rounded-[2.5rem] border border-white/5 hover:border-blue-500/50 transition-all duration-500 text-left cursor-pointer h-full flex flex-col justify-between overflow-hidden"
-        >
-          {/* 🎯 EFFECTS LAYER 1: Slide-Up Background Gradient (Glow Fill Effect) */}
-          <div className="absolute inset-0 bg-gradient-to-t from-blue-600/15 via-blue-500/[0.02] to-transparent translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out z-0 pointer-events-none" />
+  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 2xl:gap-10">
+  {[
+    { title: "AI SEO", desc: "We leverage smart AI tools to analyze data, find hidden keyword opportunities, and speed up growth.", icon: <FileCode2 size={24} /> },
+    { title: "Technical SEO", desc: "We fix backend site issues, boost page speed, and optimize code so Google can rank you.", icon: <Search size={24} /> },
+    { title: "eCommerce SEO", desc: "We optimize product pages and category structures to drive targeted shoppers directly to your online store.", icon: <Link2 size={24} /> },
+    { title: "Local SEO", desc: "We put your business on the map, helping nearby customers find you first on Google.", icon: <Globe2 size={24} /> },
+    { title: "Link Building", desc: "We earn high-quality, trusted backlinks that boost your website’s authority and push rankings higher.", icon: <BarChart4 size={24} /> },
+    { title: "Content Writing", desc: "We create engaging, helpful blog posts that rank well and turn everyday readers into buyers.", icon: <LineChart size={24} /> }
+  ].map((s, i) => (
+    <motion.div
+      key={i}
+      whileHover={{ y: -10 }}
+      // 🎯 FIXED: Style tag lagakar background color #0971A6 ko solid completely lock kar diya hai
+      style={{ backgroundColor: "#0971A6" }}
+      className="group relative p-10 2xl:p-16 rounded-[2.5rem] border border-white/10 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)] transition-all duration-500 text-left cursor-pointer h-full flex flex-col justify-between overflow-hidden"
+    >
+      {/* 🎯 EFFECTS LAYER 1: Tuned to soft white overlay to perfectly match the solid background color */}
+      <div className="absolute inset-0 bg-gradient-to-t from-white/5 via-white/[0.01] to-transparent translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out z-0 pointer-events-none" />
 
-          {/* Foreground content wrapper inside relative z-10 */}
-          <div className="relative z-10 flex flex-col h-full justify-between w-full">
-            <div>
-              {/* 🎯 Icon aur Title Container Row */}
-              <div className="flex items-center gap-5 mb-8">
-                
-                {/* Icon Box with Scale and Glowing Drop Shadow */}
-                <div className="shrink-0 w-12 h-12 2xl:w-16 2xl:h-16 bg-white/[0.03] rounded-xl flex items-center justify-center border border-white/10 group-hover:bg-blue-600/20 group-hover:text-blue-400 group-hover:border-blue-500/50 scale-100 group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_rgba(59,130,246,0.5)] transition-all duration-500">
-                  <div className="text-blue-400 transition-colors duration-500">
-                    {s.icon}
-                  </div>
-                </div>
-
-                {/* Card Title Header */}
-                <h4 className="font-black text-[1.2rem] sm:text-[1.3rem] lg:text-[1.4rem] 2xl:text-[1.6rem] tracking-tight text-white group-hover:text-blue-400 transition-colors leading-tight">
-                  {s.title}
-                </h4>
+      {/* Foreground content wrapper inside relative z-10 */}
+      <div className="relative z-10 flex flex-col h-full justify-between w-full">
+        <div>
+          {/* 🎯 Icon aur Title Container Row */}
+          <div className="flex items-center gap-5 mb-8">
+            
+            {/* 🌀 FIXED ICON BOX: Hover se pehle subtle dark tint, hover ke baad clean white surface with 0971A6 text */}
+            <div 
+              style={{ '--hover-color': '#0971A6' } as React.CSSProperties}
+              className="shrink-0 w-12 h-12 2xl:w-16 2xl:h-16 rounded-xl bg-black/20 text-cyan-300 border border-white/5 group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent scale-100 group-hover:scale-110 transition-all duration-500 shadow-sm flex items-center justify-center"
+            >
+              <div className="transition-colors duration-500">
+                {s.icon}
               </div>
-
-              {/* Description Paragraph synced with global fluid sizing */}
-              <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed antialiased tracking-wide opacity-90 transition-colors duration-300 !max-w-none">
-                {s.desc}
-              </p>
             </div>
+
+            {/* Card Title Header */}
+            <h4 className="font-black text-[1.2rem] sm:text-[1.3rem] lg:text-[1.4rem] 2xl:text-[1.6rem] tracking-tight text-white group-hover:text-cyan-200 transition-colors leading-tight">
+              {s.title}
+            </h4>
           </div>
 
-          {/* 🎯 EFFECTS LAYER 2: Laser Bottom Edge Glow Line (Center Expand Effect) */}
-          <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-blue-500 shadow-[0_0_15px_#3b82f6] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-20" />
-        </motion.div>
-      ))}
-    </div>
+          {/* Description Paragraph synced with global fluid sizing */}
+          <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed antialiased tracking-wide opacity-90 group-hover:opacity-100 transition-opacity duration-300 !max-w-none">
+            {s.desc}
+          </p>
+        </div>
+      </div>
+
+      {/* 🎯 EFFECTS LAYER 2: Cyan matching line indicator */}
+      <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-cyan-300 shadow-[0_0_15px_#67e8f9] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-20" />
+    </motion.div>
+  ))}
+</div>
   </div>
 </section>
 
@@ -344,7 +349,7 @@ export default function SEOPage() {
       <Stats />
 
     {/* Portfolio Section */}
-<section className="relative py-16 md:py-20 2xl:py-32 bg-[#030303] text-white overflow-hidden select-none border-t border-white/5">
+<section className="relative py-16 md:py-20 2xl:py-32 bg-[#111827] text-white overflow-hidden select-none border-t border-white/5">
   {/* Background Glows */}
   <div className="absolute top-1/3 left-1/4 w-[600px] 2xl:w-[1000px] h-[600px] bg-blue-600/[0.02] blur-[150px] pointer-events-none" />
 
@@ -380,7 +385,7 @@ export default function SEOPage() {
       >
         <Link 
           href="/portfolio" 
-          className="flex items-center gap-3 md:gap-4 text-[10px] md:text-xs 2xl:text-[13px] uppercase tracking-[0.25em] font-black text-zinc-500 hover:text-white transition-all duration-500 group"
+          className="flex items-center gap-3 md:gap-4 text-[10px] md:text-xs 2xl:text-[13px] uppercase tracking-[0.25em] font-black text-white-500 hover:text-white transition-all duration-500 group"
         >
           <span className="relative pb-1 transition-colors duration-500 group-hover:text-white">
             View All Projects
@@ -430,11 +435,11 @@ export default function SEOPage() {
                 </div>
 
                 {/* Project Title Display */}
-                <div className="absolute bottom-8 left-8 right-8 z-20 space-y-2">
+                {/* <div className="absolute bottom-8 left-8 right-8 z-20 space-y-2">
                   <span className="text-2xl 2xl:text-5xl font-black tracking-tight uppercase block text-white bg-black/30 backdrop-blur-sm px-4 py-2 rounded-xl w-fit">
                     {project.title}
                   </span>
-                </div>
+                </div> */}
               </div>
             </CardWrapper>
           </Link>
@@ -447,7 +452,7 @@ export default function SEOPage() {
       <AuditCTA />
 
       {/* 🚀 WORKING PROCESS MATRIX SECTION */}
-      <section className="relative py-16 md:py-24 bg-[#020617] overflow-hidden selection:bg-blue-600/30">
+      <section className="relative py-16 md:py-24 bg-[#1E2939] overflow-hidden selection:bg-blue-600/30">
 
         {/* 🌌 Luxury Background Elements */}
         <div className="absolute inset-0 opacity-[0.05] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:30px_30px] pointer-events-none" />
@@ -469,66 +474,77 @@ export default function SEOPage() {
             {/* Central Progress Line */}
             <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-[1px] bg-gradient-to-b from-blue-500/30 via-white/10 to-transparent -translate-x-1/2 hidden md:block" />
 
-            {/* Cards Container */}
-            <div className="flex flex-col gap-3 md:gap-6">
-              {steps.map((step, index) => {
-                const isEven = index % 2 === 0;
+          {/* Cards Container */}
+<div className="flex flex-col gap-3 md:gap-6">
+  {steps.map((step, index) => {
+    const isEven = index % 2 === 0;
 
-                return (
-                  <div
-                    key={step.id}
-                    className={`relative flex flex-col md:flex-row items-start md:items-center justify-between w-full group ${isEven ? "md:flex-row" : "md:flex-row-reverse"
-                      }`}
-                  >
-                    {/* CARD CONTAINER */}
-                    <div className="w-full md:w-[45%] pl-8 md:pl-0">
-                      <motion.div
-                        initial={{ opacity: 0, x: isEven ? -30 : 30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true, margin: "-100px" }}
-                        transition={{ duration: 0.5 }}
-                        className="relative p-6 md:p-8 2xl:p-12 rounded-[1.8rem] 2xl:rounded-[3rem] bg-white/[0.02] border border-white/5 backdrop-blur-3xl hover:bg-white/[0.04] hover:border-blue-500/30 transition-all duration-500"
-                      >
-                        {/* Floating Step Number */}
-                        <div className="absolute -top-3 -right-3 w-10 h-10 2xl:w-16 2xl:h-16 rounded-full bg-[#030712] border border-white/10 flex items-center justify-center text-white font-mono text-[11px] 2xl:text-base font-bold group-hover:border-blue-500/50 transition-colors z-10 shadow-lg">
-                          {step.id}
-                        </div>
-
-                        <div className="flex flex-col gap-4">
-                          {/* Icon & Heading */}
-                          <div className="flex items-center gap-4">
-                            <div className="shrink-0 w-11 h-11 md:w-12 md:h-12 2xl:w-18 2xl:h-18 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center group-hover:bg-blue-500 group-hover:text-white transition-all duration-500">
-                              {step.icon}
-                            </div>
-                            <h4 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem]  text-white tracking-tight">
-                              {step.title}
-                            </h4>
-                          </div>
-
-                          {/* Description Below */}
-                          <p className="text-white text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px]  font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-all duration-300">
-                            {step.desc}
-                          </p>
-                        </div>
-
-                        {/* Bottom Accent Line */}
-                        <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-blue-500 group-hover:w-[35%] transition-all duration-700" />
-                      </motion.div>
-                    </div>
-
-                    {/* CENTRAL NODE */}
-                    <div className="absolute left-4 md:left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 hidden md:block">
-                      <div className="w-5 h-5 2xl:w-10 2xl:h-10 rounded-full bg-[#020617] border border-white/10 flex items-center justify-center group-hover:border-blue-500 transition-all duration-500 group-hover:scale-110">
-                        <div className="w-2 h-2 2xl:w-4 2xl:h-4 bg-zinc-700 rounded-full group-hover:bg-blue-400 transition-all" />
-                      </div>
-                    </div>
-
-                    {/* Spacer */}
-                    <div className="hidden md:block md:w-[45%]" />
-                  </div>
-                );
-              })}
+    return (
+      <div
+        key={step.id}
+        className={`relative flex flex-col md:flex-row items-start md:items-center justify-between w-full group ${
+          isEven ? "md:flex-row" : "md:flex-row-reverse"
+        }`}
+      >
+        {/* CARD CONTAINER */}
+        <div className="w-full md:w-[45%] pl-8 md:pl-0">
+          <motion.div
+            initial={{ opacity: 0, x: isEven ? -30 : 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5 }}
+            // 🎯 FIXED: Background color #0971A6 ko solid completely lock kar diya hai
+            style={{ backgroundColor: "#0971A6" }}
+            className="relative p-6 md:p-8 2xl:p-12 rounded-[1.8rem] 2xl:rounded-[3rem] border border-white/10 transition-all duration-500 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)]"
+          >
+            {/* 🌀 FLOATING STEP NUMBER: Hover se pehle dark transparent, hover par white pop layer */}
+            <div 
+              style={{ '--hover-color': '#0971A6' } as React.CSSProperties}
+              className="absolute -top-3 -right-3 w-10 h-10 2xl:w-16 2xl:h-16 rounded-full bg-black/40 border border-white/10 flex items-center justify-center text-white font-mono text-[11px] 2xl:text-base font-bold group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 z-10 shadow-lg"
+            >
+              {step.id}
             </div>
+
+            <div className="flex flex-col gap-4">
+              {/* Icon & Heading */}
+              <div className="flex items-center gap-4">
+                {/* 🌀 FIXED ICON BOX: Subtle dark background with white-pop on hover */}
+                <div 
+                  style={{ '--hover-color': '#0971A6' } as React.CSSProperties}
+                  className="shrink-0 w-11 h-11 md:w-12 md:h-12 2xl:w-18 2xl:h-18 rounded-xl bg-black/20 text-cyan-300 border border-white/5 group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 shadow-sm flex items-center justify-center"
+                >
+                  {step.icon}
+                </div>
+                
+                <h4 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] text-white group-hover:text-cyan-200 transition-colors duration-300 tracking-tight">
+                  {step.title}
+                </h4>
+              </div>
+
+              {/* Description Below */}
+              <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                {step.desc}
+              </p>
+            </div>
+
+            {/* 🎯 BOTTOM ACCENT LINE: Cyan indicator line expand effect */}
+            <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-cyan-300 shadow-[0_0_10px_#67e8f9] group-hover:w-[35%] transition-all duration-700" />
+          </motion.div>
+        </div>
+
+        {/* 🌀 CENTRAL TIMELINE NODE: Clean track node transitions matching your premium cyan layout */}
+        <div className="absolute left-4 md:left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 hidden md:block">
+          <div className="w-5 h-5 2xl:w-10 2xl:h-10 rounded-full bg-black/40 border border-white/20 flex items-center justify-center group-hover:border-cyan-300 transition-all duration-500 group-hover:scale-110 shadow-md">
+            <div className="w-2 h-2 2xl:w-4 2xl:h-4 bg-white/40 rounded-full group-hover:bg-cyan-300 group-hover:shadow-[0_0_8px_#67e8f9] transition-all" />
+          </div>
+        </div>
+
+        {/* Spacer */}
+        <div className="hidden md:block md:w-[45%]" />
+      </div>
+    );
+  })}
+</div>
           </div>
         </div>
       </section>
@@ -536,7 +552,7 @@ export default function SEOPage() {
       <IndustryExpertise />
 
       {/* Why Chose ue */}
-       <section className="relative py-16 md:py-24 2xl:py-32 bg-[#020617] overflow-hidden border-b border-white/5">
+       <section className="relative py-16 md:py-24 2xl:py-32 bg-[#111827] overflow-hidden border-b border-white/5">
 
         {/* Background Dots & Glow */}
         <div
@@ -587,49 +603,58 @@ export default function SEOPage() {
             </div>
 
             {/* RIGHT SIDE: Cards Grid */}
-             <div className="lg:col-span-6">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 2xl:gap-10 relative">
-          
-                          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-blue-500/20 blur-[100px] rounded-full pointer-events-none" />
-          
-                          {features.map((item, index) => (
-                            <motion.div
-                              key={index}
-                              initial={{ opacity: 0, y: 20 }}
-                              whileInView={{ opacity: 1, y: 0 }}
-                              transition={{ duration: 0.5, delay: index * 0.1 }}
-                              viewport={{ once: true }}
-                              className={`relative p-6 md:p-8 2xl:p-12 rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-xl group transition-all duration-500 hover:border-blue-500/50 hover:bg-white/[0.07] flex flex-col justify-between
-                              ${index % 2 !== 0 ? 'sm:translate-y-8 md:translate-y-10 2xl:translate-y-16' : ''}`}
-                            >
-                              <div className="relative z-10 space-y-4 md:space-y-5">
-          
-                                {/* Icon & Heading Row */}
-                                <div className="flex items-center gap-4">
-                                  <div className="shrink-0 w-10 h-10 md:w-12 md:h-12 2xl:w-16 2xl:h-16 flex items-center justify-center rounded-xl bg-white/[0.05] text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-all duration-500">
-                                    {item.icon}
-                                  </div>
-          
-                                  {/* Interactive Title Gradient */}
-                                  <h4 className="flex-1 font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] leading-tight bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent group-hover:from-cyan-400 group-hover:to-blue-500 transition-all duration-500">
-                                    {item.title}
-                                  </h4>
-                                </div>
-          
-                                {/* Card Description */}
-                                <p className="text-white text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-                                  {item.desc}
-                                </p>
-                              </div>
-          
-                              {/* Hover Check Icon */}
-                              <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                                <CheckCircle2 className="text-blue-500 w-4 h-4 2xl:w-6 2xl:h-6" />
-                              </div>
-                            </motion.div>
-                          ))}
-                        </div>
-                      </div>
+         {/* RIGHT SIDE: Cards Grid */}
+<div className="lg:col-span-6">
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 2xl:gap-10 relative">
+    
+    {/* Background subtle overlay ambient glow */}
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-white/10 blur-[100px] rounded-full pointer-events-none" />
+
+    {features.map((item, index) => (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+        viewport={{ once: true }}
+        // 🎯 FIXED: Style tag se background color #0971A6 ko solid completely lock kiya hai
+        style={{ backgroundColor: "#0971A6" }}
+        className={`relative p-6 md:p-8 2xl:p-12 rounded-3xl border border-white/10 group transition-all duration-500 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)] flex flex-col justify-between
+        ${index % 2 !== 0 ? 'sm:translate-y-8 md:translate-y-10 2xl:translate-y-16' : ''}`}
+      >
+        <div className="relative z-10 space-y-4 md:space-y-5">
+
+          {/* Icon & Heading Row */}
+          <div className="flex items-center gap-4">
+            
+            {/* 🌀 FIXED ICON BOX: Hover se pehle transparent dark layer, hover par pop-up pure white canvas */}
+            <div 
+              style={{ '--hover-color': '#0971A6' } as React.CSSProperties}
+              className="shrink-0 w-10 h-10 md:w-12 md:h-12 2xl:w-16 2xl:h-16 flex items-center justify-center rounded-xl bg-black/20 text-cyan-300 border border-white/5 group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 shadow-sm"
+            >
+              {item.icon}
+            </div>
+
+            {/* Interactive Title (Swapped gradient to clean solid colors to avoid contrast clash on dark blue) */}
+            <h4 className="flex-1 font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] leading-tight text-white group-hover:text-cyan-200 transition-colors duration-500">
+              {item.title}
+            </h4>
+          </div>
+
+          {/* Card Description */}
+          <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+            {item.desc}
+          </p>
+        </div>
+
+        {/* Hover Check Icon */}
+        <div className="absolute top-4 right-4 opacity-0 scale-75 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300">
+          <CheckCircle2 className="text-cyan-300 w-4 h-4 2xl:w-6 2xl:h-6" />
+        </div>
+      </motion.div>
+    ))}
+  </div>
+</div>
 
           </div>
         </div>

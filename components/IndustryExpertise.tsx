@@ -36,7 +36,8 @@ export default function IndustryExpertise() {
 
   return (
     // 🛠️ Main Section Component
-    <section className="bg-[#030207] text-white py-8 md:py-12 relative overflow-hidden border-t border-white/5">
+    <section className="   bg-gradient-to-bl from-[#0971A6] via-[#054f7a] to-[#021526]
+ text-white py-8 md:py-12 relative overflow-hidden border-t border-white/5">
 
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
 
@@ -80,12 +81,12 @@ export default function IndustryExpertise() {
                            rounded-2xl md:rounded-[2rem] border transition-all duration-500 group/card pointer-events-auto
                            -translate-y-1  bg-gradient-to-br from-blue-900/40 to-black border-blue-500/50
 
-                           flex flex-col items-center justify-center gap-4 hover:border-cyan-400/80"
+                           flex flex-col items-center justify-center gap-4 hover:border-blue"
               >
                 {/* 🌀 Icon Wrapper */}
                 <div className="relative overflow-hidden">
                   {/* 🔄 HOVER ICON SPIN: Default simple text-white hai, mouse lane par spin karega */}
-                  <Icon className="w-8 h-12 md:w-16 2xl:w-18 text-white transition-transform duration-700 ease-out group-hover/card:rotate-[360deg] group-hover/card:text-[#0971A6]" />
+                  <Icon className="w-8 h-12 md:w-16 2xl:w-20 lg:w-20 text-white transition-transform duration-700 ease-out group-hover/card:rotate-[360deg] group-hover/card:text-[#0971A6]" />
                 </div>
 
                 {/* 🖋️ Text Description Element */}

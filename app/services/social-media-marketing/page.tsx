@@ -118,51 +118,51 @@ export default function SocialMediaPage() {
         <main className="bg-[#030712] text-white selection:bg-blue-600 overflow-x-hidden">
 
             {/* 🎯 SYNCED SOCIAL MEDIA MARKETING HERO SECTION: Formatted exactly on top of your verified About Us master framework */}
-         <section className="relative w-full overflow-hidden bg-[#030712]">
-  <div className="container-wide">
+            <section className="relative w-full overflow-hidden bg-[#030712]">
+                <div className="container-wide">
 
-    {/* Background Image Container with Exact Matching Premium CSS */}
-    <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
-      <Image
-        src="/home-hero.jpg"
-        alt="Mesh Grid"
-        fill
-        sizes="100vw"
-        priority // 🔥 PageSpeed boost: Hero image jaldi load hogi
-        className="object-cover object-top opacity-35"
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#030712]/40 to-[#030712]" />
-    </div>
+                    {/* Background Image Container with Exact Matching Premium CSS */}
+                    <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+                        <Image
+                            src="/home-hero.jpg"
+                            alt="Mesh Grid"
+                            fill
+                            sizes="100vw"
+                            priority // 🔥 PageSpeed boost: Hero image jaldi load hogi
+                            className="object-cover object-top opacity-35"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#030712]/40 to-[#030712]" />
+                    </div>
 
-    {/* Ambient Blur Dot to lock the signature aesthetic */}
-    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
+                    {/* Ambient Blur Dot to lock the signature aesthetic */}
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
 
-    {/* Full Sized Padded Content Wrapper - 🎯 FIXED: Aligned perfectly with your AI Automation global structure */}
-    <div className="relative z-10 w-full mx-auto text-center lg:text-left px-6 py-24 md:py-32 lg:py-40 max-w-7xl lg:px-12 xl:px-16 2xl:max-w-[1500px] 3xl:max-w-[1800px]">
-      <div className="max-w-5xl">
+                    {/* Full Sized Padded Content Wrapper - 🎯 FIXED: Aligned perfectly with your AI Automation global structure */}
+          <div className="relative z-10 w-full mx-auto text-center lg:text-left px-6 pt-32 pb-16 md:pt-20 md:pb-24 lg:max-w-full lg:pt-40 lg:pb-28 lg:pl-40 2xl:mx-0 2xl:max-w-[1500px] 2xl:pt-48 2xl:pb-36 2xl:pl-80 3xl:mx-0 3xl:max-w-[1800px] 3xl:pt-60 3xl:pb-44 3xl:pl-72">
+                        <div className="max-w-5xl">
 
-        {/* Glassmorphism Badge Container */}
-        {/* (If you have a badge code, paste it here) */}
+                            {/* Glassmorphism Badge Container */}
+                            {/* (If you have a badge code, paste it here) */}
 
-        {/* Main Typography Block - 🎯 FIXED: Replicated the exact smooth response scaling and line-height */}
-        <h1 className="text-[3rem] md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black uppercase tracking-tighter leading-[1.1] lg:leading-[1.0] text-white mb-8">
-          Social Media{" "}
-          <span className="inline-block mt-2 bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
-            Marketing.
-          </span>
-        </h1>
+                            {/* Main Typography Block - 🎯 FIXED: Replicated the exact smooth response scaling and line-height */}
+                            <h1 className="text-[3rem] md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black uppercase tracking-tighter leading-[1.1] lg:leading-[1.0] text-white mb-8">
+                                Social Media{" "}
+                                <span className="inline-block mt-2 bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
+                                    Marketing.
+                                </span>
+                            </h1>
 
-        {/* Description Paragraph - Aligned perfectly with global layout standards */}
-        <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed w-full max-w-3xl mx-auto lg:mx-0 opacity-80">
-          We build social media strategies that stop the scroll. Our team creates engaging content and targeted ad campaigns to grow your community, boost brand loyalty, and drive real business sales.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+                            {/* Description Paragraph - Aligned perfectly with global layout standards */}
+                            <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed w-full max-w-3xl mx-auto lg:mx-0 opacity-80">
+                                We build social media strategies that stop the scroll. Our team creates engaging content and targeted ad campaigns to grow your community, boost brand loyalty, and drive real business sales.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             {/* 🎯 ABOUT SECTION */}
-            <section className="relative pt-12 md:pt-20 2xl:pt-32 pb-0 bg-[#030303] overflow-hidden">
+            <section className="relative pt-12 md:pt-20 2xl:pt-32 pb-4 bg-[#1E2939] overflow-hidden">
 
                 {/* Background Glow */}
                 <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[300px] md:w-[600px] h-[200px] bg-blue-600/[0.04] blur-[120px] pointer-events-none" />
@@ -263,7 +263,7 @@ export default function SocialMediaPage() {
 
 
             {/* 2. CORE STACK - Web Solutions (Synced perfectly with SEO & Digital Marketing Hover Architecture) */}
-            <section className="relative py-24 2xl:py-40 px-6 overflow-hidden bg-[#030303]">
+            <section className="relative py-24 2xl:py-40 px-6 overflow-hidden bg-[#111827]">
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:32px_32px]" />
                 </div>
@@ -290,42 +290,48 @@ export default function SocialMediaPage() {
                             { title: "Content Production", desc: "Creative content creation, including graphics, videos, captions, and posts tailored for your business and audience.", icon: <RefreshCw size={24} /> },
                             { title: "Analytics & Reporting", desc: "Detailed reports and insights help you track campaign performance, audience engagement, and overall marketing results clearly.", icon: <Wrench size={24} /> }
                         ].map((s, i) => (
-                            <motion.div
-                                key={i}
-                                whileHover={{ y: -10 }}
-                                className="group relative bg-[#070707] p-10 2xl:p-16 rounded-[2.5rem] border border-white/5 hover:border-blue-500/50 transition-all duration-500 cursor-pointer h-full flex flex-col justify-between overflow-hidden"
-                            >
-                                {/* 🎯 EFFECTS LAYER 1: Slide-Up Background Gradient (Glow Fill Effect) */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-blue-600/15 via-blue-500/[0.02] to-transparent translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out z-0 pointer-events-none" />
+                          <motion.div
+  key={i}
+  whileHover={{ y: -10 }}
+  // 🎯 FIXED: Style tag lagakar background color #0971A6 ko solid completely lock kar diya hai
+  style={{ backgroundColor: "#0971A6" }}
+  className="group relative p-10 2xl:p-16 rounded-[2.5rem] border border-white/10 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)] transition-all duration-500 cursor-pointer h-full flex flex-col justify-between overflow-hidden"
+>
+  {/* 🎯 EFFECTS LAYER 1: Tuned to soft white overlay to perfectly match the solid background color */}
+  <div className="absolute inset-0 bg-gradient-to-t from-white/5 via-white/[0.01] to-transparent translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out z-0 pointer-events-none" />
 
-                                {/* Foreground content inside relative z-10 for perfect layering */}
-                                <div className="relative z-10 flex flex-col h-full justify-between w-full">
-                                    <div>
-                                        {/* Icon aur Title Row Layout */}
-                                        <div className="flex items-center gap-5 mb-8">
+  {/* Foreground content inside relative z-10 for perfect layering */}
+  <div className="relative z-10 flex flex-col h-full justify-between w-full">
+    <div>
+      {/* Icon aur Title Row Layout */}
+      <div className="flex items-center gap-5 mb-8">
 
-                                            {/* Icon Box with Scale and Glowing Drop Shadow */}
-                                            <div className="shrink-0 w-12 h-12 2xl:w-16 2xl:h-16 bg-white/[0.03] rounded-xl flex items-center justify-center border border-white/10 group-hover:bg-blue-600/20 group-hover:text-blue-400 group-hover:border-blue-500/50 scale-100 group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_rgba(59,130,246,0.5)] transition-all duration-500">
-                                                <div className="text-blue-400 transition-colors duration-500">
-                                                    {s.icon}
-                                                </div>
-                                            </div>
+        {/* 🌀 FIXED ICON BOX: Hover se pehle subtle dark tint, hover ke baad clean white surface with 0971A6 text */}
+        <div 
+          style={{ '--hover-color': '#0971A6' } as React.CSSProperties}
+          className="shrink-0 w-12 h-12 2xl:w-16 2xl:h-16 rounded-xl bg-black/20 text-cyan-300 border border-white/5 group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 shadow-sm flex items-center justify-center"
+        >
+          <div className="transition-colors duration-500">
+            {s.icon}
+          </div>
+        </div>
 
-                                            <h4 className="font-black text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] text-white group-hover:text-blue-400 transition-colors leading-tight tracking-tight">
-                                                {s.title}
-                                            </h4>
-                                        </div>
+        {/* Title Text (Kept original sizes, added text-white and hover states) */}
+        <h4 className="font-black text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] text-white group-hover:text-cyan-200 transition-colors leading-tight tracking-tight">
+          {s.title}
+        </h4>
+      </div>
 
-                                        {/* Description Paragraph synced with global text sizing */}
-                                        <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed opacity-90 transition-colors duration-300 antialiased !max-w-none">
-                                            {s.desc}
-                                        </p>
-                                    </div>
-                                </div>
+      {/* Description Paragraph synced with global text sizing */}
+      <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity duration-300 antialiased !max-w-none">
+        {s.desc}
+      </p>
+    </div>
+  </div>
 
-                                {/* 🎯 EFFECTS LAYER 2: Laser Bottom Edge Glow Line (Center Expand Effect) */}
-                                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-blue-500 shadow-[0_0_15px_#3b82f6] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-20" />
-                            </motion.div>
+  {/* 🎯 EFFECTS LAYER 2: Cyan matching line indicator */}
+  <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-cyan-300 shadow-[0_0_15px_#67e8f9] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-20" />
+</motion.div>
                         ))}
                     </div>
                 </div>
@@ -334,7 +340,7 @@ export default function SocialMediaPage() {
 
             <Stats />
             {/* portfolio section */}
-            <section className="relative py-16 md:py-20 2xl:py-32 bg-[#030303] text-white overflow-hidden select-none border-t border-white/5">
+            <section className="relative py-16 md:py-20 2xl:py-32 bg-[#1E2939] text-white overflow-hidden select-none border-t border-white/5">
                 {/* Background Glows */}
                 <div className="absolute top-1/3 left-1/4 w-[600px] 2xl:w-[1000px] h-[600px] bg-blue-600/[0.02] blur-[150px] pointer-events-none" />
 
@@ -349,13 +355,13 @@ export default function SocialMediaPage() {
                             transition={{ duration: 0.5 }}
                             className="text-left"
                         >
-                          
-                              <h1 className="text-[3rem] uppercase md:text-[3.2rem] 2xl:text-[5rem] lg:text-[3.8rem] uppercase  font-black tracking-tighter leading-[0.8] text-white mb-8">
-                                            Just some of our{" "}
-                                            <span className="inline-block mt-2 uppercase bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
-                                                Social Results
-                                            </span>
-                                          </h1>
+
+                            <h1 className="text-[3rem] uppercase md:text-[3.2rem] 2xl:text-[5rem] lg:text-[3.8rem] uppercase  font-black tracking-tighter leading-[0.8] text-white mb-8">
+                                Just some of our{" "}
+                                <span className="inline-block mt-2 uppercase bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
+                                    Social Results
+                                </span>
+                            </h1>
                             <p className="mt-4 text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed opacity-80">
                                 See how our social media strategies helped businesses increase engagement, reach new audiences, generate leads, and grow online successfully.
                             </p>
@@ -371,7 +377,7 @@ export default function SocialMediaPage() {
                         >
                             <Link
                                 href="/casestudies"
-                                className="flex items-center gap-3 md:gap-4 text-[10px] md:text-xs 2xl:text-[13px] uppercase tracking-[0.25em] font-black text-zinc-500 hover:text-white transition-all duration-500 group"
+                                className="flex items-center gap-3 md:gap-4 text-[10px] md:text-xs 2xl:text-[13px] uppercase tracking-[0.25em] font-black text-white-500 hover:text-white transition-all duration-500 group"
                             >
                                 <span className="relative pb-1 transition-colors duration-500 group-hover:text-white">
                                     View All Projects
@@ -424,11 +430,11 @@ export default function SocialMediaPage() {
                                             </div>
 
                                             {/* Project Title Display */}
-                                            <div className="absolute bottom-8 left-8 right-8 z-20 space-y-2">
+                                            {/* <div className="absolute bottom-8 left-8 right-8 z-20 space-y-2">
                                                 <span className="text-2xl 2xl:text-5xl font-black tracking-tight uppercase block text-white bg-black/30 backdrop-blur-sm px-4 py-2 rounded-xl w-fit">
                                                     {project.title}
                                                 </span>
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </CardWrapper>
                                 </Link>
@@ -445,7 +451,7 @@ export default function SocialMediaPage() {
             <ServiceCTA />
 
             {/* process section  */}
-            <section className="relative py-16 md:py-24 bg-[#020617] overflow-hidden selection:bg-blue-600/30">
+            <section className="relative py-16 md:py-24 bg-[#111827] overflow-hidden selection:bg-blue-600/30">
 
                 {/* 🌌 Luxury Background Elements */}
                 <div className="absolute inset-0 opacity-[0.05] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:30px_30px] pointer-events-none" />
@@ -478,41 +484,52 @@ export default function SocialMediaPage() {
                                         className={`relative flex flex-col md:flex-row items-start md:items-center justify-between w-full group ${isEven ? "md:flex-row" : "md:flex-row-reverse"
                                             }`}
                                     >
-                                        {/* CARD CONTAINER */}
-                                        <div className="w-full md:w-[45%] pl-8 md:pl-0">
-                                            <motion.div
-                                                initial={{ opacity: 0, x: isEven ? -30 : 30 }}
-                                                whileInView={{ opacity: 1, x: 0 }}
-                                                viewport={{ once: true, margin: "-100px" }}
-                                                transition={{ duration: 0.5 }}
-                                                className="relative p-6 md:p-8 2xl:p-12 rounded-[1.8rem] 2xl:rounded-[3rem] bg-white/[0.02] border border-white/5 backdrop-blur-3xl hover:bg-white/[0.04] hover:border-blue-500/30 transition-all duration-500"
-                                            >
-                                                {/* Floating Step Number */}
-                                                <div className="absolute -top-3 -right-3 w-10 h-10 2xl:w-16 2xl:h-16 rounded-full bg-[#030712] border border-white/10 flex items-center justify-center text-white font-mono text-[11px] 2xl:text-base font-bold group-hover:border-blue-500/50 transition-colors z-10 shadow-lg">
-                                                    {step.id}
-                                                </div>
+                                      {/* CARD CONTAINER */}
+<div className="w-full md:w-[45%] pl-8 md:pl-0">
+  <motion.div
+    initial={{ opacity: 0, x: isEven ? -30 : 30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true, margin: "-100px" }}
+    transition={{ duration: 0.5 }}
+    // 🎯 FIXED: Style tag lagakar background color #0971A6 ko solid completely lock kar diya hai
+    style={{ backgroundColor: "#0971A6" }}
+    className="relative p-6 md:p-8 2xl:p-12 rounded-[1.8rem] 2xl:rounded-[3rem] border border-white/10 group transition-all duration-500 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)]"
+  >
+    {/* 🌀 FLOATING STEP NUMBER BADGE: Hover se pehle dark, hover ke baad clean white surface with 0971A6 text */}
+    <div 
+      style={{ '--hover-color': '#0971A6' } as React.CSSProperties}
+      className="absolute -top-3 -right-3 w-10 h-10 2xl:w-16 2xl:h-16 rounded-full bg-black/40 border border-white/10 flex items-center justify-center text-white font-mono text-[11px] 2xl:text-base font-bold group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 z-10 shadow-lg"
+    >
+      {step.id}
+    </div>
 
-                                                <div className="flex flex-col gap-4">
-                                                    {/* Icon & Heading */}
-                                                    <div className="flex items-center gap-4">
-                                                        <div className="shrink-0 w-11 h-11 md:w-12 md:h-12 2xl:w-18 2xl:h-18 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center group-hover:bg-blue-500 group-hover:text-white transition-all duration-500">
-                                                            {step.icon}
-                                                        </div>
-                                                        <h4 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem]  text-white tracking-tight">
-                                                            {step.title}
-                                                        </h4>
-                                                    </div>
+    <div className="flex flex-col gap-4">
+      {/* Icon & Heading */}
+      <div className="flex items-center gap-4">
+        {/* 🌀 FIXED ICON BOX: Hover se pehle subtle dark tint, hover ke baad clean white surface with 0971A6 text */}
+        <div 
+          style={{ '--hover-color': '#0971A6' } as React.CSSProperties}
+          className="shrink-0 w-11 h-11 md:w-12 md:h-12 2xl:w-18 2xl:h-18 rounded-xl bg-black/20 text-cyan-300 border border-white/5 group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 shadow-sm flex items-center justify-center"
+        >
+          {step.icon}
+        </div>
+        
+        {/* Heading text (Maintained original sizes) */}
+        <h4 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] text-white group-hover:text-cyan-200 transition-colors duration-300 tracking-tight">
+          {step.title}
+        </h4>
+      </div>
 
-                                                    {/* Description Below */}
-                                                    <p className="text-white text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px]  font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-all duration-300">
-                                                        {step.desc}
-                                                    </p>
-                                                </div>
+      {/* Description Below */}
+      <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+        {step.desc}
+      </p>
+    </div>
 
-                                                {/* Bottom Accent Line */}
-                                                <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-blue-500 group-hover:w-[35%] transition-all duration-700" />
-                                            </motion.div>
-                                        </div>
+    {/* 🎯 BOTTOM ACCENT LINE: Cyan matching expand line */}
+    <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-cyan-300 shadow-[0_0_10px_#67e8f9] group-hover:w-[35%] transition-all duration-700" />
+  </motion.div>
+</div>
 
                                         {/* CENTRAL NODE */}
                                         <div className="absolute left-4 md:left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 hidden md:block">
@@ -534,7 +551,7 @@ export default function SocialMediaPage() {
             <IndustryExpertise />
 
             {/* our core experties */}
-            <section className="relative py-24 2xl:py-40 px-6 overflow-hidden bg-[#030303]">
+            <section className="relative py-24 2xl:py-40 px-6 overflow-hidden bg-[#1E2939]">
                 <div className="absolute inset-0 z-0 opacity-[0.02] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:40px_40px] pointer-events-none" />
 
                 <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto relative z-10">
@@ -551,81 +568,80 @@ export default function SocialMediaPage() {
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 2xl:gap-8">
-                        {[
-                            {
-                                step: "01",
-                                title: "Meta Ads",
-                                keywords: "Lookalike Audiences, CBO/ABO Tuning, Pixel Tracking",
-                                desc: "Scale your brand on Facebook and Instagram with high-converting, laser-targeted visual ad campaigns."
-                            },
-                            {
-                                step: "02",
-                                title: "LinkedIn Advertising",
-                                keywords: "B2B Matched Audiences, Account Targeting, Lead Gen",
-                                desc: "Connect directly with B2B decision-makers, generate premium leads, and drive professional business growth."
-                            },
-                            {
-                                step: "03",
-                                title: "YouTube Advertising",
-                                keywords: "In-Stream Formats, Retargeting Funnels, Custom Intent",
-                                desc: "Capture attention and boost conversions using high-impact video ads on the world’s largest video platform."
-                            },
-                            {
-                                step: "04",
-                                title: "TikTok Advertising",
-                                keywords: "Spark Ads, UGC Optimization, Viral Trend Hacking",
-                                desc: "Engage viral audiences and drive massive impulse sales with trendy, native video content strategies."
-                            }
-                        ].map((p, i) => (
-                            /* 🎯 FIX: 'motion.div' ki jagah simple 'div' lagaya hai aur Framer Motion ki lift coding ko pure Tailwind transform se swap kiya hai */
-                            <div
-                                key={i}
-                                className="group relative bg-[#080808] p-8 2xl:p-8 rounded-[3rem] border border-white/5 hover:border-blue-500/50 transition-all duration-500 flex flex-col h-full overflow-hidden cursor-pointer hover:-translate-y-2 transform will-change-transform z-10"
-                            >
-                                {/* 🎯 EFFECTS LAYER 1: Slide-Up Background Glow */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-blue-600/15 via-blue-500/[0.02] to-transparent translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out z-0 pointer-events-none" />
+                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 2xl:gap-8">
+  {[
+    {
+      step: "01",
+      title: "Meta Ads",
+      keywords: "Lookalike Audiences, CBO/ABO Tuning, Pixel Tracking",
+      desc: "Scale your brand on Facebook and Instagram with high-converting, laser-targeted visual ad campaigns."
+    },
+    {
+      step: "02",
+      title: "LinkedIn Advertising",
+      keywords: "B2B Matched Audiences, Account Targeting, Lead Gen",
+      desc: "Connect directly with B2B decision-makers, generate premium leads, and drive professional business growth."
+    },
+    {
+      step: "03",
+      title: "YouTube Advertising",
+      keywords: "In-Stream Formats, Retargeting Funnels, Custom Intent",
+      desc: "Capture attention and boost conversions using high-impact video ads on the world’s largest video platform."
+    },
+    {
+      step: "04",
+      title: "TikTok Advertising",
+      keywords: "Spark Ads, UGC Optimization, Viral Trend Hacking",
+      desc: "Engage viral audiences and drive massive impulse sales with trendy, native video content strategies."
+    }
+  ].map((p, i) => (
+    <div
+      key={i}
+      // 🎯 FIXED: Style tag lagakar background color #0971A6 ko solid completely lock kar diya hai
+      style={{ backgroundColor: "#0971A6" }}
+      className="group relative p-8 2xl:p-8 rounded-[3rem] border border-white/10 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)] transition-all duration-500 flex flex-col h-full overflow-hidden cursor-pointer hover:-translate-y-2 transform will-change-transform z-10"
+    >
+      {/* 🎯 EFFECTS LAYER 1: Tuned to soft white overlay to perfectly match the solid background color */}
+      <div className="absolute inset-0 bg-gradient-to-t from-white/5 via-white/[0.01] to-transparent translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out z-0 pointer-events-none" />
 
-                                {/* Header row area layout */}
-                                <div className="relative w-full mb-2 min-h-[70px] flex items-start justify-between z-10 pointer-events-none">
-                                    {/* Step Number behind text */}
-                                    <span className="absolute left-0 -top-6 text-6xl 2xl:text-8xl font-black text-white/5 group-hover:text-blue-600/20 select-none pointer-events-none z-0 transition-colors duration-500">
-                                        {p.step}
-                                    </span>
+      {/* Header row area layout */}
+      <div className="relative w-full mb-2 min-h-[70px] flex items-start justify-between z-10 pointer-events-none">
+        
+        {/* 🌀 FIXED STEP NUMBER WATERMARK: Made more readable on the blue surface, turns into glowing tint on hover */}
+        <span className="absolute left-0 -top-6 text-6xl 2xl:text-8xl font-black text-black/15 group-hover:text-black/30 select-none pointer-events-none z-0 transition-colors duration-500">
+          {p.step}
+        </span>
 
-                                    {/* Title text floating over step layer */}
-                                    <div className="space-y-2 flex-grow relative z-10 pt-6">
-                                        <h3 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.3rem] 2xl:text-[1.5rem] text-white group-hover:text-blue-500 transition-colors duration-300 leading-tight">
-                                            {p.title}
-                                        </h3>
-                                    </div>
+        {/* Title text floating over step layer */}
+        <div className="space-y-2 flex-grow relative z-10 pt-6">
+          <h3 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.3rem] 2xl:text-[1.5rem] text-white group-hover:text-cyan-200 transition-colors duration-300 leading-tight">
+            {p.title}
+          </h3>
+        </div>
 
-                                    {/* Icon Alignment */}
-                                    <div className="relative z-10 pt-5 pl-4 shrink-0">
-                                        <ChevronRight size={16} className="text-zinc-600 group-hover:text-blue-400 transition-colors duration-300" />
-                                    </div>
-                                </div>
+        {/* Icon Alignment */}
+        <div className="relative z-10 pt-5 pl-4 shrink-0">
+          <ChevronRight size={16} className="text-white/60 group-hover:text-cyan-200 transition-colors duration-300 transform group-hover:translate-x-1" />
+        </div>
+      </div>
 
-                                {/* Content block content wraps safely */}
-                                <div className="space-y-2 flex-grow relative z-10 pointer-events-none">
+      {/* Content block content wraps safely */}
+      <div className="space-y-2 flex-grow relative z-10 pointer-events-none">
+        <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed pt-2 max-w-xl 2xl:max-w-2xl antialiased opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+          {p.desc}
+        </p>
+      </div>
 
+      {/* 🌀 PROGRESS BAR AREA: Switched to track background opacity and a glowing cyan loader fill */}
+      <div className="mt-4 h-1 w-full bg-black/20 rounded-full overflow-hidden subpixel-antialiased relative z-10 pointer-events-none">
+        <div className="h-full bg-cyan-300 shadow-[0_0_8px_#67e8f9] w-full transition-all duration-1000" />
+      </div>
 
-                                    <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed pt-2 max-w-xl 2xl:max-w-2xl antialiased">
-                                        {p.desc}
-                                    </p>
-                                </div>
-
-                                {/* Progress Bar Area */}
-                                <div className="mt-4 h-1 w-full bg-white/5 rounded-full overflow-hidden subpixel-antialiased relative z-10 pointer-events-none">
-                                    {/* 🎯 Safe fallback for internal progress element line width */}
-                                    <div className="h-full bg-blue-600/40 w-full transition-all duration-1000" />
-                                </div>
-
-                                {/* 🎯 EFFECTS LAYER 2: Laser Bottom Edge Glow Line */}
-                                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-blue-500 shadow-[0_0_15px_#3b82f6] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-20 pointer-events-none" />
-                            </div>
-                        ))}
-                    </div>
+      {/* 🎯 EFFECTS LAYER 2: Cyan matching line indicator */}
+      <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-cyan-300 shadow-[0_0_15px_#67e8f9] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-20 pointer-events-none" />
+    </div>
+  ))}
+</div>
                 </div>
             </section>
 
@@ -633,7 +649,7 @@ export default function SocialMediaPage() {
 
 
             {/* Why Choose US  */}
-            <section className="relative py-16 md:py-24 2xl:py-32 bg-[#020617] overflow-hidden border-b border-white/5">
+            <section className="relative py-16 md:py-24 2xl:py-32 bg-[#111827] overflow-hidden border-b border-white/5">
 
                 {/* Background Dots & Glow */}
                 <div
@@ -684,50 +700,58 @@ export default function SocialMediaPage() {
                             </motion.div>
                         </div>
 
-                        {/* RIGHT SIDE: Cards Grid */}
-                        <div className="lg:col-span-6">
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 2xl:gap-10 relative">
+                   {/* RIGHT SIDE: Cards Grid */}
+<div className="lg:col-span-6">
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 2xl:gap-10 relative">
 
-                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-blue-500/20 blur-[100px] rounded-full pointer-events-none" />
+    {/* Background soft glow setup */}
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-blue-500/10 blur-[120px] rounded-full pointer-events-none" />
 
-                                {features.map((item, index) => (
-                                    <motion.div
-                                        key={index}
-                                        initial={{ opacity: 0, y: 20 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                                        viewport={{ once: true }}
-                                        className={`relative p-6 md:p-8 2xl:p-12 rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-xl group transition-all duration-500 hover:border-blue-500/50 hover:bg-white/[0.07] flex flex-col justify-between
-                      ${index % 2 !== 0 ? 'sm:translate-y-8 md:translate-y-10 2xl:translate-y-16' : ''}`}
-                                    >
-                                        <div className="relative z-10 space-y-4 md:space-y-5">
+    {features.map((item, index) => (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+        viewport={{ once: true }}
+        // 🎯 FIXED: Background color #0971A6 ko style tag se solid completely lock kiya hai
+        style={{ backgroundColor: "#0971A6" }}
+        className={`relative p-6 md:p-8 2xl:p-12 rounded-3xl border border-white/10 group transition-all duration-500 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)] flex flex-col justify-between
+        ${index % 2 !== 0 ? 'sm:translate-y-8 md:translate-y-10 2xl:translate-y-16' : ''}`}
+      >
+        <div className="relative z-10 space-y-4 md:space-y-5">
 
-                                            {/* Icon & Heading Row */}
-                                            <div className="flex items-center gap-4">
-                                                <div className="shrink-0 w-10 h-10 md:w-12 md:h-12 2xl:w-16 2xl:h-16 flex items-center justify-center rounded-xl bg-white/[0.05] text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-all duration-500">
-                                                    {item.icon}
-                                                </div>
+          {/* Icon & Heading Row */}
+          <div className="flex items-center gap-4">
+            
+            {/* 🌀 FIXED ICON BOX: Hover se pehle dark tint, hover par white background aur custom blue text icon */}
+            <div 
+              style={{ '--hover-color': '#0971A6' } as React.CSSProperties}
+              className="shrink-0 w-10 h-10 md:w-12 md:h-12 2xl:w-16 2xl:h-16 flex items-center justify-center rounded-xl bg-black/20 text-cyan-300 border border-white/5 group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 shadow-sm"
+            >
+              {item.icon}
+            </div>
 
-                                                {/* Interactive Title Gradient */}
-                                                <h4 className="flex-1 font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] leading-tight bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent group-hover:from-cyan-400 group-hover:to-blue-500 transition-all duration-500">
-                                                    {item.title}
-                                                </h4>
-                                            </div>
+            {/* Title Text (Solid crisp white, text-gradient removed for better contrast on blue background) */}
+            <h4 className="flex-1 font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] leading-tight text-white group-hover:text-cyan-200 transition-colors duration-500">
+              {item.title}
+            </h4>
+          </div>
 
-                                            {/* Card Description */}
-                                            <p className="text-white text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-                                                {item.desc}
-                                            </p>
-                                        </div>
+          {/* Card Description */}
+          <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+            {item.desc}
+          </p>
+        </div>
 
-                                        {/* Hover Check Icon */}
-                                        <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                                            <CheckCircle2 className="text-blue-500 w-4 h-4 2xl:w-6 2xl:h-6" />
-                                        </div>
-                                    </motion.div>
-                                ))}
-                            </div>
-                        </div>
+        {/* Hover Check Icon */}
+        <div className="absolute top-4 right-4 opacity-0 scale-75 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300">
+          <CheckCircle2 className="text-cyan-300 w-4 h-4 2xl:w-6 2xl:h-6" />
+        </div>
+      </motion.div>
+    ))}
+  </div>
+</div>
 
                     </div>
                 </div>

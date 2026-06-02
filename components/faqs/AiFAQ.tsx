@@ -42,11 +42,12 @@ export default function AutomationFAQ() {
   ];
 
   return (
-    <section className="relative py-24 bg-[#020617] overflow-hidden border-y border-white/5">
-      {/* Background Ambient Glow */}
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-600/5 blur-[150px] rounded-full pointer-events-none" />
-      
-      <div className="relative z-10 max-w-4xl mx-auto px-6">
+ <section className="relative py-24 bg-[#111827] overflow-hidden border-y border-white/5">
+  {/* Background Glow */}
+  <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-cyan-600/10 blur-[120px] rounded-full pointer-events-none" />
+  
+  {/* 🎯 FIXED: Max-width upgraded and standardized for fluid scaling on all devices */}
+  <div className="relative z-10 w-full mx-auto px-6 max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl">
         {/* Header Title Section */}
         <div className="mb-12">
          

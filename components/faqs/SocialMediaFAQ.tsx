@@ -22,11 +22,13 @@ export default function SocialMediaFAQ() {
   ];
 
   return (
-    <section className="relative py-24 bg-[#020617] overflow-hidden border-y border-white/5">
-      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
-      <div className="relative z-10 max-w-4xl mx-auto px-6">
+<section className="relative py-24 bg-[#111827] overflow-hidden border-y border-white/5">
+  {/* Background Glow */}
+  <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-cyan-600/10 blur-[120px] rounded-full pointer-events-none" />
+  
+  {/* 🎯 FIXED: Max-width upgraded and standardized for fluid scaling on all devices */}
+  <div className="relative z-10 w-full mx-auto px-6 max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl">
         <div className="mb-12">
-          <p className="text-[10px] uppercase tracking-[6px] text-[#00f2ff] font-black italic mb-2">Service Specifics</p>
           <h2 className="text-4xl md:text-5xl font-black text-white uppercase italic leading-none">
             Social Media <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00f2ff] to-[#0070ff]">FAQ.</span>
           </h2>

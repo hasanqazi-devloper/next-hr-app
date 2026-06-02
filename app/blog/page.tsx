@@ -70,7 +70,7 @@ export default function BlogPage() {
       : posts.filter((p) => p.category === active);
 
   return (
-    <main className="bg-[#020617] text-white min-h-screen selection:bg-blue-600 antialiased overflow-x-hidden">
+    <main className="bg-[#111827] text-white min-h-screen selection:bg-blue-600 antialiased overflow-x-hidden">
 
       {/* 1. HERO SECTION */}
       <section className="relative w-full overflow-hidden bg-[#030712]">

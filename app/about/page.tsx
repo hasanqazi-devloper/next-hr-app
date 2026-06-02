@@ -40,9 +40,9 @@ export default function AboutPage() {
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
 
           {/* Full Sized Padded Content Wrapper */}
-<div className="relative z-10 w-full mx-auto text-center lg:text-left px-6 pt-32 pb-16 md:pt-20 md:pb-24 lg:max-w-full lg:pt-40 lg:pb-28 lg:pl-40 2xl:mx-0 2xl:max-w-[1500px] 2xl:pt-48 2xl:pb-36 2xl:pl-80 3xl:mx-0 3xl:max-w-[1800px] 3xl:pt-60 3xl:pb-44 3xl:pl-72">
-  {/* Aapka Content */}
-    <div className="max-w-5xl">
+          <div className="relative z-10 w-full mx-auto text-center lg:text-left px-6 pt-32 pb-16 md:pt-20 md:pb-24 lg:max-w-full lg:pt-40 lg:pb-28 lg:pl-40 2xl:mx-0 2xl:max-w-[1500px] 2xl:pt-48 2xl:pb-36 2xl:pl-80 3xl:mx-0 3xl:max-w-[1800px] 3xl:pt-60 3xl:pb-44 3xl:pl-72">
+            {/* Aapka Content */}
+            <div className="max-w-5xl">
 
               {/* Glassmorphism Badge Container */}
               <div className="flex items-center gap-2.5 mb-8 w-fit px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md mx-auto md:mx-0">
@@ -69,7 +69,7 @@ export default function AboutPage() {
       </section>
 
       {/* 2. OUR IDENTITY (CLS Fix) */}
-      <section className="py-20 px-6 bg-gradient-to-b from-[#020617] to-[#0b1329] relative z-10 border-t border-white/5">
+      <section className="py-20 px-6 bg-[#1E2939] relative z-10 border-t border-white/5">
         <div className="container-wide">
           <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-blue-500/[0.04] blur-[140px] pointer-events-none" />
 
@@ -97,57 +97,57 @@ export default function AboutPage() {
               </div>
             </motion.div>
 
-           <motion.div
-  initial={{ opacity: 0, x: 30 }}
-  whileInView={{ opacity: 1, x: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 0.6 }}
-  className="space-y-8"
->
-  <div className="space-y-4">
-    <span className="text-[10px] tracking-[4px] text-cyan-400 font-extrabold block">OUR IDENTITY</span>
-    
-    {/* 🎯 FIX: Heading optimized in 'rem' for Mobile, Laptop, and 2K screens */}
-    <h2 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem]  font-black text-white tracking-tighter leading-[1.1] lg:leading-[1] mb-6">
-     Who We{" "}
-  
-      {/* 🎯 FIXED OVERFLOW & BREAKING: Changed to 'block' with precise margins and safety right padding */}
-      <span className="  py-1 pr-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-       Are
-      </span>
-    </h2>
-  </div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="space-y-8"
+            >
+              <div className="space-y-4">
+                <span className="text-[10px] tracking-[4px] text-blue-400 font-extrabold block">OUR IDENTITY</span>
 
-  {/* Main Lead Paragraph */}
-  <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-normal leading-relaxed antialiased tracking-wide opacity-90">
-    High Rise Digital was founded in 2019. We are a growing <span className="text-blue-400">AI-enabled digital solutions</span> company powered by 12+ skilled professionals.
-  </p>
+                {/* 🎯 FIX: Heading optimized in 'rem' for Mobile, Laptop, and 2K screens */}
+                <h2 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem]  font-black text-white tracking-tighter leading-[1.1] lg:leading-[1] mb-6">
+                  Who We{" "}
 
-  <div className="space-y-4 lg:space-y-4 text-white font-medium leading-relaxed w-full mt-6">
+                  {/* 🎯 FIXED OVERFLOW & BREAKING: Changed to 'block' with precise margins and safety right padding */}
+                  <span className="  py-1 pr-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                    Are
+                  </span>
+                </h2>
+              </div>
 
-    {/* Paragraph 1 */}
-    <p className="  pl-4 text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl max-w-xl lg:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto lg:mx-0 antialiased tracking-wide opacity-90">
-      Over the years, we have successfully worked with clients from the USA, UK, Australia, UAE, and many other countries, helping businesses strengthen their online presence.
-    </p>
+              {/* Main Lead Paragraph */}
+              <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-normal leading-relaxed antialiased tracking-wide opacity-90">
+                <a href="/">High Rise Digital</a>  was founded in 2019. We are a growing <span className="text-blue-400">AI-enabled digital solutions</span> company powered by 12+ skilled professionals.
+              </p>
 
-    {/* Paragraph 2 */}
-    <p className="  pl-4 text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl max-w-xl lg:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto lg:mx-0 antialiased tracking-wide opacity-90">
-      With experience across multiple industries, we have completed <span className="text-blue-400 font-black">700+ projects</span>, delivering creative designs, SEO, and effective marketing strategies.
-    </p>
+              <div className="space-y-4 lg:space-y-4 text-white font-medium leading-relaxed w-full mt-6">
 
-    {/* Paragraph 3 */}
-    <p className=" pl-4 text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl max-w-xl lg:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto lg:mx-0 antialiased tracking-wide opacity-90">
-      Our focus is simple — providing quality work, building long-term relationships, and helping brands grow with confidence.
-    </p>
+                {/* Paragraph 1 */}
+                <p className="  pl-4 text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl max-w-xl lg:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto lg:mx-0 antialiased tracking-wide opacity-90">
+                  Over the years, we have successfully worked with clients from the USA, UK, Australia, UAE, and many other countries, helping businesses strengthen their online presence.
+                </p>
 
-  </div>
-</motion.div>
+                {/* Paragraph 2 */}
+                <p className="  pl-4 text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl max-w-xl lg:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto lg:mx-0 antialiased tracking-wide opacity-90">
+                  With experience across multiple industries, we have completed <span className="text-blue-400 font-black">700+ projects</span>, delivering creative designs, SEO, and effective marketing strategies.
+                </p>
+
+                {/* Paragraph 3 */}
+                <p className=" pl-4 text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl max-w-xl lg:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto lg:mx-0 antialiased tracking-wide opacity-90">
+                  Our focus is simple — providing quality work, building long-term relationships, and helping brands grow with confidence.
+                </p>
+
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* 3. VISION & MISSION */}
-      <section className="py-24 bg-[#02040a] px-6 relative border-y border-white/[0.03]">
+      <section className="py-24 bg-[#111827] px-6 relative border-y border-white/[0.03]">
 
         <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
@@ -163,7 +163,7 @@ export default function AboutPage() {
             <h3 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter  leading-tight">Vision & Mission</h3>
           </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
   {[
     { title: "Our Vision", icon: <Globe size={26} />, desc: "To become a globally trusted digital agency that empowers businesses with innovative strategies, creativity, and long-term digital growth solutions." },
     { title: "Our Mission", icon: <Target size={26} />, desc: "To deliver high-quality digital marketing, branding, and web solutions that help businesses grow, connect, and succeed online." },
@@ -175,20 +175,30 @@ export default function AboutPage() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: i * 0.1 }}
-      className="p-10 rounded-[2.5rem] bg-zinc-950/50 border border-white/5 hover:border-blue-500/30 transition-all duration-400 group"
+      // 🎯 FIXED: Style tag lagakar background color #0971A6 ko solid completely lock kar diya hai
+      style={{ backgroundColor: "#0971A6" }}
+      className="p-10 rounded-[2.5rem] border border-white/10 group transition-all duration-500 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)]"
     >
-      {/* 🎯 FIX: Icon aur Heading ko ek row line mein laane ke liye wrapper parent code */}
+      {/* Icon aur Heading wrapper */}
       <div className="flex items-center gap-4 mb-6">
-        <div className="shrink-0 text-blue-400 bg-blue-500/10 w-14 h-14 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+        {/* 🌀 FIXED ICON BOX: Hover se pehle subtle dark tint, hover ke baad clean white surface with 0971A6 text */}
+        <div 
+          style={{ '--hover-color': '#0971A6' } as React.CSSProperties}
+          className="shrink-0 w-14 h-14 flex items-center justify-center rounded-2xl bg-black/20 text-cyan-300 border border-white/5 group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 shadow-sm"
+        >
           {val.icon}
         </div>
-        <h3 className="text-[20px] font-bold text-white tracking-tight">{val.title}</h3>
+        
+        {/* Heading text (Maintained 20px font-size) */}
+        <h3 className="text-[20px] font-bold text-white tracking-tight group-hover:text-cyan-200 transition-colors duration-300">
+          {val.title}
+        </h3>
       </div>
 
-      {/* Description Panel */}
-      <p className="text-white text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-2xl opacity-90 antialiased">
+      {/* Description Panel (Maintained font setups) */}
+      <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-2xl opacity-90 antialiased group-hover:opacity-100 transition-opacity duration-300">
         {val.desc}
-      </p> 
+      </p>
     </motion.div>
   ))}
 </div>
@@ -196,79 +206,111 @@ export default function AboutPage() {
       </section>
 
       {/* 4. WORKING PROCESS */}
-      <section className="py-24 px-6 bg-gradient-to-b from-[#02040a] to-[#0c142d] relative">
+      <section className="py-24 px-6 bg-[#1E2939] relative">
         <div className="max-w-7xl mx-auto">
           <div className="mb-20">
-            <span className="text-[10px]  tracking-[4px] text-cyan-400 font-extrabold block mb-4">EXECUTION TRACK</span>
+            <span className="text-[10px]  tracking-[4px] text-blue-400 font-extrabold block mb-4">EXECUTION TRACK</span>
             <h3 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter  leading-none">Our {" "}
 
-               <span className=" mt-0 py-1 pr-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                 Working Process.
-                </span>
+              <span className=" mt-0 py-1 pr-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                Working Process.
+              </span>
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-            {[
-              { step: "01", title: "Understanding", desc: "Learning about your business and goals." },
-              { step: "02", title: "Research", desc: "Detailed market research and planning." },
-              { step: "03", title: "Creative", desc: "Engaging designs and digital solutions." },
-              { step: "04", title: "Launch", desc: "Optimization and performance marketing." },
-              { step: "05", title: "Growth", desc: "Monitoring and long-term support." }
-            ].map((proc, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className="p-8 rounded-[2rem] bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] transition-all"
-              >
-                <span className="text-blue-500 font-black text-xl mb-4 block opacity-50">{proc.step}</span>
-                <h3 className="mb-2 font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] tracking-[1px]">{proc.title}</h3 >
-                <p className="mb-2 text-white text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed antialiased">
-                  {proc.desc}
-                </p>              </motion.div>
-            ))}
-          </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+  {[
+    { step: "01", title: "Understanding", desc: "Learning about your business and goals." },
+    { step: "02", title: "Research", desc: "Detailed market research and planning." },
+    { step: "03", title: "Creative", desc: "Engaging designs and digital solutions." },
+    { step: "04", title: "Launch", desc: "Optimization and performance marketing." },
+    { step: "05", title: "Growth", desc: "Monitoring and long-term support." }
+  ].map((proc, idx) => (
+    <motion.div
+      key={idx}
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ delay: idx * 0.1 }}
+      // 🎯 FIXED: Style tag lagakar background color #0971A6 ko solid completely lock kar diya hai
+      style={{ backgroundColor: "#0971A6" }}
+      className="p-8 rounded-[2rem] border border-white/10 group transition-all duration-500 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)] flex flex-col justify-between"
+    >
+      <div>
+        {/* 🌀 FIXED STEP NUMBER BADGE: Hover se pehle subtle dark tint, hover ke baad clean white surface with 0971A6 text */}
+        <span 
+          style={{ '--hover-color': '#0971A6' } as React.CSSProperties}
+          className="w-10 h-10 flex items-center justify-center rounded-xl bg-black/20 text-cyan-300 border border-white/5 font-black text-sm mb-4 group-hover:bg-white group-hover:text-blue/500 group-hover:border-transparent transition-all duration-500 shadow-sm"
+        >
+          {proc.step}
+        </span>
+        
+        {/* Title Text (Kept original sizes, added text-white) */}
+        <h3 className="mb-2 font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] tracking-[1px] text-white group-hover:text-cyan-200 transition-colors duration-300">
+          {proc.title}
+        </h3>
+        
+        {/* Description Paragraph (Kept original sizes & configuration) */}
+        <p className="mb-2 text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed antialiased opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+          {proc.desc}
+        </p>
+      </div>
+    </motion.div>
+  ))}
+</div>
         </div>
       </section>
 
       {/* 5. 4 REASONS TO WORK WITH US */}
-      <section className="py-24 bg-[#010307] px-6 relative border-t border-white/[0.02]">
+      <section className="py-24 bg-[#111827] px-6 relative border-t border-white/[0.02]">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
             <div className="max-w-2xl">
               <h3 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter  leading-tight">4 Reasons {" "}
-                  <span className=" mt-0 py-1 pr-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
- To Work With Us.
-                 </span>
+                <span className=" mt-0 py-1 pr-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                  To Work With Us.
+                </span>
 
               </h3>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              { icon: <Users size={24} />, title: "Experienced Team", desc: "Our skilled professionals bring creativity, expertise, and industry knowledge to deliver high-quality digital solutions." },
-              { icon: <Globe size={24} />, title: "Global Client Network", desc: "We have successfully worked with clients from the USA, UK, Australia, UAE, and many other countries worldwide." },
-              { icon: <Award size={24} />, title: "Proven Track Record", desc: "With 700+ completed projects across multiple industries, we deliver reliable results that help businesses grow online." },
-              { icon: <CheckCircle2 size={24} />, title: "Client-Focused Approach", desc: "We prioritize clear communication, personalized strategies, and long-term partnerships to ensure success." }
-            ].map((reason, i) => (
-              <motion.div
-                key={i}
-                whileHover={{ x: 10 }}
-                className="flex gap-6 p-8 rounded-[2.5rem] bg-zinc-950 border border-white/5 hover:border-blue-500/20 transition-all"
-              >
-                <div className="text-blue-400 shrink-0">{reason.icon}</div>
-                <div>
-                  <h4 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem]">{reason.title}</h4>
-                  <p className="mb-2 mt-2 text-white text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-2xl opacity-90 antialiased">
-                    {reason.desc}
-                  </p>            </div>
-              </motion.div>
-            ))}
-          </div>
+         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+  {[
+    { icon: <Users size={24} />, title: "Experienced Team", desc: "Our skilled professionals bring creativity, expertise, and industry knowledge to deliver high-quality digital solutions." },
+    { icon: <Globe size={24} />, title: "Global Client Network", desc: "We have successfully worked with clients from the USA, UK, Australia, UAE, and many other countries worldwide." },
+    { icon: <Award size={24} />, title: "Proven Track Record", desc: "With 700+ completed projects across multiple industries, we deliver reliable results that help businesses grow online." },
+    { icon: <CheckCircle2 size={24} />, title: "Client-Focused Approach", desc: "We prioritize clear communication, personalized strategies, and long-term partnerships to ensure success." }
+  ].map((reason, i) => (
+    <motion.div
+      key={i}
+      whileHover={{ x: 10 }}
+      // 🎯 FIXED: Style tag lagakar background color #0971A6 ko solid completely lock kar diya hai
+      style={{ backgroundColor: "#0971A6" }}
+      className="flex gap-6 p-8 rounded-[2.5rem] border border-white/10 group transition-all duration-500 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)]"
+    >
+      {/* 🌀 FIXED ICON BOX: Hover se pehle subtle dark tint, hover ke baad clean white surface with 0971A6 text */}
+      <div 
+        style={{ '--hover-color': '#0971A6' } as React.CSSProperties}
+        className="shrink-0 w-12 h-12 flex items-center justify-center rounded-xl bg-black/20 text-cyan-300 border border-white/5 group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 shadow-sm"
+      >
+        {reason.icon}
+      </div>
+
+      <div>
+        {/* Title Text (Kept original sizes, added text-white) */}
+        <h4 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] text-white group-hover:text-cyan-200 transition-colors duration-300">
+          {reason.title}
+        </h4>
+        
+        {/* Description Paragraph (Kept original sizes & padding) */}
+        <p className="mb-2 mt-2 text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-2xl opacity-90 antialiased group-hover:opacity-100 transition-opacity duration-300">
+          {reason.desc}
+        </p>
+      </div>
+    </motion.div>
+  ))}
+</div>
         </div>
       </section>
 

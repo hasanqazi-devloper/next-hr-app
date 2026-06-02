@@ -82,7 +82,7 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#020617] text-white overflow-x-hidden selection:bg-blue-600 -mt-24 md:-mt-28 lg:-mt-32">
+    <main className="min-h-screen bg-[#111827] text-white overflow-x-hidden selection:bg-blue-600 -mt-24 md:-mt-28 lg:-mt-32">
 
       {/* 🖼️ HERO SECTION */}
       <section className="relative w-full overflow-hidden bg-[#020617]">

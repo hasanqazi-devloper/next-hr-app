@@ -122,11 +122,11 @@ export default function PortfolioBento() {
                     </div>
 
                     {/* Project Title Display */}
-                    <div className="absolute bottom-8 left-8 right-8 z-20 space-y-2">
+                    {/* <div className="absolute bottom-8 left-8 right-8 z-20 space-y-2">
                       <span className="text-2xl 2xl:text-5xl font-black tracking-tight uppercase block text-white bg-black/30 backdrop-blur-sm px-4 py-2 rounded-xl w-fit">
                         {project.title}
                       </span>
-                    </div>
+                    </div> */}
                   </div>
                 </CardWrapper>
               </Link>

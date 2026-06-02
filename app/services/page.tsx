@@ -14,7 +14,7 @@ import CTA from "@/components/sections/CTA";
 
 // 1. Service List Data (Content Exactly Same)
 const serviceList = [
-  { id: "02", title: "Technical SEO", slug: "seo", icon: <BarChart3 /> },
+  { id: "02", title: "Search Engine Optimization", slug: "seo", icon: <BarChart3 /> },
   { id: "01", title: "Web Development", slug: "web-development", icon: <Zap /> },
   { id: "03", title: "Social Media Marketing", slug: "social-media-marketing", icon: <ShieldCheck /> },
   { id: "04", title: "AI Automation", slug: "ai-automation", icon: <Sparkles /> },
@@ -67,7 +67,7 @@ export default function ServicesPage() {
 
 
       {/* SECTION 2: AGENCY INSIGHT */}
-      <section className="relative py-24 2xl:py-40 bg-[#030303] overflow-hidden border-y border-white/5">
+      <section className="relative py-24 2xl:py-40 bg-[#1E2939] overflow-hidden border-y border-white/5">
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-600/[0.02] blur-[120px] pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-cyan-600/[0.02] blur-[120px] pointer-events-none" />
 
@@ -121,7 +121,7 @@ export default function ServicesPage() {
 
               {/* Paragraph 1 */}
               <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
-                High Rise Digital Agency has years of experience helping businesses grow worldwide through modern digital marketing strategies. We use advanced AI tools and data-driven technologies to deliver better results and smarter solutions.
+               <a href="/">High Rise Digital Agency</a>    has years of experience helping businesses grow worldwide through modern digital marketing strategies. We use advanced AI tools and data-driven technologies to deliver better results and smarter solutions.
               </p>
 
               {/* Paragraph 2 */}
@@ -159,9 +159,11 @@ export default function ServicesPage() {
       </section>
 
       {/* SECTION 3: SERVICE GRID */}
-    <section className="py-16 md:py-24 2xl:py-40 px-4 sm:px-6 max-w-7xl 2xl:max-w-[1600px] mx-auto overflow-hidden">
-  {/* ⚡ FIXED HEADING: Mobile par line hide hogi aur spacing sahi rahegi */}
-  <h3 className="text-[1.8rem] sm:text-[2.3rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black pb-4 md:pb-6 mb-8 flex flex-wrap md:flex-nowrap items-center gap-4 text-white leading-tight">
+    {/* 🎯 FIXED: Removed max-width limits from section and parent to make it 100% full screen width */}
+<section className="py-16 md:py-24 bg-[#111827] 2xl:py-40 px-4 sm:px-8 md:px-12 2xl:px-20 w-full overflow-hidden">
+  
+  {/* ⚡ HEADING: Kept layout safe but removed constrained container */}
+  <h3 className="text-[1.8rem] sm:text-[2.3rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black pb-4 md:pb-6 mb-8 flex flex-wrap md:flex-nowrap items-center gap-4 text-white leading-tight w-full">
     Our Complete Range of {" "}
     <span className="inline-block pb-1 pr-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500">
       Digital Marketing Services
@@ -169,33 +171,38 @@ export default function ServicesPage() {
     <div className="hidden md:block h-px bg-white/10 flex-grow animate-pulse" />
   </h3>
 
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 2xl:gap-10">
+  {/* 🎯 FIXED: Grid is now stretching edge-to-edge across the screen width */}
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 2xl:gap-10 w-full">
     {serviceList.map((service) => (
       <Link href={`/services/${service.slug}`} key={service.id} className="block h-full">
         <motion.div
           whileHover={{ y: -10 }}
-          className="p-6 sm:p-8 md:p-10 2xl:p-16 border border-white/10 bg-[#070b14] rounded-[2rem] md:rounded-[3rem] group hover:border-blue-500/50 transition-all duration-500 cursor-pointer h-full flex flex-col justify-between relative overflow-hidden"
+          style={{ backgroundColor: "#0971A6" }}
+          className="p-6 sm:p-8 md:p-10 2xl:p-16 border border-white/10 group transition-all duration-500 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)] rounded-[2rem] md:rounded-[3rem] cursor-pointer h-full flex flex-col justify-between relative overflow-hidden"
         >
-          {/* 🎯 EFFECTS LAYER 1 */}
-          <div className="absolute inset-0 bg-gradient-to-t from-blue-600/15 via-blue-500/[0.02] to-transparent translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out z-0 pointer-events-none" />
+          {/* EFFECTS LAYER 1 */}
+          <div className="absolute inset-0 bg-gradient-to-t from-white/5 via-white/[0.01] to-transparent translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out z-0 pointer-events-none" />
 
           {/* Foreground content */}
           <div className="relative z-10 flex flex-col h-full justify-between w-full">
             <div>
-              {/* 🎯 FIXED ROW LAYOUT: Mobile par layout handle karne ke liye justify badla hai */}
               <div className="flex items-start justify-between gap-4 mb-6 md:mb-8 w-full">
                 
                 {/* Left side: Icon + Title */}
                 <div className="flex items-center gap-4 sm:gap-5 min-w-0">
-                  {/* Icon Box */}
-                  <div className="shrink-0 w-11 h-11 sm:w-12 sm:h-12 2xl:w-16 2xl:h-16 bg-white/[0.03] rounded-xl flex items-center justify-center border border-white/10 group-hover:bg-blue-600/20 group-hover:text-blue-400 group-hover:border-blue-500/50 scale-100 group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_rgba(59,130,246,0.5)] transition-all duration-500">
-                    <div className="text-blue-400 transition-colors duration-500">
+                  
+                  {/* 🌀 ICON BOX */}
+                  <div 
+                    style={{ '--hover-color': '#0971A6' } as React.CSSProperties}
+                    className="shrink-0 w-11 h-11 sm:w-12 sm:h-12 2xl:w-16 2xl:h-16 rounded-xl bg-black/20 text-cyan-300 border border-white/5 group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 shadow-sm flex items-center justify-center"
+                  >
+                    <div className="transition-colors duration-500">
                       {service.icon}
                     </div>
                   </div>
 
-                  {/* 🎯 FIXED TITLE TEXT: text sizes ko responsive banaya aur break-words lagaya */}
-                  <h4 className="font-black text-[1.25rem] sm:text-[1.5rem] lg:text-[1.8rem] 2xl:text-[1.9rem] text-white group-hover:text-blue-400 transition-colors leading-snug tracking-tight break-words">
+                  {/* Title Text */}
+                  <h4 className="font-black text-[1.25rem] sm:text-[1.5rem] lg:text-[1.8rem] 2xl:text-[1.9rem] text-white group-hover:text-cyan-200 transition-colors leading-snug tracking-tight break-words">
                     {service.title}
                   </h4>
                 </div>
@@ -204,7 +211,7 @@ export default function ServicesPage() {
                 <div className="shrink-0 p-1 md:p-2">
                   <ArrowUpRight 
                     size={22} 
-                    className="text-zinc-600 group-hover:text-blue-400 transform transition-all duration-500 group-hover:translate-x-1 group-hover:-translate-y-1 ease-out" 
+                    className="text-white/50 group-hover:text-cyan-200 transform transition-all duration-500 group-hover:translate-x-1 group-hover:-translate-y-1 ease-out" 
                   />
                 </div>
 
@@ -212,8 +219,8 @@ export default function ServicesPage() {
             </div>
           </div>
 
-          {/* 🎯 EFFECTS LAYER 2 */}
-          <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-blue-500 shadow-[0_0_15px_#3b82f6] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-20" />
+          {/* EFFECTS LAYER 2 */}
+          <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-cyan-300 shadow-[0_0_15px_#67e8f9] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-20" />
         </motion.div>
       </Link>
     ))}

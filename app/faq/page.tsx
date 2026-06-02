@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useState } from "react";
 import Image from "next/image"; // Next.js Optimization
 import { motion, AnimatePresence } from "framer-motion";
@@ -53,111 +54,119 @@ export default function FAQPage() {
   return (
     <main className="min-h-screen bg-[#020617] text-white overflow-x-hidden selection:bg-blue-600">
       
-   {/* 🎯 SYNCED FAQ HERO SECTION: Perfectly matched responsive grid alignment, fluid spacing, and unified backdrop structure */}
-<section className="relative w-full overflow-hidden bg-[#030712]">
-  <div className="container-wide">
-    
-    {/* Background Image Container with Exact Matching Premium CSS */}
-    <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
-      <Image
-        src="/home-hero.jpg"
-        alt="Mesh Grid"
-        fill
-        priority 
-        sizes="100vw"
-        className="object-cover object-top opacity-35" // Standardized opacity for depth consistency
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#030712]/40 to-[#030712]" />
-    </div>
-
-    {/* Ambient Blur Dot to lock the signature aesthetic */}
-    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
-
-    {/* Full Sized Padded Content Wrapper - Exact global layout spacing */}
-<div className="relative z-10 w-full mx-auto text-center lg:text-left px-6 pt-32 pb-16 md:pt-20 md:pb-24 lg:max-w-full lg:pt-40 lg:pb-28 lg:pl-40 2xl:mx-0 2xl:max-w-[1500px] 2xl:pt-48 2xl:pb-36 2xl:pl-80 3xl:mx-0 3xl:max-w-[1800px] 3xl:pt-60 3xl:pb-44 3xl:pl-72">
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4 }}
-        className="max-w-5xl"
-      >
-        {/* Badge Container (Centered on mobile, left on desktop) */}
-        <div className="flex items-center gap-2.5 mb-8 w-fit px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md mx-auto md:mx-0">
-          <HelpCircle size={12} className="text-blue-400 animate-pulse" />
-          <span className="text-[10px] font-black tracking-[4px] text-blue-300 uppercase">Support Center</span>
-        </div>
-
-        {/* Main Large Typography Block with Tight Line Height */}
-        <h1 className="text-[3rem]  md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black tracking-tighter leading-[1] text-white mb-8 normal-case">
-          FREQUENTLY {" "}
-          <span className="inline-block  mt-2 uppercase bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
-            Asked Questions.
-          </span>
-        </h1>
-
-        {/* Paragraph aligned with the same typography standards (Centered on mobile) */}
-     <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
-  Everything you need to know about our digital marketing processes, timelines, and how we help your brand reach new heights.
-</p>
-      </motion.div>
-    </div>
-  </div>
-</section>
-      {/* --- FAQ ACCORDION SECTION - Better Scaling --- */}
-      <section className="py-24 px-6 relative 2xl:py-36">
-        <div className="max-w-4xl 2xl:max-w-6xl mx-auto">
-          <div className="space-y-4 2xl:space-y-6">
-            {faqs.map((faq, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.05 }}
-                className={`rounded-[2rem] border transition-all duration-500 overflow-hidden ${
-                  openIndex === i ? "border-blue-500/50 bg-blue-500/[0.03]" : "border-white/5 bg-white/[0.01] hover:bg-white/[0.03]"
-                }`}
-              >
-                <button
-                  onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                  className="w-full p-8 2xl:p-12 flex justify-between items-center text-left"
-                >
-                  <span className={`text-xl md:text-2xl 2xl:text-3xl font-bold transition-colors ${openIndex === i ? "text-blue-400" : "text-white"}`}>
-                    {faq.q}
-                  </span>
-                  <div className={`p-2 2xl:p-4 rounded-full border transition-all duration-500 ${
-                    openIndex === i ? "bg-blue-500 border-blue-500 rotate-45 text-white" : "bg-white/5 border-white/10 text-blue-400"
-                  }`}>
-                    <Plus size={20} className="2xl:w-8 2xl:h-8" />
-                  </div>
-                </button>
-
-                <AnimatePresence>
-                  {openIndex === i && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
-                    >
-                      <div className="px-8 pb-8 2xl:px-12 2xl:pb-12 text-zinc-400 text-lg 2xl:text-2xl leading-relaxed border-t border-white/5 pt-6">
-                        {faq.a}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.div>
-            ))}
+      {/* 🎯 SYNCED FAQ HERO SECTION */}
+      <section className="relative w-full overflow-hidden bg-[#030712]">
+        <div className="container-wide">
+          
+          {/* Background Image Container */}
+          <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+            <Image
+              src="/home-hero.jpg"
+              alt="Mesh Grid"
+              fill
+              priority 
+              sizes="100vw"
+              className="object-cover object-top opacity-35"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#030712]/40 to-[#030712]" />
           </div>
 
-          {/* Need More Help? - Scaling for 4K */}
-          <div className="mt-20 2xl:mt-32 text-center p-12 2xl:p-20 rounded-[3rem] border border-white/5 bg-white/[0.01]">
+          {/* Ambient Blur Dot */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
+
+          {/* Content Wrapper */}
+          <div className="relative z-10 w-full mx-auto text-center lg:text-left px-6 pt-32 pb-16 md:pt-20 md:pb-24 lg:max-w-full lg:pt-40 lg:pb-28 lg:pl-40 2xl:mx-0 2xl:max-w-[1500px] 2xl:pt-48 2xl:pb-36 2xl:pl-80 3xl:mx-0 3xl:max-w-[1800px] 3xl:pt-60 3xl:pb-44 3xl:pl-72">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4 }}
+              className="max-w-5xl"
+            >
+              {/* Badge Container */}
+              <div className="flex items-center gap-2.5 mb-8 w-fit px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md mx-auto lg:mx-0">
+                <HelpCircle size={12} className="text-blue-400 animate-pulse" />
+                <span className="text-[10px] font-black tracking-[4px] text-blue-300 uppercase">Support Center</span>
+              </div>
+
+              {/* Main Typography Block */}
+              <h1 className="text-[3rem] md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black tracking-tighter leading-[1] text-white mb-8 normal-case">
+                FREQUENTLY {" "}
+                <span className="inline-block mt-2 uppercase bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
+                  Asked Questions.
+                </span>
+              </h1>
+
+              {/* Paragraph */}
+              <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
+                Everything you need to know about our digital marketing processes, timelines, and how we help your brand reach new heights.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* --- FAQ ACCORDION SECTION - Fluid Scaling Engineered --- */}
+      <section className="relative py-24 bg-[#111827] overflow-hidden border-y border-white/5">
+        {/* Background Glow */}
+        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-cyan-600/10 blur-[120px] rounded-full pointer-events-none" />
+        
+        {/* 🎯 FIXED: Max-width layer perfectly upgraded with responsive grid container */}
+        <div className="relative z-10 w-full mx-auto px-6 max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl flex flex-col gap-4 md:gap-6">
+          {faqs.map((faq, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.05 }}
+              className={`rounded-[2rem] border transition-all duration-500 overflow-hidden ${
+                openIndex === i ? "border-blue-500/50 bg-blue-500/[0.03]" : "border-white/5 bg-white/[0.01] hover:bg-white/[0.03]"
+              }`}
+            >
+              <button
+                onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                className="w-full p-8 2xl:p-12 flex justify-between items-center text-left gap-4"
+              >
+                <span className={`text-xl md:text-2xl 2xl:text-3xl font-bold transition-colors ${openIndex === i ? "text-blue-400" : "text-white"}`}>
+                  {faq.q}
+                </span>
+                <div className={`shrink-0 p-2 2xl:p-4 rounded-full border transition-all duration-500 ${
+                  openIndex === i ? "bg-blue-500 border-blue-500 rotate-45 text-white" : "bg-white/5 border-white/10 text-blue-400"
+                }`}>
+                  <Plus size={20} className="2xl:w-8 2xl:h-8" />
+                </div>
+              </button>
+
+              <AnimatePresence>
+                {openIndex === i && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
+                  >
+                    <div className="px-8 pb-8 2xl:px-12 2xl:pb-12 text-zinc-400 text-lg 2xl:text-2xl leading-relaxed border-t border-white/5 pt-6">
+                      {faq.a}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
+          ))}
+
+          {/* Need More Help? - Centered and scaled beautifully under the fluid framework */}
+          <div className="mt-20 2xl:mt-32 text-center p-8 md:p-12 2xl:p-20 rounded-[3rem] border border-white/5 bg-white/[0.01]">
             <h3 className="text-2xl md:text-3xl 2xl:text-5xl font-bold mb-4">Still have questions?</h3>
-<p className="text-white-500 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mb-6 md:mb-8 max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 antialiased">
-  Can't find the answer you're looking for? Please chat with our friendly team.
-</p>            <button className="px-10 py-4 2xl:px-16 2xl:py-6 bg-blue-600 hover:bg-blue-500 text-white font-black rounded-full transition-all text-sm 2xl:text-xl shadow-[0_0_30px_rgba(37,99,235,0.2)]">
-              Get in Touch
-            </button>
+            {/* 🎯 FIXED: Invalid text-white-500 class swapped with clean responsive typography standard */}
+            <p className="text-zinc-400 text-[15px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mb-6 md:mb-8 max-w-2xl mx-auto antialiased">
+              Can't find the answer you're looking for? Please chat with our friendly team.
+            </p>            
+        {/* 🎯 LINK INTEGRATED: Wrap your premium button inside Next.js Link component */}
+<Link href="/contact" className="inline-block">
+  <button className="px-10 py-4 2xl:px-16 2xl:py-6 bg-blue-600 hover:bg-blue-500 text-white font-black rounded-full transition-all text-sm 2xl:text-xl shadow-[0_0_30px_rgba(37,99,235,0.2)] active:scale-95 duration-300">
+    Get in Touch
+  </button>
+</Link>
           </div>
         </div>
       </section>

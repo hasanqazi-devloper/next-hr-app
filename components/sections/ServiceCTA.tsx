@@ -172,8 +172,8 @@ export default function ConsultationCTA() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       className={`p-4 rounded-2xl text-center text-xs font-bold border ${status.success
-                          ? "bg-emerald-500/10 border-emerald-500/20 text-emerald-400"
-                          : "bg-rose-500/10 border-rose-500/20 text-rose-400"
+                        ? "bg-emerald-500/10 border-emerald-500/20 text-emerald-400"
+                        : "bg-rose-500/10 border-rose-500/20 text-rose-400"
                         }`}
                     >
                       {status.message}
@@ -214,20 +214,20 @@ export default function ConsultationCTA() {
             </div>
 
             {/* RIGHT SIDE IMAGE */}
-      {/* RIGHT IMAGE */}
-<div className="hidden lg:flex items-end justify-center relative min-h-[600px]">
+            {/* RIGHT IMAGE */}
+            <div className="hidden lg:flex items-end justify-center relative min-h-[600px]">
 
-  {/* Shape */}
-  <div className="absolute bottom-0 right-0 w-[80%] h-[65%] bg-blue-500/10 rounded-tl-[180px] rounded-tr-[40px]" />
+              {/* Shape */}
+              <div className="absolute bottom-10 right-0 w-[80%] h-[65%] bg-[#0971A6] rounded-tl-[180px]" />
 
-  {/* Image */}
-  <img
-    src="/contact-png.png"
-    alt="Team"
-    className="relative z-10 max-h-[600px] w-auto"
-  />
+              {/* Image */}
+              <img
+                src="/contact-png.png"
+                alt="Team"
+                className="relative bottom-10 z-10 max-h-[600px] w-auto"
+              />
 
-</div>
+            </div>
 
           </div>
         </div>

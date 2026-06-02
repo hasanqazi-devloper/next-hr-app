@@ -78,30 +78,39 @@ export default function JuicerReviews() {
         </div>
 
         {/* 🔥 Infinite Marquee Slider - 🎯 FIXED: Set to absolute full bleed width */}
-        <div className="relative w-screen left-1/2 right-1/2 -ml-[50vw] +mr-[50vw] overflow-hidden flex items-center">
-          
-          {/* Track Animation at perfect slow speed */}
-          <div
-            className="flex gap-4 md:gap-6 w-max animate-marquee hover:[animation-play-state:paused] py-4 items-center pl-6"
-            style={{ animationDuration: "65s" }}
-          >
-            {doubledReviews.map((review, index) => (
-              // 🎯 FIXED: Dynamic calculation percentage metrics to fill huge 2K/4K monitors smoothly
-              <div
-                key={`${review.id}-${index}`}
-className="w-[90vw] sm:w-[50vw] md:w-[42vw] lg:w-[38vw] xl:w-[30vw] 2xl:w-[26vw] 3xl:w-[22vw] shrink-0 rounded-2xl border-white/[0.05] bg-[#09090b]/60 backdrop-blur-md p-0 overflow-hidden transition-all duration-500 group"              >
-                <div className="relative w-full overflow-hidden rounded-xl bg-zinc-950/20">
-                  <img
-                    src={review.src}
-                    alt={review.alt}
-                    className="w-full h-auto object-contain transition-all duration-500 "
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+      <div className="relative w-screen left-1/2 right-1/2 -ml-[50vw] +mr-[50vw] overflow-hidden flex items-center">
 
+  {/* 🎯 FIXED: Keyframe direction reversed from -50% to 0% so it rolls Left to Right smoothly */}
+  <div
+    className="flex gap-4 md:gap-6 w-max hover:[animation-play-state:paused] py-4 items-center pl-6"
+    style={{ 
+      animation: "marquee-reverse 65s linear infinite",
+    }}
+  >
+    {/* 🌌 Injecting dynamic reverse marquee animation style directly */}
+    <style>{`
+      @keyframes marquee-reverse {
+        0% { transform: translateX(-50%); }
+        100% { transform: translateX(0%); }
+      }
+    `}</style>
+
+    {doubledReviews.map((review, index) => (
+      <div
+        key={`${review.id}-${index}`}
+        className="w-[90vw] sm:w-[50vw] md:w-[42vw] lg:w-[38vw] xl:w-[30vw] 2xl:w-[26vw] 3xl:w-[22vw] shrink-0 rounded-2xl border-white/[0.05] bg-[#09090b]/60 backdrop-blur-md p-0 overflow-hidden transition-all duration-500 group"
+      >
+        <div className="relative w-full overflow-hidden rounded-xl bg-zinc-950/20">
+          <img
+            src={review.src}
+            alt={review.alt}
+            className="w-full h-auto object-contain transition-all duration-500"
+          />
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
       </div>
     </div>
   );

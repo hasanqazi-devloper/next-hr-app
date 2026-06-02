@@ -161,7 +161,7 @@ export default function PortfolioPage() {
   const filtered = active === "all" ? projects : projects.filter(p => p.category === active);
 
   return (
-    <main className="bg-[#030712] text-zinc-100 selection:bg-blue-600 overflow-x-hidden min-h-screen antialiased pb-24">
+    <main className="bg-[#111827] text-zinc-100 selection:bg-blue-600 overflow-x-hidden min-h-screen antialiased pb-24">
 
       {/* 1. HERO SECTION */}
       <section className="relative w-full overflow-hidden bg-[#030712]">
